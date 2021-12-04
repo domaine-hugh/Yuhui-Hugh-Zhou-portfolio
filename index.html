@@ -9,34 +9,120 @@
     <title>Hi, Yuhui is here!</title>
 </head>
 <body>
-    <header>
+    <header id="headerSection">
         <nav>
             <ul>
-                <li><a>HOME</a></li>
-                <li><a>ABOUT</a></li>
-                <li><a>SKILLS</a></li>
-                <li><a>PROJECTS</a></li>
-                <li><a>CONTACT</a></li>
+                <li><a href="#aboutSection">ABOUT</a></li>
+                <li><a href="#projectSection">PROJECTS</a></li>
+                <li><a href="#skillSection">SKILLS</a></li>
+                <li><a href="#contactSection">CONTACT</a></li>
             </ul>
         </nav>
+        <div>
+
+        </div>
+        <a class="jumpToNextSection" href="#aboutSection" aria-label="go to about section"> </a>
     </header>
     <main>
         <aside class="followmeBarAside">
 
         </aside>
         <aside class="navBarAside">
-
+            <nav>
+                <ul>
+                    <li><a href="#headerSection" aria-label="go to home section"></a><p>Wecome</p></li>
+                    <li><a href="#projectSection" aria-label="go to project section"></a><p>My projects</p></li>
+                    <li><a href="#aboutSection" aria-label="go to about section"></a><p>About me</p></li>
+                    <li><a href="#skillSection" aria-label="go to skill section"></a><p>My skill-set</p></li>
+                    <li><a href="#contactSection" aria-label="go to contact section"></a><p>Contact me</p></li>
+                </ul>
+            </nav>
         </aside>
-        <section class="aboutSection">
+        <section class="aboutSection" id="aboutSection">
+            <div class="profile">
+                <h2>ABOUT ME</h2>
+                <div>
+                    <img src="./images/profilePhoto.jpg" alt="Hugh's profile photo">
+                    <div class="profileText">
+                        <p>Hi, I am Hugh Zhou, an electrical engineer turned front-end web developer based in Toronto.</p>
+                        <p>I'm passionate about creating possibilities through programming, so I consistently look forward to expanding my skill-set.</p>
+                        <p>My greatest strength is my curiosity and willingness to learn. A positive and self-motivated attitude always assists me when I meet challenges, and I enjoy problem-solving.</p>
+                        <p>Taking ownership of my work is my engine to keep improving the quality of my applications.</p>
+                        <p>A natural team player: reliable, receptive, flexible and supportive.</p>
+                        <p>Please feel free to contact me!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="education">
+                <h2>EDUCATION BACKGROUND</h2>
+                <div>
+                    <img src="./images/junoLogo.png" alt="Juno College logo">
+                    <div>
+                        <p>Juno College of Technology</p>
+                        <p>Professional training (May 2021-Dec 2021)</p>
+                        <p>Web Development</p>
+                        <p>Learned and practiced the skills of front-end development and accumulated experience by building projects.</p>
+                    </div>
+                </div>
+                <div>
+                    <img src="./images/ryersonLogo.png"  alt="Ryerson University logo">
+                    <div>
+                        <p>Ryerson University</p>
+                        <p>Master Degree (Sep 2018-Jan 2020)</p>
+                        <p>Engineering Innovation and Entrepreneurship</p>
+                        <p>Incubated start-ups from engineering innovations by applying business skills and strategies.</p>
+                    </div>
+                </div>
+                <div>
+                    <img src="./images/southamptonLogo.png"  alt="University of Southampton logo">
+                    <div>
+                        <p>University of Southampton</p>
+                        <p>Master Degree (Sep 2013 - Nov 2014)</p>
+                        <p>Energy and Sustainability with Electrical Power Engineering</p>
+                        <p>Researched renewable energy and electric power system and built projects by MATLAB, PowerWorld, ERACS and COMSOL.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="plumAssessment">
+                <h2>PLUM ASSESSMENT</h2>
+                <h3>Top 3 Talents:</h3>
+                <div>
+                    <h3>Embracing Diversity</h3>
+                    <ul>
+                        <li>Very good at knowing what to say to make people feel included, welcome, and accepted.</li>
+                        <li>Very capable of adapting to a wide range of people and being open to different attitudes, values, and personalities.</li>
+                        <li>Extraordinary at being respectful, sensitive, and making others feel comfortable and appreciated.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Conflict Resolution</h3>
+                    <ul>
+                        <li>Excellent at examining issues from multiple viewpoints and analyzing information to find the best solution.</li>
+                        <li>Very capable of identifying effective strategies to resolve conflict and managing difficult interpersonal situations.</li>
+                        <li>Excellent at encouraging and building mutual respect, and displaying sensitivity in difficult situations.</li>
+                        <li>Capable of being considerate in difficult circumstances and aiming to achieve mutually agreeable solutions.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Communication</h3>
+                    <ul>
+                        <li>Very capable of knowing the "right thing" to say to people and understanding how people will react.</li>
+                        <li>Able to speak clearly, convey positivity, and be sociable.</li>
+                        <li>Good at being courteous, cooperative, and considerate with others.</li>
+                    </ul>
+                </div>
+
+            </div>
+            <input type="range" min="0" max="2">
+            <a class="jumpToNextSection" href="#skillsSection" aria-label="go to skill section"> </a>
+        </section>
+        <section class="projectSection" id="projectSection">
 
         </section>
-        <section class="skillsSection">
+        <section class="skillSection" id="skillSection">
 
         </section>
-        <section class="projectsSection">
-
-        </section>
-        <section class="contactSection">
+        <section class="contactSection"  id="contactSection">
 
         </section>
 
