@@ -1,0 +1,22 @@
+.projectSection {
+    video {
+        width: 700px;
+        margin-right: 50px;
+    }
+
+    img {
+        width:40px;
+        margin-right: 10px;
+       
+    }
+
+    & > div {
+        height:70vh;
+        display:flex;
+        flex-direction: row;
+
+        div {
+            align-self: flex-end;
+        }
+    }
+}

@@ -375,6 +375,32 @@ header li a {
   width: 150px;
 }
 
+.projectSection video {
+  width: 700px;
+  margin-right: 50px;
+}
+
+.projectSection img {
+  width: 40px;
+  margin-right: 10px;
+}
+
+.projectSection > div {
+  height: 70vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.projectSection > div div {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
 html {
   font-size: 125%;
 }
