@@ -1,0 +1,64 @@
+.navContainer {
+    position:fixed; 
+    top: calc(50vh - 100px);
+
+    ul {
+        display:flex;
+        flex-direction: column; 
+        justify-content: space-evenly;
+        height: 200px;
+        width: 50px;
+        list-style: none;
+        padding-left: 0;
+
+        li {
+            position:relative;
+            z-index: 1;
+            height: 40px;
+            width: 40px;
+        }
+    }
+}
+
+.navContainer p {
+    display:none;
+    position:absolute;
+    margin: 0;
+    top:0;
+}
+
+
+.followmeBarAside {
+    left:0;
+    margin: 0 0 0 20px;
+
+    p{
+        left:50px;
+    }
+}
+
+.linkedinLinkContainer:hover .linkedinLinkPrompt,
+.githubLinkContainer:hover  .githubLinkPrompt,
+.twitterLinkContainer:hover .twitterLinkPrompt,
+.emailButtonContainer:hover .emailButtonPrompt,
+.resumeButtonContainer:hover .resumeButtonPrompt{
+    display:block;
+}
+
+.navBarAside {
+    right:0;
+    margin: 0 20px 0 0;
+
+    p{
+        right: 50px;
+    }
+}
+
+.headerLinkContainer:hover .headerLinkPrompt,
+.aboutLinkContainer:hover .aboutLinkPrompt,
+.projectLinkContainer:hover .projectLinkPrompt,
+.skillLinkContainer:hover .skillLinkPrompt,
+.contactLinkContainer:hover .contactLinkPrompt {
+    display:block;
+}
+

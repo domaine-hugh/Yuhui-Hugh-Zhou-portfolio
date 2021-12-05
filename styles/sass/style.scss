@@ -1,0 +1,13 @@
+@import "normalization";
+@import "header";
+@import "aside";
+@import "aboutSection";
+
+html {
+    font-size: 125%;
+}
+
+.mainWrapper {
+    width: 80vw;
+    margin: 0 auto;
+}

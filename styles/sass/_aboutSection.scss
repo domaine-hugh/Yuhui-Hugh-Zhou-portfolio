@@ -1,0 +1,32 @@
+.aboutSection {
+    height: 100vh;
+    .profile {
+        display:block;
+    }
+    .education,
+    .plumAssessment {
+        display:none;
+    }
+}
+
+.profile {
+    & > div {
+        display:flex;
+
+        img {
+            height: 350px;
+        }
+
+    }
+}
+
+.education {
+    & > div {
+        display:flex;
+
+        img {
+            height: 70px;
+            width: 150px;
+        }
+    }
+}
