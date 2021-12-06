@@ -382,7 +382,7 @@ header li a {
 
 .projectSection img {
   width: 40px;
-  margin-right: 10px;
+  margin: 0 10px;
 }
 
 .projectSection > div {
@@ -399,6 +399,67 @@ header li a {
 .projectSection > div div {
   -ms-flex-item-align: end;
       align-self: flex-end;
+}
+
+.skillSection ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding-left: 0;
+}
+
+.skillSection ul li {
+  width: 15%;
+  list-style: none;
+}
+
+.skillSection img {
+  width: 100%;
+  margin: 0 auto;
+  padding: 30%;
+}
+
+.skillSection p {
+  text-align: center;
+}
+
+.contactSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contactSection > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contactSection .contactText {
+  width: 50%;
+}
+
+.contactSection form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 html {
