@@ -43,35 +43,37 @@ app.hoverDisplayVideo = () => {
 //     }
 //     printing(0);
 // }
-const text = 'Lorem ipsum dummy text blabla.';
-const typingContainer = document.getElementById("printingArea");
-let index = 0;
-let isAdding = true;
 
-function typing()   {
+//Printing effect(header)
+app.text = ['former electrical engineer', 'husband and father', 'basketball player'];
+app.typingContainer = document.getElementById("printingArea");
+app.index = 0;
+app.arrayIndex = 0;
+app.isAdding = true;
 
+app.typing = () =>  {
     setTimeout(function () {
-        typingContainer.innerText = text.slice(0, index);
-
-        if (isAdding) {
-            if (index > text.length) {
-                isAdding = false;
+        app.typingContainer.innerText = app.text[app.arrayIndex].slice(0, app.index);
+        if (app.isAdding) {
+            if (app.index === app.text[app.arrayIndex].length) {
+                app.isAdding = false;
                 setTimeout(function () {
-                    typing()
+                    app.typing()
                 }, 2000);
                 return;
             } else {
-                index++;
+                app.index++;
             }
         } else {
-            if (index === 0) {
-                isAdding = true;
+            if (app.index === 0) {
+                app.isAdding = true;
+                app.arrayIndex = (app.arrayIndex + 1) % app.text.length;    //1 % 3 = 1; 2 % 3 = 2; 3 % 3 = 0;
             } else {
-                index--;
+                app.index--;
             }
         }
-        typing();
-    }, 100)
+        app.typing();
+    }, app.isAdding ? 100 : 30)
 }
 
 
@@ -101,7 +103,7 @@ app.init = function () {
     app.hoverDisplayVideo();
 
     //Printing effect(header)
-    typing();
+    app.typing();
 
 }
 
