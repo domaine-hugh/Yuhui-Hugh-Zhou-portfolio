@@ -464,6 +464,8 @@ header li a {
 
 html {
   font-size: 125%;
+  max-width: 1920px;
+  background-color: #0a192f;
 }
 
 .mainWrapper {

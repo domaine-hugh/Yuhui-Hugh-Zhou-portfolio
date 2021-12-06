@@ -6,8 +6,16 @@
 @import "skillSection";
 @import "contactMe";
 
+$colorNavy: #0a192f;
+$colorLightSlate:#ccd6f6;
+$colorSlate:#a8b2d1;
+$colorDarkSlate:#a8b2d1;
+$colorLightGreen:#64ffda;
+
 html {
     font-size: 125%;
+    max-width: 1920px;
+    background-color: $colorNavy;
 }
 
 .mainWrapper {
