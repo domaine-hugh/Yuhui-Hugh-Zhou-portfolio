@@ -5,12 +5,9 @@
 @import "projectSection";
 @import "skillSection";
 @import "contactMe";
+@import "variables";
 
-$colorNavy: #0a192f;
-$colorLightSlate:#ccd6f6;
-$colorSlate:#a8b2d1;
-$colorDarkSlate:#a8b2d1;
-$colorLightGreen:#64ffda;
+
 
 html {
     font-size: 125%;
@@ -21,4 +18,23 @@ html {
 .mainWrapper {
     width: 80vw;
     margin: 0 auto;
+}
+
+h1 {
+    font-family: 'Monoton', cursive;
+    color:$colorLightSlate;
+    font-size: 2rem;
+}
+
+h2 {
+    font-family: 'Inter', sans-serif;
+    color:$colorSlate;
+    font-size: 1.8rem;
+}
+h3 {
+    font-family: 'Lato', sans-serif;
+}
+
+p {
+    font-family: 'Crimson Pro', serif;
 }

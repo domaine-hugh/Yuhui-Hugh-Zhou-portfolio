@@ -1,24 +1,52 @@
+@import "variables";
+
 header {
     height: 100vh;
 
     nav {
+        width: 60vw;
+        margin: 0 auto;
         height: 20px;
         display:flex;
-        justify-content: flex-end;
+        justify-content: center;
 
         ul {
             display:flex;
             flex-direction: row;
             justify-content: space-between;
+            font-family: 'Crimson Pro', serif;
+            height: 5vh;
+            padding-left: 0;
+            width: 100%;
         }
     }
 }
 
 header li{
     list-style: none;
-    margin-right: 10px;
 
     a{
         text-decoration: none;
+        margin: 0 20px;
+        color: $colorLightGreen;
+        font-size: 1.2rem;
+        padding: 3px 5px;
+       
     }
+}
+
+.typingcontainer {
+    width: 60vw;
+    margin: 25vh auto 0;
+
+    h2:nth-of-type(2) {
+       margin-left: 200px;
+    }
+
+    P {
+        color: $colorLightGreen;
+        font-size: 1.2rem;
+    }
+
+    
 }

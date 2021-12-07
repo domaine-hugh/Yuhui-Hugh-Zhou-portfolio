@@ -1,22 +1,41 @@
+@import "variables";
+
 .navContainer {
     position:fixed; 
-    top: calc(50vh - 100px);
 
     ul {
         display:flex;
         flex-direction: column; 
         justify-content: space-evenly;
         height: 200px;
-        width: 50px;
+        width: 40px;
         list-style: none;
         padding-left: 0;
+        margin: 0;
 
         li {
             position:relative;
             z-index: 1;
             height: 40px;
             width: 40px;
+            color:$colorLightSlate;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
+    }
+}
+
+.navContainer {
+    a,button {
+        color:$colorLightSlate;
+        border: none;
+        background-color: inherit;
+        cursor: pointer;
+    }
+
+    a {
+        font-size: 1.2rem;
     }
 }
 
@@ -24,41 +43,102 @@
     display:none;
     position:absolute;
     margin: 0;
-    top:0;
+    top:6px;
+    border : 1px solid $colorLightGreen;
+    z-index: 1;
+    background-color: $colorLightNavy;
+    text-align: center;
+    border-radius: 5px;
 }
 
 
 .followmeBarAside {
+    top: 0;
     left:0;
     margin: 0 0 0 20px;
+    
+    & > div {
+        height: 100px;
+        border-left: 1px solid $colorSlate;
+    }
 
     p{
-        left:50px;
+        left:40px;
+        width: 210px;
     }
+}
+
+.leftArrow {
+    position: absolute;
+    top: 3px;
+    left: 7px;
+    animation: leftArrow 700ms linear infinite;
+}
+
+@keyframes leftArrow {
+    0% {left: 7px;}
+    50% {left: 2px;}
+    100%{left: 7px;}
+}
+
+.navBarAside {
+    bottom: 0;
+    right:0;
+    margin: 0 20px 0 0;
+
+    & > div {
+        height: 100px;
+        border-right: 1px solid $colorSlate;
+    }
+
+    p{
+        right: 50px;
+        width: 140px;
+    }
+}
+
+.rightArrow {
+    position: absolute;
+    top: 3px;
+    right: 7px;
+    animation: rightArrow 700ms linear infinite;
+}
+
+@keyframes rightArrow {
+    0% {right: 7px;}
+    50% {right: 2px;}
+    100%{right: 7px;}
 }
 
 .linkedinLinkContainer:hover .linkedinLinkPrompt,
 .githubLinkContainer:hover  .githubLinkPrompt,
 .twitterLinkContainer:hover .twitterLinkPrompt,
 .emailButtonContainer:hover .emailButtonPrompt,
-.resumeButtonContainer:hover .resumeButtonPrompt{
-    display:block;
-}
-
-.navBarAside {
-    right:0;
-    margin: 0 20px 0 0;
-
-    p{
-        right: 50px;
-    }
-}
-
+.resumeButtonContainer:hover .resumeButtonPrompt,
 .headerLinkContainer:hover .headerLinkPrompt,
 .aboutLinkContainer:hover .aboutLinkPrompt,
 .projectLinkContainer:hover .projectLinkPrompt,
 .skillLinkContainer:hover .skillLinkPrompt,
-.contactLinkContainer:hover .contactLinkPrompt {
+.contactLinkContainer:hover .contactLinkPrompt{
     display:block;
+    animation: asideDropdownShowing 700ms linear;
+}
+
+@keyframes asideDropdownShowing {
+    0% {
+      transform: scale(1, 1);
+    }
+    25% {
+      transform: scale(0.9, 1.1);
+    }
+    50% {
+      transform: scale(1.1, 0.9);
+    }
+    75% {
+      transform: scale(0.95, 1.05);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
 }
 
