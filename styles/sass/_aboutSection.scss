@@ -1,4 +1,7 @@
+@import "variables";
+
 .aboutSection {
+    position: relative;
     height: 100vh;
     .profile {
         display:block;
@@ -10,6 +13,8 @@
 }
 
 .profile {
+    width: 70vw;
+    margin: 0 auto;
     & > div {
         display:flex;
 
@@ -30,3 +35,110 @@
         }
     }
 }
+
+.aboutSectionRange {
+    position:absolute;
+    bottom: 0;
+    width:100%;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5vh;
+
+    div {
+        display:flex;
+        justify-content: space-between;
+        width: 25%;
+
+        p {
+            font-family: $fontSubTittle;
+            color: $colorLightSlate;
+        }
+
+      
+    }
+    input[type=range] {
+        height: 25px;
+        -webkit-appearance: none;
+       
+        width: 25%;
+        background-color: $colorNavy;
+      }
+      input[type=range]:focus {
+        outline: none;
+      }
+      input[type=range]::-webkit-slider-runnable-track {
+        width: 100%;
+        height: 5px;
+        box-shadow: 0px 0px 1px $colorLightGreen;
+        background: $colorSlate;
+        border-radius: 1px;
+        border: 0px solid $colorLightGreen;
+      }
+      input[type=range]::-webkit-slider-thumb {
+        box-shadow: 0px 0px 1px $colorSlate;
+        border: 1px solid $colorSlate;
+        height: 18px;
+        width: 18px;
+        border-radius: 25px;
+        background: $colorLightGreen;
+        -webkit-appearance: none;
+        margin-top: -7px;
+      }
+      input[type=range]:focus::-webkit-slider-runnable-track {
+        background: $colorSlate;
+      }
+      input[type=range]::-moz-range-track {
+        width: 100%;
+        height: 5px;
+        box-shadow: 0px 0px 1px $colorLightGreen;
+        background: $colorSlate;
+        border-radius: 1px;
+        border: 0px solid $colorLightGreen;
+      }
+      input[type=range]::-moz-range-thumb {
+        box-shadow: 0px 0px 1px $colorSlate;
+        border: 1px solid $colorSlate;
+        height: 18px;
+        width: 18px;
+        border-radius: 25px;
+        background: $colorLightGreen;
+      }
+      input[type=range]::-ms-track {
+        width: 100%;
+        height: 5px;
+        background: transparent;
+        border-color: transparent;
+        color: transparent;
+      }
+      input[type=range]::-ms-fill-lower {
+        background: $colorSlate;
+        border: 0px solid $colorLightGreen;
+        border-radius: 2px;
+        box-shadow: 0px 0px 1px $colorLightGreen;
+      }
+      input[type=range]::-ms-fill-upper {
+        background: $colorSlate;
+        border: 0px solid $colorLightGreen;
+        border-radius: 2px;
+        box-shadow: 0px 0px 1px $colorLightGreen;
+      }
+      input[type=range]::-ms-thumb {
+        margin-top: 1px;
+        box-shadow: 0px 0px 1px $colorSlate;
+        border: 1px solid $colorSlate;
+        height: 18px;
+        width: 18px;
+        border-radius: 25px;
+        background: $colorLightGreen;
+      }
+      input[type=range]:focus::-ms-fill-lower {
+        background: $colorSlate;
+      }
+      input[type=range]:focus::-ms-fill-upper {
+        background: $colorSlate;
+      }
+}
+
+//About Me section

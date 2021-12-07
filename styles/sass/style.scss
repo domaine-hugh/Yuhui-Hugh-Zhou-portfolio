@@ -21,20 +21,33 @@ html {
 }
 
 h1 {
-    font-family: 'Monoton', cursive;
+    font-family: $fontTittle;
     color:$colorLightSlate;
     font-size: 2rem;
 }
 
 h2 {
-    font-family: 'Inter', sans-serif;
+    font-family: $fontSubTittle;
     color:$colorSlate;
     font-size: 1.8rem;
 }
+
+.aboutSection h2,
+.projectSection h2,
+.skillSection h2,
+.contactSection h2 {
+    color:$colorLightSlate;
+    margin: 0;
+    height: 15vh;
+    padding-top: 5vh;
+}
+
 h3 {
-    font-family: 'Lato', sans-serif;
+    font-family: $fontSubSubTittle;
+    color:$colorDarkSlate;
+    font-size: 1.5rem;
 }
 
 p {
-    font-family: 'Crimson Pro', serif;
+    font-family: $fontText;
 }
