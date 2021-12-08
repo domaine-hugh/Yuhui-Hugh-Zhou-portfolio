@@ -519,17 +519,20 @@ header li a {
 }
 
 .aboutSection .profile {
+  width: 70vw;
+  margin: 0 auto;
   display: block;
 }
 
 .aboutSection .education,
 .aboutSection .plumAssessment {
+  width: 70vw;
+  margin: 0 auto;
   display: none;
 }
 
-.profile {
-  width: 70vw;
-  margin: 0 auto;
+.aboutSection h3 {
+  margin-bottom: 60px;
 }
 
 .profile > div {
@@ -540,17 +543,75 @@ header li a {
 
 .profile > div img {
   height: 350px;
+  margin-right: 2vw;
+}
+
+.profile > div .profileText {
+  background-color: #8892b0;
+  padding: 5px 20px;
+  color: #020c1b;
+  border-bottom-right-radius: 50px;
+}
+
+.profile > div span {
+  color: #64ffda;
 }
 
 .education > div {
+  background-color: #8892b0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
 }
 
 .education > div img {
-  height: 70px;
-  width: 150px;
+  width: 100px;
+  margin: 0 50px 0 30px;
+}
+
+.education > div p {
+  padding: 5px;
+  margin: 0;
+  color: #020c1b;
+}
+
+.education > div span {
+  font-weight: bolder;
+}
+
+.education > div:last-child {
+  border-bottom-right-radius: 50px;
+}
+
+.plumAssessment > div {
+  background-color: #8892b0;
+  padding: 5px 10px;
+  padding-left: 150px;
+}
+
+.plumAssessment > div h4 {
+  margin: 5px 0;
+}
+
+.plumAssessment > div ul {
+  margin: 10px 0;
+}
+
+.plumAssessment > div ul li {
+  list-style-type: square;
+}
+
+.plumAssessment > div:first-of-type {
+  padding-top: 30px;
+}
+
+.plumAssessment > div:last-child {
+  padding-bottom: 30px;
+  border-bottom-right-radius: 50px;
 }
 
 .aboutSectionRange {
@@ -586,6 +647,15 @@ header li a {
 .aboutSectionRange div p {
   font-family: "Inter", sans-serif;
   color: #ccd6f6;
+  width: 100px;
+}
+
+.aboutSectionRange div P:nth-child(2) {
+  text-align: center;
+}
+
+.aboutSectionRange div p:last-child {
+  text-align: end;
 }
 
 .aboutSectionRange input[type=range] {
@@ -683,7 +753,27 @@ header li a {
   background: #a8b2d1;
 }
 
-.projectSection video {
+.projectSection .videoContainer {
+  position: relative;
+}
+
+.projectSection .videoContainer .videoCover {
+  position: absolute;
+  background-color: rgba(168, 178, 209, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 700px;
+  height: 393.75px;
+}
+
+.projectSection .videoContainer video {
   width: 700px;
   margin-right: 50px;
 }
@@ -694,7 +784,7 @@ header li a {
 }
 
 .projectSection > div {
-  height: 70vh;
+  height: 75vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -707,6 +797,14 @@ header li a {
 .projectSection > div div {
   -ms-flex-item-align: end;
       align-self: flex-end;
+}
+
+.projectSection .videoCover h2 {
+  color: #64ffda;
+}
+
+.videoContainer:hover .videoCover {
+  display: none;
 }
 
 .skillSection ul {
@@ -807,6 +905,11 @@ h3 {
   font-family: "Lato", sans-serif;
   color: #8892b0;
   font-size: 1.5rem;
+}
+
+h4 {
+  font-family: "Lato", sans-serif;
+  color: #020c1b;
 }
 
 p {

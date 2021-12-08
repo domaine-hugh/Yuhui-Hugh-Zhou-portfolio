@@ -4,36 +4,99 @@
     position: relative;
     height: 100vh;
     .profile {
+        width: 70vw;
+        margin: 0 auto;
         display:block;
     }
     .education,
     .plumAssessment {
+        width: 70vw;
+        margin: 0 auto;
         display:none;
+    }
+
+    h3 {
+      margin-bottom: 60px;
     }
 }
 
 .profile {
-    width: 70vw;
-    margin: 0 auto;
     & > div {
         display:flex;
-
+        
         img {
             height: 350px;
+            margin-right: 2vw;
         }
 
+        .profileText {
+          background-color:$colorDarkSlate;
+          padding: 5px 20px;
+          color:$colorDarkNavy;
+          border-bottom-right-radius: 50px;
+        }
+
+        span {
+          color :$colorLightGreen;
+        }
     }
 }
 
 .education {
     & > div {
+        background-color:$colorDarkSlate;
         display:flex;
+       align-items: center;
+       padding: 20px;
 
         img {
-            height: 70px;
-            width: 150px;
+            width: 100px;
+            margin: 0 50px 0 30px;
+        }
+
+        p {
+          padding: 5px;
+          margin: 0;
+          color:$colorDarkNavy;
+        }
+
+        span {
+          font-weight: bolder;
         }
     }
+
+    & > div:last-child {
+      border-bottom-right-radius: 50px;
+    }
+}
+
+.plumAssessment {
+  & > div {
+    background-color:$colorDarkSlate;
+    padding : 5px 10px;
+    padding-left: 150px;
+
+    h4 {
+      margin: 5px 0 ;
+    }
+
+    ul {
+      margin: 10px 0;
+
+      li {
+        list-style-type: square;
+      }
+    }
+  }
+
+  & > div:first-of-type {
+    padding-top:30px;
+  }
+
+  & > div:last-child {
+    padding-bottom: 30px;
+    border-bottom-right-radius: 50px;
+  }
 }
 
 .aboutSectionRange {
@@ -54,6 +117,15 @@
         p {
             font-family: $fontSubTittle;
             color: $colorLightSlate;
+            width: 100px;
+        }
+
+        P:nth-child(2) {
+          text-align: center;
+        }
+
+        p:last-child {
+          text-align: end;
         }
 
       

@@ -14,7 +14,9 @@
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro&family=Inter:wght@700&family=Lato:wght@700&family=Monoton&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crimson+Pro&family=Inter:wght@700&family=Lato:wght@700&family=Monoton&display=swap"
+        rel="stylesheet">
     <title>Hi, Yuhui is here!</title>
 </head>
 
@@ -34,7 +36,7 @@
                 <h1>Hugh Zhou</h1>
                 <h2>A front-end web developer</h2>
                 <h2><i class="fas fa-plus" aria-label="a plus sign"></i></h2>
-                <h2 >A <span id="printingArea"></span></h2>
+                <h2>A <span id="printingArea"></span></h2>
             </div>
         </div>
     </header>
@@ -108,18 +110,18 @@
                         <p>I take agency and ownership over my work, and it is the driver and motivator for me to
                             continuously improve and evolve the web applications I create. </p>
                         <p>A natural team player: reliable, receptive, flexible and supportive.</p>
-                        <p>Please feel free to contact me!</p>
+                        <p>Please feel free to contact me if you are interested in building <span>accessible</span> and
+                            <span>responsive</span> applications!</p>
                     </div>
                 </div>
             </div>
             <div class="education" id="education">
-                <h3>EDUCATION BACKGROUND</h3>
+                <h3>Educational Background</h3>
                 <div>
                     <img src="./images/junoLogo.png" alt="Juno College logo">
                     <div>
                         <p>Juno College of Technology</p>
-                        <p>Professional training (May 2021-Dec 2021)</p>
-                        <p>Web Development</p>
+                        <p>Professional training (May 2021-Dec 2021) <span>Web Development</span></p>
                         <p>Learned and practiced the skills of front-end development and accumulated experience by
                             building projects.</p>
                     </div>
@@ -128,8 +130,8 @@
                     <img src="./images/ryersonLogo.png" alt="Ryerson University logo">
                     <div>
                         <p>Ryerson University</p>
-                        <p>Master Degree (Sep 2018-Jan 2020)</p>
-                        <p>Engineering Innovation and Entrepreneurship</p>
+                        <p>Master Degree (Sep 2018-Jan 2020) <span>Engineering Innovation and Entrepreneurship</span>
+                        </p>
                         <p>Incubated start-ups from engineering innovations by applying business skills and strategies.
                         </p>
                     </div>
@@ -138,18 +140,17 @@
                     <img src="./images/southamptonLogo.png" alt="University of Southampton logo">
                     <div>
                         <p>University of Southampton</p>
-                        <p>Master Degree (Sep 2013 - Nov 2014)</p>
-                        <p>Energy and Sustainability with Electrical Power Engineering</p>
+                        <p>Master Degree (Sep 2013-Nov 2014) <span>Energy and Sustainability with Electrical Power
+                                Engineering</span></p>
                         <p>Researched renewable energy and electric power system and built projects by MATLAB,
                             PowerWorld, ERACS and COMSOL.</p>
                     </div>
                 </div>
             </div>
             <div class="plumAssessment" id="plumAssessment">
-                <h3>PLUM ASSESSMENT</h3>
-                <h3>Top 3 Talents:</h3>
+                <h3>Plum Assessment Top 3 Talents</h3>
                 <div>
-                    <h3>Embracing Diversity</h3>
+                    <h4>Embracing Diversity</h4>
                     <ul>
                         <li>Very good at knowing what to say to make people feel included, welcome, and accepted.</li>
                         <li>Very capable of adapting to a wide range of people and being open to different attitudes,
@@ -159,7 +160,7 @@
                     </ul>
                 </div>
                 <div>
-                    <h3>Conflict Resolution</h3>
+                    <h4>Conflict Resolution</h4>
                     <ul>
                         <li>Excellent at examining issues from multiple viewpoints and analyzing information to find the
                             best solution.</li>
@@ -172,7 +173,7 @@
                     </ul>
                 </div>
                 <div>
-                    <h3>Communication</h3>
+                    <h4>Communication</h4>
                     <ul>
                         <li>Very capable of knowing the "right thing" to say to people and understanding how people will
                             react.</li>
@@ -187,15 +188,20 @@
                     <p>Education</p>
                     <p>Plum</p>
                 </div>
-                <input id="aboutSectionRange" type="range" min="0" max="2" value="0">
+                <input id="aboutSectionRange" autocomplete="off" type="range" min="0" max="2" value="0">
             </div>
         </section>
         <section class="projectSection mainWrapper" id="projectSection">
             <h2>Some Things I've Made</h2>
             <div>
-                <video class="projectVideos" preload="auto" muted loop>
-                    <source src="./videos/Pokemon.mp4" type="video/mp4">
-                </video>
+                <div class="videoContainer">
+                    <div class="videoCover">
+                        <h2>Hover on me!</h2>
+                    </div>
+                    <video class="projectVideos" preload="auto" muted loop>
+                        <source src="./videos/Pokemon.mp4" type="video/mp4">
+                    </video>
+                </div>
                 <div>
                     <h3>Pokemon-Guess-Em-All</h3>
                     <p>My first React application. Pokemon guess and catch Application. Multiple APIs and Firebase
@@ -223,9 +229,14 @@
                 </div>
             </div>
             <div>
-                <video class="projectVideos" preload="auto" muted loop>
-                    <source src="./videos/What-to-Watch.mp4" type="video/mp4">
-                </video>
+                <div class="videoContainer">
+                    <div class="videoCover">
+                        <h2>Hover on me!</h2>
+                    </div>
+                    <video class="projectVideos" preload="auto" muted loop>
+                        <source src="./videos/What-to-Watch.mp4" type="video/mp4">
+                    </video>
+                </div>
                 <div>
                     <h3>What-to-Watch</h3>
                     <p>This was a paired programming project created in collaboration with Dani. Movie Watch List
@@ -253,9 +264,14 @@
                 </div>
             </div>
             <div>
-                <video class="projectVideos" preload="auto" muted loop>
-                    <source src="./videos/WEATHER-NETWORK.mp4" type="video/mp4">
-                </video>
+                <div class="videoContainer">
+                    <div class="videoCover">
+                        <h2>Hover on me!</h2>
+                    </div>
+                    <video class="projectVideos" preload="auto" muted loop>
+                        <source src="./videos/WEATHER-NETWORK.mp4" type="video/mp4">
+                    </video>
+                </div>
                 <div>
                     <h3>YUHUI-WEATHER-NETWORK</h3>
                     <p>Weather checking and GIF generating Application. Multiple APIs applied. The user's city is
@@ -281,9 +297,14 @@
                 </div>
             </div>
             <div>
-                <video class="projectVideos" preload="auto" muted loop>
-                    <source src="./videos/BREAK-TIMER.mp4" type="video/mp4">
-                </video>
+                <div class="videoContainer">
+                    <div class="videoCover">
+                        <h2>Hover on me!</h2>
+                    </div>
+                    <video class="projectVideos" preload="auto" muted loop>
+                        <source src="./videos/BREAK-TIMER.mp4" type="video/mp4">
+                    </video>
+                </div>
                 <div>
                     <h3>YUHUI-S-BREAK-TIMER</h3>
                     <p>My first JavaScript application. Countdown Application. Multiple default countdown options. Theme
@@ -370,7 +391,8 @@
                     <p>Please feel free to contact me if you are interested in hiring me, or you have any suggestions,
                         feedback, comments on my applications and my web development career path, or you want to
                         recommend some good places to take the kids out for fun!</p>
-                    <p>My contact methods are listed in the left side bar: visit my LinkedIn, GitHub, Twitter, copy my email and download my resume.</p>
+                    <p>My contact methods are listed in the left side bar: visit my LinkedIn, GitHub, Twitter, copy my
+                        email and download my resume.</p>
                 </div>
                 <form>
                     <label for="nameInput">Please enter your name here:</label>

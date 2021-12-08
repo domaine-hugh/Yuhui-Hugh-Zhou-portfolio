@@ -19,31 +19,6 @@ app.hoverDisplayVideo = () => {
     }
 }
 
-// app.headerPrinter = () => {
-//     const content = ["former electical engineer", "husband and father", "front-end web developer!"];
-//     const printingContainer = document.querySelector('#printingArea');
-//     const printing = (index) => {
-//         if (index < content.length) {
-//             const text = content[index];
-//             printingContainer.innerHTML = text;
-//             for (let i = 0 ; i < text.length ; i ++) {
-//                 console.log(i);
-
-//                 printingContainer.style.animationTimingFunction = `step(" + ${printingContainer.textContent.length} + "), step(1)`;
-//                 printingContainer.style.animationName = `typing${text.length}`;
-//                 printingContainer.style.animationDuration = `${text.length / 2}s, 0.5s`;
-//                 console.log(printingContainer.style.animationTimingFunction);
-//             }
-//             setTimeout(() => {
-//                 printing(index + 1)
-//             }, text.length * 500)
-//         } else {
-//             printing(0);
-//         }
-//     }
-//     printing(0);
-// }
-
 //Printing effect(header)
 app.text = ['former electrical engineer', 'husband and father', 'basketball player'];
 app.typingContainer = document.getElementById("printingArea");

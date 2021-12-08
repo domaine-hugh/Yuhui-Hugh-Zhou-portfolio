@@ -1,9 +1,23 @@
 .projectSection {
-    video {
-        width: 700px;
-        margin-right: 50px;
-    }
+    .videoContainer {
+        position: relative;
 
+        .videoCover {
+            position:absolute;
+            background-color: rgba(168,178,209, 0.5);
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            width: 700px;
+            height: 393.75px;
+        }
+
+        video {
+            width: 700px;
+            
+            margin-right: 50px;
+        }
+    }
     img {
         width:40px;
         margin: 0 10px;
@@ -11,7 +25,7 @@
     }
 
     & > div {
-        height:70vh;
+        height:75vh;
         display:flex;
         flex-direction: row;
 
@@ -19,4 +33,11 @@
             align-self: flex-end;
         }
     }
+}
+.projectSection .videoCover h2 {
+    color:$colorLightGreen;
+}
+
+.videoContainer:hover .videoCover {
+    display:none;
 }
