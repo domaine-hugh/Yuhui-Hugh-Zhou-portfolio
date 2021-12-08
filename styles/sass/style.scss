@@ -6,13 +6,19 @@
 @import "skillSection";
 @import "contactMe";
 @import "variables";
+@import "footer";
 
 
 
 html {
     font-size: 125%;
+    
+}
+
+body {
     max-width: 1920px;
     background-color: $colorNavy;
+    margin: 0 auto;
 }
 
 .mainWrapper {

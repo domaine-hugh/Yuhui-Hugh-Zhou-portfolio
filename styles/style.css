@@ -1137,22 +1137,37 @@ header li a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  height: calc(100vh - 100px);
 }
 
 .contactSection > div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #a8b2d1;
 }
 
 .contactSection .contactText {
-  width: 50%;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.contactSection .contactText > p {
+  margin: 30px 0;
+  line-height: 2;
+}
+
+.contactSection .contactText span {
+  color: #64ffda;
 }
 
 .contactSection form {
+  width: 60%;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1162,10 +1177,172 @@ header li a {
           flex-direction: column;
 }
 
+.contactSection form .inputContainer {
+  width: 100%;
+}
+
+.contactSection form button {
+  font-size: 1.2rem;
+  padding: 10px 0;
+  font-family: "Inter", sans-serif;
+  color: #64ffda;
+  background-color: #020c1b;
+  border: none;
+}
+
+.contactMethods {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contactMethods li {
+  display: inline;
+}
+
+.contactMethods li button {
+  background-color: #0a192f;
+  border: none;
+}
+
+.contactMethods li i {
+  color: #ccd6f6;
+  margin: 0 20px;
+}
+
+.inputContainer {
+  position: relative;
+  margin: 10px 0;
+}
+
+.inputContainer input, .inputContainer textarea {
+  width: 100%;
+  margin: 0;
+  background-color: #a8b2d1;
+  border: none;
+  font-family: "Crimson Pro", serif;
+  text-align: center;
+}
+
+.inputContainer input:focus,
+.inputContainer textarea:focus {
+  outline: none;
+}
+
+.inputContainer span {
+  position: absolute;
+  background-color: #64ffda;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+
+.inputContainer .bottom,
+.inputContainer .top {
+  height: 2px;
+  left: 0;
+  right: 0;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+}
+
+.inputContainer .left,
+.inputContainer .right {
+  width: 2px;
+  top: 0;
+  bottom: 0;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+}
+
+.inputContainer .bottom {
+  bottom: 0;
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+}
+
+.inputContainer input:focus ~ .bottom,
+.inputContainer textarea:focus ~ .bottom {
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.inputContainer .right {
+  right: 0;
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+}
+
+.inputContainer input:focus ~ .right,
+.inputContainer textarea:focus ~ .right {
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+}
+
+.inputContainer .top {
+  top: 0;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+}
+
+.inputContainer input:focus ~ .top,
+.inputContainer textarea:focus ~ .top {
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.inputContainer .left {
+  left: 0;
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+}
+
+.inputContainer input:focus ~ .left,
+.inputContainer textarea:focus ~ .left {
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+}
+
+footer {
+  width: 80vw;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100px;
+}
+
+footer p {
+  color: #a8b2d1;
+}
+
+footer span {
+  color: #64ffda;
+}
+
 html {
   font-size: 125%;
+}
+
+body {
   max-width: 1920px;
   background-color: #0a192f;
+  margin: 0 auto;
 }
 
 .mainWrapper {
