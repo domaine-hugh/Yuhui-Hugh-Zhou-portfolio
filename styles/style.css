@@ -405,6 +405,7 @@ header li a {
 }
 
 .navBarAside {
+  opacity: 0;
   bottom: 0;
   right: 0;
   margin: 0 20px 0 0;
@@ -418,6 +419,30 @@ header li a {
 .navBarAside p {
   right: 50px;
   width: 140px;
+}
+
+.navBarAsideShow {
+  opacity: 1;
+  -webkit-animation: navBarAsideShow 1s linear;
+          animation: navBarAsideShow 1s linear;
+}
+
+@-webkit-keyframes navBarAsideShow {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes navBarAsideShow {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .rightArrow {

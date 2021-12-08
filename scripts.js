@@ -51,6 +51,15 @@ app.typing = () =>  {
     }, app.isAdding ? 100 : 30)
 }
 
+//Showing nav aside
+app.showingNavAside = () => {
+    if (document.documentElement.scrollTop >= 50) {
+        document.querySelector('#navBarAside').classList.add('navBarAsideShow');
+    } else {
+        document.querySelector('#navBarAside').classList.remove('navBarAsideShow');
+    }
+}
+
 
 
 app.init = function () {
@@ -79,7 +88,15 @@ app.init = function () {
 
     //Printing effect(header)
     app.typing();
+    //Scrolling trigger functions
+    window.addEventListener('scroll', function(){
+        console.log(document.documentElement.scrollTop);
+        app.showingNavAside();
+    })
+    //When refresh page
+    app.showingNavAside();
 
+    
 }
 
 app.init();
