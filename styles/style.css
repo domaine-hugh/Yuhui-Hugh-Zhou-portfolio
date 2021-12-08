@@ -780,6 +780,8 @@ header li a {
 
 .projectSection .videoContainer {
   position: relative;
+  top: 10vh;
+  width: 700px;
 }
 
 .projectSection .videoContainer .videoCover {
@@ -800,7 +802,6 @@ header li a {
 
 .projectSection .videoContainer video {
   width: 700px;
-  margin-right: 50px;
 }
 
 .projectSection img {
@@ -809,19 +810,61 @@ header li a {
 }
 
 .projectSection > div {
-  height: 75vh;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
 }
 
-.projectSection > div div {
+.projectSection > div > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.projectDetails {
+  position: relative;
+  bottom: 10vh;
   -ms-flex-item-align: end;
       align-self: flex-end;
+  width: calc(80vw - 800px);
+}
+
+.projectDetails p, .projectDetails div {
+  background-color: #8892b0;
+}
+
+.projectDetails P {
+  margin: 0;
+  padding: 20px;
+}
+
+.projectDetails div {
+  padding: 0 20px 20px 20px;
+}
+
+.projectDetails div:last-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.projectDetails div:last-child a {
+  text-decoration: none;
+  color: #64ffda;
+  margin: 0 30px;
 }
 
 .projectSection .videoCover h2 {
@@ -830,6 +873,63 @@ header li a {
 
 .videoContainer:hover .videoCover {
   display: none;
+}
+
+.nextProjectLink {
+  position: absolute;
+  bottom: 5vh;
+  font-family: "Lato", sans-serif;
+  text-decoration: none;
+  color: #64ffda;
+}
+
+.nextProjectLink i {
+  position: absolute;
+  margin-left: 15px;
+  -webkit-animation: downArrow 700ms linear infinite;
+          animation: downArrow 700ms linear infinite;
+}
+
+@-webkit-keyframes downArrow {
+  0% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 10px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
+@keyframes downArrow {
+  0% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 10px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
+.projectSection > div:nth-child(even) .videoContainer {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.projectSection > div:nth-child(even) .projectDetails {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.projectSection > div:nth-child(even) .nextProjectLink {
+  right: 0;
+}
+
+.skillSection {
+  height: 100vh;
 }
 
 .skillSection ul {
@@ -848,16 +948,185 @@ header li a {
 .skillSection ul li {
   width: 15%;
   list-style: none;
+  margin-bottom: 5vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 20px;
+  background-color: #8892b0;
 }
 
 .skillSection img {
-  width: 100%;
-  margin: 0 auto;
-  padding: 30%;
+  width: 50%;
+  margin: 20px 0 10px;
 }
 
 .skillSection p {
   text-align: center;
+  margin: 10px 0 20px;
+}
+
+.pulseEffect {
+  z-index: 1;
+  position: relative;
+}
+
+.pulseEffect::before {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border: 4px solid #8892b0;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  border-radius: 20px;
+}
+
+.pulseEffect:hover::before {
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: scale(1.75);
+          transform: scale(1.75);
+  opacity: 0;
+  -webkit-animation: pulseEffect 1s;
+          animation: pulseEffect 1s;
+}
+
+@-webkit-keyframes pulseEffect {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1.25);
+            transform: scale(1.25);
+    opacity: 0;
+  }
+}
+
+@keyframes pulseEffect {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1.25);
+            transform: scale(1.25);
+    opacity: 0;
+  }
+}
+
+.jellyEffect:hover {
+  -webkit-animation: jellyEffect 0.5s;
+          animation: jellyEffect 0.5s;
+}
+
+@-webkit-keyframes jellyEffect {
+  0% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  25% {
+    -webkit-transform: scale(0.9, 1.1);
+            transform: scale(0.9, 1.1);
+  }
+  50% {
+    -webkit-transform: scale(1.1, 0.9);
+            transform: scale(1.1, 0.9);
+  }
+  75% {
+    -webkit-transform: scale(0.95, 1.05);
+            transform: scale(0.95, 1.05);
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+}
+
+@keyframes jellyEffect {
+  0% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  25% {
+    -webkit-transform: scale(0.9, 1.1);
+            transform: scale(0.9, 1.1);
+  }
+  50% {
+    -webkit-transform: scale(1.1, 0.9);
+            transform: scale(1.1, 0.9);
+  }
+  75% {
+    -webkit-transform: scale(0.95, 1.05);
+            transform: scale(0.95, 1.05);
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+}
+
+.shineEffect {
+  z-index: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.shineEffect::after {
+  content: '';
+  z-index: -1;
+  background-color: rgba(255, 255, 255, 0.2);
+  position: absolute;
+  top: -50%;
+  bottom: -50%;
+  width: 1.25em;
+  -webkit-transform: translate3d(-800%, 0, 0) rotate(35deg);
+          transform: translate3d(-800%, 0, 0) rotate(35deg);
+}
+
+.shineEffect:hover::after {
+  -webkit-animation: shineEffect 1s;
+          animation: shineEffect 1s;
+}
+
+@-webkit-keyframes shineEffect {
+  0% {
+    -webkit-transform: translate3d(-800%, 0, 0) rotate(35deg);
+            transform: translate3d(-800%, 0, 0) rotate(35deg);
+  }
+  100% {
+    -webkit-transform: translate3d(700%, 0, 0) rotate(35deg);
+            transform: translate3d(700%, 0, 0) rotate(35deg);
+  }
+}
+
+@keyframes shineEffect {
+  0% {
+    -webkit-transform: translate3d(-800%, 0, 0) rotate(35deg);
+            transform: translate3d(-800%, 0, 0) rotate(35deg);
+  }
+  100% {
+    -webkit-transform: translate3d(700%, 0, 0) rotate(35deg);
+            transform: translate3d(700%, 0, 0) rotate(35deg);
+  }
 }
 
 .contactSection {

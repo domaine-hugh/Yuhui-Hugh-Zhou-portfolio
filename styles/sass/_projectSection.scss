@@ -1,6 +1,8 @@
 .projectSection {
     .videoContainer {
         position: relative;
+        top: 10vh;
+        width: 700px;
 
         .videoCover {
             position:absolute;
@@ -14,8 +16,6 @@
 
         video {
             width: 700px;
-            
-            margin-right: 50px;
         }
     }
     img {
@@ -25,19 +25,89 @@
     }
 
     & > div {
-        height:75vh;
+        height:100vh;
         display:flex;
-        flex-direction: row;
+        flex-direction: column;
+        position: relative;
 
-        div {
-            align-self: flex-end;
+        & >div {
+            display:flex;
+            flex-direction: column;
         }
     }
 }
+
+.projectDetails {
+    position: relative;
+    bottom:10vh;
+    align-self: flex-end;
+    width: calc(80vw - 800px); // 100px between it and video
+
+    p, div {
+        background-color: $colorDarkSlate;
+    }
+
+    P {
+        margin: 0;
+        padding: 20px ;
+    }
+
+    div {
+        padding: 0 20px 20px 20px;
+    }
+
+    div:last-child {
+        display: flex;
+        justify-content: center;
+
+        a{
+            text-decoration: none;
+            color:$colorLightGreen;
+            margin: 0 30px;
+        }
+    }
+}
+
 .projectSection .videoCover h2 {
     color:$colorLightGreen;
 }
 
 .videoContainer:hover .videoCover {
     display:none;
+}
+
+.nextProjectLink {
+    position:absolute;
+    bottom: 5vh;
+    font-family: $fontSubSubTittle;
+    text-decoration: none;
+    color:$colorLightGreen;
+
+    i {
+        position:absolute;
+        margin-left: 15px;
+        animation: downArrow 700ms linear infinite;
+    }
+
+    @keyframes downArrow {
+        0% {bottom: 0;}
+        50% {bottom: 10px;}
+        100%{bottom: 0;}
+    }
+}
+
+.projectSection {
+    & > div:nth-child(even)  {
+        .videoContainer{
+            align-self: flex-end;
+        }
+        
+        .projectDetails{
+            align-self: flex-start;
+        }
+    
+        .nextProjectLink {
+            right:0;
+        }
+    }
 }

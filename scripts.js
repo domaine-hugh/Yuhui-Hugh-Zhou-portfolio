@@ -53,20 +53,45 @@ app.typing = () =>  {
 
 //Showing nav aside
 app.showingNavAside = () => {
-    if (document.documentElement.scrollTop >= 50) {
+    if (document.documentElement.scrollTop >= window.innerHeight * 0.05) {
         document.querySelector('#navBarAside').classList.add('navBarAsideShow');
     } else {
         document.querySelector('#navBarAside').classList.remove('navBarAsideShow');
     }
 }
 
+//Random hover effect for skill section
+app.randomHoverEffect = () => {
+    const skillBlocks = document.querySelectorAll(".skillSection li");
+    for( let i = 0 ; i < skillBlocks.length; i ++) {
+        ['mouseenter', 'focusin', 'touchstart'].forEach((e) => {
+            skillBlocks[i].addEventListener(e, function() {
+                const randomNumber = Math.floor(Math.random() * 3);
+                if (randomNumber === 0) {
+                    console.log('hi');
+                    skillBlocks[i].classList.add('pulseEffect');
+                } else if (randomNumber === 1) {
+                    skillBlocks[i].classList.add('jellyEffect');
+                } else if(randomNumber === 2){
+                    skillBlocks[i].classList.add('shineEffect');
+                }
+            })
+        })
+    }
 
+    for( let i = 0 ; i < skillBlocks.length; i ++) {
+        ['mouseleave', 'focusout', 'touchmove'].forEach((e) => {
+            skillBlocks[i].addEventListener(e, function() {
+                skillBlocks[i].classList.remove('pulseEffect');
+                skillBlocks[i].classList.remove('jellyEffect');
+                skillBlocks[i].classList.remove('shineEffect');
+            })
+        })
+    }
+}
 
-app.init = function () {
-    // window.addEventListener('load', function() {
-    //     console.log('All assets are loaded')
-    // })
-    //About Section switch function
+//About Section switch function
+app.aboutSwitch = () => {
     document.querySelector("#aboutSectionRange").addEventListener('change', function (e) {
         if (e.target.value === "1") {
             document.querySelector("#profile").style.display = 'none';
@@ -82,10 +107,22 @@ app.init = function () {
             document.querySelector("#plumAssessment").style.display = 'none';
         }
     })
+}
 
-    //Calling display project videos
+
+app.init = function () {
+    // window.addEventListener('load', function() {
+    //     console.log('All assets are loaded')
+    // })
+
+    //About Section switch function
+    app.aboutSwitch();
+
+    //Random hover effect for skill section
+    app.randomHoverEffect();
+
+    //Display project videos
     app.hoverDisplayVideo();
-
     //Printing effect(header)
     app.typing();
     //Scrolling trigger functions
@@ -95,6 +132,8 @@ app.init = function () {
     })
     //When refresh page
     app.showingNavAside();
+
+
 
     
 }
