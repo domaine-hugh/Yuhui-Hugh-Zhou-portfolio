@@ -121,7 +121,7 @@ app.showingNavAside = () => {
 }
 //Showing follow me aside 
 app.showingFollowMeAside = () => {
-    if (document.documentElement.scrollTop >= window.innerHeight * 6.45) {
+    if (document.documentElement.scrollTop >= window.innerHeight * 5.45) {
         document.querySelector('#followmeBarAside').classList.add('asideHide');
     } else {
         document.querySelector('#followmeBarAside').classList.remove('asideHide');
@@ -147,8 +147,6 @@ app.navIndicator = () => {
         document.querySelector("#aboutIndicator").classList.add('fas');
         document.querySelector("#projectIndicator").classList.remove('fas');
         document.querySelector("#projectIndicator").classList.add('far');
-        document.querySelector("#skillIndicator").classList.remove('fas');
-        document.querySelector("#skillIndicator").classList.add('far');
         document.querySelector("#contactIndicator").classList.remove('fas');
         document.querySelector("#contactIndicator").classList.add('far');
     } else if (document.documentElement.scrollTop >= window.innerHeight * 2 && document.documentElement.scrollTop < window.innerHeight * 6) {//Project section
@@ -158,30 +156,15 @@ app.navIndicator = () => {
         document.querySelector("#aboutIndicator").classList.add('far');
         document.querySelector("#projectIndicator").classList.remove('far');
         document.querySelector("#projectIndicator").classList.add('fas');
-        document.querySelector("#skillIndicator").classList.remove('fas');
-        document.querySelector("#skillIndicator").classList.add('far');
         document.querySelector("#contactIndicator").classList.remove('fas');
         document.querySelector("#contactIndicator").classList.add('far');
-    } else if (document.documentElement.scrollTop >= window.innerHeight * 6 && document.documentElement.scrollTop < window.innerHeight * 7) { //Skill section
+    } else if (document.documentElement.scrollTop >= window.innerHeight * 6){ //Contact section
         document.querySelector("#homeIndicator").classList.remove('fas');
         document.querySelector("#homeIndicator").classList.add('far');
         document.querySelector("#aboutIndicator").classList.remove('fas');
         document.querySelector("#aboutIndicator").classList.add('far');
         document.querySelector("#projectIndicator").classList.remove('fas');
         document.querySelector("#projectIndicator").classList.add('far');
-        document.querySelector("#skillIndicator").classList.remove('far');
-        document.querySelector("#skillIndicator").classList.add('fas');
-        document.querySelector("#contactIndicator").classList.remove('fas');
-        document.querySelector("#contactIndicator").classList.add('far');
-    } else { //Contact section
-        document.querySelector("#homeIndicator").classList.remove('fas');
-        document.querySelector("#homeIndicator").classList.add('far');
-        document.querySelector("#aboutIndicator").classList.remove('fas');
-        document.querySelector("#aboutIndicator").classList.add('far');
-        document.querySelector("#projectIndicator").classList.remove('fas');
-        document.querySelector("#projectIndicator").classList.add('far');
-        document.querySelector("#skillIndicator").classList.remove('fas');
-        document.querySelector("#skillIndicator").classList.add('far');
         document.querySelector("#contactIndicator").classList.remove('far');
         document.querySelector("#contactIndicator").classList.add('fas');
     }
@@ -246,15 +229,15 @@ app.aboutSwitch = () => {
         if (e.target.value === "1") {
             document.querySelector("#profile").style.display = 'none';
             document.querySelector("#education").style.display = 'block';
-            document.querySelector("#plumAssessment").style.display = 'none';
+            document.querySelector("#skillSection").style.display = 'none';
         } else if (e.target.value === "2") {
             document.querySelector("#profile").style.display = 'none';
             document.querySelector("#education").style.display = 'none';
-            document.querySelector("#plumAssessment").style.display = 'block';
+            document.querySelector("#skillSection").style.display = 'block';
         } else {
             document.querySelector("#profile").style.display = 'block';
             document.querySelector("#education").style.display = 'none';
-            document.querySelector("#plumAssessment").style.display = 'none';
+            document.querySelector("#skillSection").style.display = 'none';
         }
     })
 }
