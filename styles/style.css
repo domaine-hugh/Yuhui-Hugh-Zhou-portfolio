@@ -308,6 +308,36 @@ header li a {
       align-self: center;
 }
 
+.typingcontainer .printingArea::after {
+  content: "|";
+  -webkit-animation: blinkSign 1s infinite;
+          animation: blinkSign 1s infinite;
+}
+
+@-webkit-keyframes blinkSign {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blinkSign {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .navContainer {
   position: fixed;
   z-index: 1;

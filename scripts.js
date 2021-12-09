@@ -93,17 +93,22 @@ app.typing = () =>  {
     }, app.isAdding ? 100 : 30)
 }
 
-app.headerPicture = () => {
-    if (app.currentWords === 'former electrical engineer') {
-        document.querySelector('#changingImg').src = "./images/EE.jpg";
-        document.querySelector('#changingImg').alt = "Hugh was an electrical engineer";
-    } else if (app.currentWords === 'husband and father') {
-        document.querySelector('#changingImg').src = "./images/father.jpg";
-        document.querySelector('#changingImg').alt = "Hugh and his daughter";
-    }  else if (app.currentWords === 'basketball player...?') {
-        document.querySelector('#changingImg').src = "./images/basketball.gif";
-        document.querySelector('#changingImg').alt = "Hugh is a basketball player";
-    }
+//Changing profile picture 
+app.profileImage = () => {
+    ['mouseenter', 'focusin', 'touchstart', 'mousedown'].forEach((e) => {
+        document.querySelector('#profileImage').addEventListener(e, function() {
+            document.querySelector('#profileImage').src = './images/hughCartoon.jpg';
+            document.querySelector('#profileImage').alt = 'Cartoon version Hugh';
+        })
+    })
+}
+app.profileImageBack = () => {
+    ['mouseleave', 'focusout', 'touchmove', 'mouseup'].forEach((e) => {
+        document.querySelector('#profileImage').addEventListener(e, function() {
+            document.querySelector('#profileImage').src = './images/profilePhoto.jpg';
+            document.querySelector('#profileImage').alt = 'Hugh profile photo';
+        })
+    })
 }
 
 //Showing nav aside
@@ -283,12 +288,9 @@ app.init = function () {
     app.navIndicator();
     app.projectTittles();
 
-    //Header picture change
-    app.headerPicture();
-
-
-
-    
+    //Profile picture change
+    app.profileImage();
+    app.profileImageBack();
 }
 
 app.init();
