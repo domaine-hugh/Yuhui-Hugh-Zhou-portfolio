@@ -1,17 +1,12 @@
 .projectSection {
     .videoContainer {
-        position: relative;
-        top: 10vh;
         width: 700px;
 
         .videoCover {
             position:absolute;
-            background-color: rgba(168,178,209, 0.7);
-            display:flex;
-            justify-content: center;
-            align-items: center;
             width: 700px;
             height: 393.75px;
+            margin: 0;
         }
 
         video {
@@ -25,14 +20,15 @@
     }
 
     & > div {
+        position:relative;
         height:100vh;
         display:flex;
         flex-direction: column;
-        position: relative;
 
         & >div {
+            margin-top: 15vh;
             display:flex;
-            flex-direction: column;
+            justify-content: space-between;
         }
     }
 
@@ -58,8 +54,6 @@
 }
 
 .projectDetails {
-    position: relative;
-    bottom:10vh;
     align-self: flex-end;
     width: calc(80vw - 800px); // 100px between it and video
 
@@ -87,6 +81,12 @@
             padding: 5px 15px;
         }
     }
+
+    a {
+        text-decoration: none;
+        color:$colorLightGreen;
+        padding: 0 5px;
+    }
 }
 
 .projectDetails a:hover {
@@ -103,6 +103,7 @@
 
 .nextProjectLink {
     position:absolute;
+    right: 0;
     bottom: 5vh;
     font-family: $fontSubSubTittle;
     text-decoration: none;
@@ -121,19 +122,4 @@
     }
 }
 
-.projectSection {
-    & > div:nth-child(even)  {
-        .videoContainer{
-            align-self: flex-end;
-        }
-        
-        .projectDetails{
-            align-self: flex-start;
-        }
-    
-        .nextProjectLink {
-            right:0;
-        }
-    }
-}
 

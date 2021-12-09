@@ -237,6 +237,143 @@ html {
 
 header {
   height: 100vh;
+  position: relative;
+}
+
+header .loadingPage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: #0a192f;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 2;
+}
+
+header .loadingPage .balls {
+  width: 4em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .loadingPage .balls div {
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  background-color: #64ffda;
+}
+
+header .loadingPage .balls div:nth-of-type(1) {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-animation: left-swing 0.5s ease-in alternate infinite;
+          animation: left-swing 0.5s ease-in alternate infinite;
+}
+
+header .loadingPage .balls div:nth-of-type(3) {
+  -webkit-transform: translateX(-95%);
+          transform: translateX(-95%);
+  -webkit-animation: right-swing 0.5s ease-out alternate infinite;
+          animation: right-swing 0.5s ease-out alternate infinite;
+}
+
+@-webkit-keyframes left-swing {
+  50% {
+    -webkit-transform: translateX(95%);
+            transform: translateX(95%);
+  }
+  100% {
+    -webkit-transform: translateX(95%);
+            transform: translateX(95%);
+  }
+}
+
+@keyframes left-swing {
+  50% {
+    -webkit-transform: translateX(95%);
+            transform: translateX(95%);
+  }
+  100% {
+    -webkit-transform: translateX(95%);
+            transform: translateX(95%);
+  }
+}
+
+@-webkit-keyframes right-swing {
+  50% {
+    -webkit-transform: translateX(-95%);
+            transform: translateX(-95%);
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+}
+
+@keyframes right-swing {
+  50% {
+    -webkit-transform: translateX(-95%);
+            transform: translateX(-95%);
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+}
+
+header .loadingPage h2 {
+  font-family: "Monoton", cursive;
+  color: #ccd6f6;
+  font-size: 2rem;
+}
+
+header .loadingPageHide {
+  opacity: 0;
+  -webkit-animation: loadingPageHide 0.5s linear;
+          animation: loadingPageHide 0.5s linear;
+  z-index: -1;
+}
+
+@-webkit-keyframes loadingPageHide {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes loadingPageHide {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 header nav {
@@ -1030,25 +1167,14 @@ header li a {
 }
 
 .projectSection .videoContainer {
-  position: relative;
-  top: 10vh;
   width: 700px;
 }
 
 .projectSection .videoContainer .videoCover {
   position: absolute;
-  background-color: rgba(168, 178, 209, 0.7);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   width: 700px;
   height: 393.75px;
+  margin: 0;
 }
 
 .projectSection .videoContainer video {
@@ -1061,6 +1187,7 @@ header li a {
 }
 
 .projectSection > div {
+  position: relative;
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1069,17 +1196,16 @@ header li a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  position: relative;
 }
 
 .projectSection > div > div {
+  margin-top: 15vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .projectSection h2 {
@@ -1131,8 +1257,6 @@ header li a {
 }
 
 .projectDetails {
-  position: relative;
-  bottom: 10vh;
   -ms-flex-item-align: end;
       align-self: flex-end;
   width: calc(80vw - 800px);
@@ -1167,6 +1291,12 @@ header li a {
   padding: 5px 15px;
 }
 
+.projectDetails a {
+  text-decoration: none;
+  color: #64ffda;
+  padding: 0 5px;
+}
+
 .projectDetails a:hover {
   background-color: #112240;
 }
@@ -1181,6 +1311,7 @@ header li a {
 
 .nextProjectLink {
   position: absolute;
+  right: 0;
   bottom: 5vh;
   font-family: "Lato", sans-serif;
   text-decoration: none;
@@ -1216,20 +1347,6 @@ header li a {
   100% {
     bottom: 0;
   }
-}
-
-.projectSection > div:nth-child(even) .videoContainer {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-}
-
-.projectSection > div:nth-child(even) .projectDetails {
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-}
-
-.projectSection > div:nth-child(even) .nextProjectLink {
-  right: 0;
 }
 
 .contactSection {

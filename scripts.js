@@ -41,6 +41,27 @@ app.copyEmail = () => {
     }
 }
 
+//Download resume
+app.downloadResume = () => {
+    const downloadResumeButtons = document.querySelectorAll(".resumeButtonContainer");
+    for( let i = 0; i < downloadResumeButtons.length ; i ++) {
+        downloadResumeButtons[i].addEventListener("click", function() {
+            //Create pop window
+            const container = document.querySelector('main');
+            const popContainer = document.createElement('div');
+            const popText = document.createElement('p');
+            popText.innerText = "You successfully downloaded my resume!"
+            popContainer.appendChild(popText);
+            popContainer.classList.add('copyPop');
+            container.appendChild(popContainer);
+            //Delete pop window 
+            setTimeout(function() {
+                popContainer.remove();
+            }, 3000)
+        })
+    }
+}
+
 //Printing effect(header)
 app.text = ['former electrical engineer', 'husband and father', 'basketball player...?'];
 app.typingContainer = document.getElementById("printingArea");
@@ -136,8 +157,6 @@ app.navIndicator = () => {
         document.querySelector("#aboutIndicator").classList.add('far');
         document.querySelector("#projectIndicator").classList.remove('fas');
         document.querySelector("#projectIndicator").classList.add('far');
-        document.querySelector("#skillIndicator").classList.remove('fas');
-        document.querySelector("#skillIndicator").classList.add('far');
         document.querySelector("#contactIndicator").classList.remove('fas');
         document.querySelector("#contactIndicator").classList.add('far');
     } else if (document.documentElement.scrollTop >= window.innerHeight * 1 && document.documentElement.scrollTop < window.innerHeight * 2) { //About section
@@ -241,13 +260,116 @@ app.aboutSwitch = () => {
         }
     })
 }
+//Loading page
+app.loadingShowingNumber =0 ;
+app.loadingNumber = () => {
+    setTimeout(function() {
+        if (app.loadingShowingNumber <= 100) {
+            document.querySelector("#countingNumber").innerText = `${app.loadingShowingNumber}%`;
+            app.loadingShowingNumber ++;
+            app.loadingNumber();
+        }
+    }, 15)
+}
+app.loadingPageDone = () => {
+    setTimeout(function() {
+        document.querySelector("#loadingPage").classList.add('loadingPageHide')
+    }, 3000)
+}
+
+//Hover on some skill icons
+app.hoverOnSkillIcons = () => {
+    ['mouseenter', 'focusin', 'touchstart', 'mousedown'].forEach((e) => {
+        document.querySelector('#javascriptLogo').addEventListener(e, function() {
+            document.querySelector('#javascriptLogo').src = './images/javascript.png';
+        })
+        document.querySelector('#htmlLogo').addEventListener(e, function() {
+            document.querySelector('#htmlLogo').src = './images/html5.png';
+        })
+        document.querySelector('#cssLogo').addEventListener(e, function() {
+            document.querySelector('#cssLogo').src = './images/css3.png';
+        })
+        document.querySelector('#reactLogo').addEventListener(e, function() {
+            document.querySelector('#reactLogo').src = './images/react.png';
+        })
+        document.querySelector('#jqueryLogo').addEventListener(e, function() {
+            document.querySelector('#jqueryLogo').src = './images/jquery.png';
+        })
+        document.querySelector('#sassLogo').addEventListener(e, function() {
+            document.querySelector('#sassLogo').src = './images/sass.png';
+        })
+        document.querySelector('#apiLogo').addEventListener(e, function() {
+            document.querySelector('#apiLogo').src = './images/api.png';
+        })
+        document.querySelector('#firebaseLogo').addEventListener(e, function() {
+            document.querySelector('#firebaseLogo').src = './images/firebase.png';
+        })
+        document.querySelector('#gitLogo').addEventListener(e, function() {
+            document.querySelector('#gitLogo').src = './images/git.png';
+        })
+        document.querySelector('#terminalLogo').addEventListener(e, function() {
+            document.querySelector('#terminalLogo').src = './images/terminal.png';
+        })
+        document.querySelector('#teamworkLogo').addEventListener(e, function() {
+            document.querySelector('#teamworkLogo').src = './images/teamwork.png';
+        })
+        document.querySelector('#responsiveLogo').addEventListener(e, function() {
+            document.querySelector('#responsiveLogo').src = './images/responsive.png';
+        })
+        document.querySelector('#accessibilityLogo').addEventListener(e, function() {
+            document.querySelector('#accessibilityLogo').src = './images/accessibility.png';
+        })
+    })
+}
+app.hoverOutSkillIcons = () => {
+    ['mouseleave', 'focusout', 'touchmove', 'mouseup'].forEach((e) => {
+        document.querySelector('#javascriptLogo').addEventListener(e, function() {
+            document.querySelector('#javascriptLogo').src = './images/javascript01.png';
+        })
+        document.querySelector('#htmlLogo').addEventListener(e, function() {
+            document.querySelector('#htmlLogo').src = './images/html501.png';
+        })
+        document.querySelector('#cssLogo').addEventListener(e, function() {
+            document.querySelector('#cssLogo').src = './images/css301.png';
+        })
+        document.querySelector('#reactLogo').addEventListener(e, function() {
+            document.querySelector('#reactLogo').src = './images/react01.png';
+        })
+        document.querySelector('#jqueryLogo').addEventListener(e, function() {
+            document.querySelector('#jqueryLogo').src = './images/jquery01.png';
+        })
+        document.querySelector('#sassLogo').addEventListener(e, function() {
+            document.querySelector('#sassLogo').src = './images/sass01.png';
+        })
+        document.querySelector('#apiLogo').addEventListener(e, function() {
+            document.querySelector('#apiLogo').src = './images/api01.png';
+        })
+        document.querySelector('#firebaseLogo').addEventListener(e, function() {
+            document.querySelector('#firebaseLogo').src = './images/firebase01.png';
+        })
+        document.querySelector('#gitLogo').addEventListener(e, function() {
+            document.querySelector('#gitLogo').src = './images/git01.png';
+        })
+        document.querySelector('#terminalLogo').addEventListener(e, function() {
+            document.querySelector('#terminalLogo').src = './images/terminal01.png';
+        })
+        document.querySelector('#teamworkLogo').addEventListener(e, function() {
+            document.querySelector('#teamworkLogo').src = './images/teamwork01.png';
+        })
+        document.querySelector('#responsiveLogo').addEventListener(e, function() {
+            document.querySelector('#responsiveLogo').src = './images/responsive01.png';
+        })
+        document.querySelector('#accessibilityLogo').addEventListener(e, function() {
+            document.querySelector('#accessibilityLogo').src = './images/accessibility01.png';
+        })
+    })
+}
 
 
 app.init = function () {
-    // window.addEventListener('load', function() {
-    //     console.log('All assets are loaded')
-    // })
-
+    //Page loading
+    app.loadingNumber();
+    app.loadingPageDone();
     //About Section switch function
     app.aboutSwitch();
     //Random hover effect for skill section
@@ -258,6 +380,11 @@ app.init = function () {
     app.typing();
     //Copy email
     app.copyEmail();
+    //Download resume
+    app.downloadResume();
+    //Hover skill icon
+    app.hoverOnSkillIcons();
+    app.hoverOutSkillIcons();
     //Scrolling trigger functions
     window.addEventListener('scroll', function(){
         app.showingNavAside();
@@ -270,7 +397,6 @@ app.init = function () {
     app.showingFollowMeAside();
     app.navIndicator();
     app.projectTittles();
-
     //Profile picture change
     app.profileImage();
     app.profileImageBack();

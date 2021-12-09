@@ -22,6 +22,14 @@
 
 <body>
     <header id="headerSection">
+        <div class="loadingPage" id="loadingPage">
+            <div class="balls">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <h2 class="countingNumber" id="countingNumber"></h2>
+        </div>
         <nav>
             <ul>
                 <li><a href="#aboutSection">ABOUT</a></li>
@@ -144,55 +152,55 @@
                 <h3>Some Things In My Toolbox</h3>
                 <ul>
                     <li>
-                        <img src="./images/accessibility-shortcut.png" alt="accessibility skill logo">
+                        <img id= "accessibilityLogo" src="./images/accessibility01.png" alt="accessibility skill logo">
                         <p>Accessibility</p>
                     </li>
                     <li>
-                        <img src="./images/responsive-design.png" alt="responsive design skill logo">
-                        <p>Rsponsive Design</p>
+                        <img id= "responsiveLogo" src="./images/responsive01.png" alt="responsive design skill logo">
+                        <p>Responsive Design</p>
                     </li>
                     <li>
-                        <img src="./images/javascript .png" alt="JavaScript ES6+ skill logo">
+                        <img id= "javascriptLogo" src="./images/javascript01.png" alt="JavaScript ES6+ skill logo">
                         <p>JavaScript(ES6+)</p>
                     </li>
                     <li>
-                        <img src="./images/html5.png" alt="HTML5 skill logo">
+                        <img id= "htmlLogo"src="./images/html501.png" alt="HTML5 skill logo">
                         <p>HTML5</p>
                     </li>
                     <li>
-                        <img src="./images/css3.png" alt="CSS3 skill logo">
+                        <img id= "cssLogo" src="./images/css301.png" alt="CSS3 skill logo">
                         <p>CSS3</p>
                     </li>
                     <li>
-                        <img src="./images/react.png" alt="React skill logo">
+                        <img id= "reactLogo" src="./images/react01.png" alt="React skill logo">
                         <p>React</p>
                     </li>
                     <li>
-                        <img src="./images/jquery.png" alt="jQUERY skill logo">
+                        <img id= "jqueryLogo" src="./images/jquery01.png" alt="jQUERY skill logo">
                         <p>jQUERY</p>
                     </li>
                     <li>
-                        <img src="./images/sass.png" alt="SASS skill logo">
+                        <img id= "sassLogo"src="./images/sass01.png" alt="SASS skill logo">
                         <p>SASS</p>
                     </li>
                     <li>
-                        <img src="./images/api.png" alt="REST API skill logo">
+                        <img id= "apiLogo" src="./images/api01.png" alt="REST API skill logo">
                         <p>REST API</p>
                     </li>
                     <li>
-                        <img src="./images/firebase.png" alt="Firebase skill logo">
+                        <img id= "firebaseLogo" src="./images/firebase01.png" alt="Firebase skill logo">
                         <p>Firebase</p>
                     </li>
                     <li>
-                        <img src="./images/git.png" alt="Git skill logo">
+                        <img id= "gitLogo"src="./images/git01.png" alt="Git skill logo">
                         <p>Git</p>
                     </li>
                     <li>
-                        <img src="./images/teamwork.png" alt="Team-based Development skill logo">
+                        <img id= "teamworkLogo" src="./images/teamwork01.png" alt="Team-based Development skill logo">
                         <p>Team-based Development</p>
                     </li>
                     <li>
-                        <img src="./images/terminal.png" alt="Terminal skill logo">
+                        <img id= "terminalLogo" src="./images/terminal01.png" alt="Terminal skill logo">
                         <p>Terminal</p>
                     </li>
                     <li>
@@ -215,9 +223,7 @@
                 <h2 id="firstProjectTittle">Some Things I've Made</h2>
                 <div>
                     <div class="videoContainer">
-                        <div class="videoCover">
-                            <h3>Hover on me!</h3>
-                        </div>
+                        <img class="videoCover" src="./images/pokemon-cover.png" alt = "Pokemon-Guess-Em-All displays on desktop and mobile device">
                         <video class="projectVideos" preload="auto" muted loop>
                             <source src="./videos/Pokemon.mp4" type="video/mp4">
                         </video>
@@ -230,16 +236,16 @@
                             can check the Pokédex, catch the Pokémon and manage their Pokémon teams. Using Firebase, the
                             Pokémon teams are updated in real-time based on the users' verified usernames.</p>
                         <div>
-                            <img src="./images/accessibility-shortcut.png" alt="accessibility skill logo">
-                            <img src="./images/responsive-design.png" alt="responsive design skill logo">
-                            <img src="./images/react.png" alt="React skill logo">
-                            <img src="./images/javascript .png" alt="JavaScript ES6+ skill logo">
-                            <img src="./images/html5.png" alt="HTML5 skill logo">
-                            <img src="./images/css3.png" alt="CSS3 skill logo">
-                            <img src="./images/sass.png" alt="SASS skill logo">
-                            <img src="./images/api.png" alt="REST API skill logo">
-                            <img src="./images/firebase.png" alt="Firebase skill logo">
-                            <img src="./images/git.png" alt="Git skill logo">
+                            <img src="./images/accessibility01.png" alt="accessibility skill logo">
+                            <img src="./images/responsive01.png" alt="responsive design skill logo">
+                            <img src="./images/react01.png" alt="React skill logo">
+                            <img src="./images/javascript01.png" alt="JavaScript ES6+ skill logo">
+                            <img src="./images/html501.png" alt="HTML5 skill logo">
+                            <img src="./images/css301.png" alt="CSS3 skill logo">
+                            <img src="./images/sass01.png" alt="SASS skill logo">
+                            <img src="./images/api01.png" alt="REST API skill logo">
+                            <img src="./images/firebase01.png" alt="Firebase skill logo">
+                            <img src="./images/git01.png" alt="Git skill logo">
                         </div>
                         <div>
                             <a href="https://pokemon-guess-em-all.netlify.app/"
@@ -256,16 +262,14 @@
                 <h2  id="secondProjectTittle">Some Things I've Made</h2>
                 <div>
                     <div class="videoContainer">
-                        <div class="videoCover">
-                            <h3>Hover on me!</h3>
-                        </div>
+                        <img class="videoCover" src="./images/movie-cover.png" alt = "What-to-Watch displays on desktop and mobile device">
                         <video class="projectVideos" preload="auto" muted loop>
                             <source src="./videos/What-to-Watch.mp4" type="video/mp4">
                         </video>
                     </div>
                     <div class="projectDetails">
                         <h3>What-to-Watch</h3>
-                        <p>This was a paired programming project created in collaboration with Dani. Movie Watch List
+                        <p>This was a paired programming project created in collaboration with <a href="https://danimayfield.dev/">Dani Mayfield</a>. Movie Watch List
                             Application. Multiple APIs applied. Users can request randomly generated movies then save
                             and
                             store them through a drag and drop feature. Buttons allow users to add or remove films from
@@ -273,15 +277,15 @@
                             when
                             movie cards are clicked.</p>
                         <div>
-                            <img src="./images/accessibility-shortcut.png" alt="accessibility skill logo">
-                            <img src="./images/responsive-design.png" alt="responsive design skill logo">
-                            <img src="./images/javascript .png" alt="JavaScript ES6+ skill logo">
-                            <img src="./images/html5.png" alt="HTML5 skill logo">
-                            <img src="./images/css3.png" alt="CSS3 skill logo">
-                            <img src="./images/sass.png" alt="SASS skill logo">
-                            <img src="./images/api.png" alt="REST API skill logo">
-                            <img src="./images/git.png" alt="Git skill logo">
-                            <img src="./images/teamwork.png" alt="Team-based Development skill logo">
+                            <img src="./images/accessibility01.png" alt="accessibility skill logo">
+                            <img src="./images/responsive01.png" alt="responsive design skill logo">
+                            <img src="./images/javascript01.png" alt="JavaScript ES6+ skill logo">
+                            <img src="./images/html501.png" alt="HTML5 skill logo">
+                            <img src="./images/css301.png" alt="CSS3 skill logo">
+                            <img src="./images/sass01.png" alt="SASS skill logo">
+                            <img src="./images/api01.png" alt="REST API skill logo">
+                            <img src="./images/git01.png" alt="Git skill logo">
+                            <img src="./images/teamwork01.png" alt="Team-based Development skill logo">
                         </div>
                         <div>
                             <a href="https://what-to-watch-juno.netlify.app/"
@@ -298,9 +302,7 @@
                 <h2  id="thirdProjectTittle">Some Things I've Made</h2>
                 <div>
                     <div class="videoContainer">
-                        <div class="videoCover">
-                            <h3>Hover on me!</h3>
-                        </div>
+                        <img class="videoCover" src="./images/weather-cover.png" alt = "YUHUI-WEATHER-NETWORK displays on desktop and mobile device">
                         <video class="projectVideos" preload="auto" muted loop>
                             <source src="./videos/WEATHER-NETWORK.mp4" type="video/mp4">
                         </video>
@@ -313,14 +315,14 @@
                             be entered and checked. Checked weather data can be saved and marked on the page.
                             Weather-relevant GIFs are generated to make users happy.</p>
                         <div>
-                            <img src="./images/accessibility-shortcut.png" alt="accessibility skill logo">
-                            <img src="./images/responsive-design.png" alt="responsive design skill logo">
-                            <img src="./images/jquery.png" alt="jQUERY skill logo">
-                            <img src="./images/javascript .png" alt="JavaScript ES6+ skill logo">
-                            <img src="./images/html5.png" alt="HTML5 skill logo">
-                            <img src="./images/css3.png" alt="CSS3 skill logo">
-                            <img src="./images/api.png" alt="REST API skill logo">
-                            <img src="./images/git.png" alt="Git skill logo">
+                            <img src="./images/accessibility01.png" alt="accessibility skill logo">
+                            <img src="./images/responsive01.png" alt="responsive design skill logo">
+                            <img src="./images/jquery01.png" alt="jQUERY skill logo">
+                            <img src="./images/javascript01.png" alt="JavaScript ES6+ skill logo">
+                            <img src="./images/html501.png" alt="HTML5 skill logo">
+                            <img src="./images/css301.png" alt="CSS3 skill logo">
+                            <img src="./images/api01.png" alt="REST API skill logo">
+                            <img src="./images/git01.png" alt="Git skill logo">
                         </div>
                         <div>
                             <a href="https://hughzhoutrt.github.io/YUHUI-WEATHER-NETWORK/"
@@ -337,15 +339,13 @@
                 <h2 id="fourthProjectTittle">Some Things I've Made</h2>
                 <div>
                     <div class="videoContainer">
-                        <div class="videoCover">
-                            <h3>Hover on me!</h3>
-                        </div>
+                        <img class="videoCover" src="./images/timer-cover.png" alt = "YUHUI-BREAK-TIMER displays on desktop and mobile device">
                         <video class="projectVideos" preload="auto" muted loop>
                             <source src="./videos/BREAK-TIMER.mp4" type="video/mp4">
                         </video>
                     </div>
                     <div class="projectDetails">
-                        <h3>YUHUI-S-BREAK-TIMER</h3>
+                        <h3>YUHUI-BREAK-TIMER</h3>
                         <p>My first JavaScript application. A countdown application. Multiple default countdown options.
                             Theme
                             colours and languages are selective. Both normal countdown and be-back countdown are
@@ -354,13 +354,13 @@
                             calculate
                             the countdown time. Maximum 24 hours in advance.</p>
                         <div>
-                            <img src="./images/accessibility-shortcut.png" alt="accessibility skill logo">
-                            <img src="./images/responsive-design.png" alt="responsive design skill logo">
-                            <img src="./images/jquery.png" alt="jQUERY skill logo">
-                            <img src="./images/javascript .png" alt="JavaScript ES6+ skill logo">
-                            <img src="./images/html5.png" alt="HTML5 skill logo">
-                            <img src="./images/css3.png" alt="CSS3 skill logo">
-                            <img src="./images/git.png" alt="Git skill logo">
+                            <img src="./images/accessibility01.png" alt="accessibility skill logo">
+                            <img src="./images/responsive01.png" alt="responsive design skill logo">
+                            <img src="./images/jquery01.png" alt="jQUERY skill logo">
+                            <img src="./images/javascript01.png" alt="JavaScript ES6+ skill logo">
+                            <img src="./images/html501.png" alt="HTML5 skill logo">
+                            <img src="./images/css301.png" alt="CSS3 skill logo">
+                            <img src="./images/git01.png" alt="Git skill logo">
                         </div>
                         <div>
                             <a href="https://hughzhoutrt.github.io/YUHUI-BREAK-TIMER/"

@@ -2,6 +2,74 @@
 
 header {
     height: 100vh;
+    position:relative;
+
+    .loadingPage {
+        position: absolute;
+        top:0;
+        left:0;
+        height: 100vh;
+        width: 100vw;
+        background-color: $colorNavy;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+        
+        
+        .balls {
+        width: 4em;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: space-between;
+        }
+        
+        .balls div {
+        width: 0.8rem;
+        height: 0.8rem;
+        border-radius: 50%;
+        background-color: $colorLightGreen;
+        }
+        
+        .balls div:nth-of-type(1) {
+        transform: translateX(-100%);
+        animation: left-swing 0.5s ease-in alternate infinite;
+        }
+        
+        .balls div:nth-of-type(3) {
+        transform: translateX(-95%);
+        animation: right-swing 0.5s ease-out alternate infinite;
+        }
+        
+        @keyframes left-swing {
+            50% {transform: translateX(95%);}
+            100% {transform: translateX(95%);}
+        }
+        
+        @keyframes right-swing {
+            50% {transform: translateX(-95%);}
+            100% {transform: translateX(100%);}
+        }
+
+        h2 {
+            font-family: $fontTittle;
+            color:$colorLightSlate;
+            font-size: 2rem;
+        }
+    }
+
+    .loadingPageHide {
+        opacity: 0;
+        animation: loadingPageHide 0.5s linear;
+        z-index: -1;
+    }
+
+    @keyframes loadingPageHide {
+        0% {opacity: 1;}
+        100% {opacity: 0;}
+    }
 
     nav {
         width: 60vw;
