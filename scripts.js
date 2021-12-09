@@ -25,6 +25,18 @@ app.copyEmail = () => {
     for( let i = 0; i < copyEmailButtons.length ; i ++) {
         copyEmailButtons[i].addEventListener("click", function() {
             navigator.clipboard.writeText("hughzhoutrt@gmail.com");
+            //Create pop window
+            const container = document.querySelector('main');
+            const popContainer = document.createElement('div');
+            const popText = document.createElement('p');
+            popText.innerText = "You successfully copied my email address to your clipboard!"
+            popContainer.appendChild(popText);
+            popContainer.classList.add('copyPop');
+            container.appendChild(popContainer);
+            //Delete pop window 
+            setTimeout(function() {
+                popContainer.remove();
+            }, 3000)
         })
     }
 }
@@ -63,9 +75,76 @@ app.typing = () =>  {
 //Showing nav aside
 app.showingNavAside = () => {
     if (document.documentElement.scrollTop >= window.innerHeight * 0.05) {
-        document.querySelector('#navBarAside').classList.add('navBarAsideShow');
+        document.querySelector('#navBarAside').classList.add('asideShow');
     } else {
-        document.querySelector('#navBarAside').classList.remove('navBarAsideShow');
+        document.querySelector('#navBarAside').classList.remove('asideShow');
+    }
+}
+//Showing follow me aside 
+app.showingFollowMeAside = () => {
+    if (document.documentElement.scrollTop >= window.innerHeight * 6.45) {
+        document.querySelector('#followmeBarAside').classList.add('asideHide');
+    } else {
+        document.querySelector('#followmeBarAside').classList.remove('asideHide');
+    }
+}
+//Nav aside indicator 
+app.navIndicator = () => {
+    if (document.documentElement.scrollTop < window.innerHeight * 1) { //Home page
+        document.querySelector("#homeIndicator").classList.remove('far');
+        document.querySelector("#homeIndicator").classList.add('fas');
+        document.querySelector("#aboutIndicator").classList.remove('fas');
+        document.querySelector("#aboutIndicator").classList.add('far');
+        document.querySelector("#projectIndicator").classList.remove('fas');
+        document.querySelector("#projectIndicator").classList.add('far');
+        document.querySelector("#skillIndicator").classList.remove('fas');
+        document.querySelector("#skillIndicator").classList.add('far');
+        document.querySelector("#contactIndicator").classList.remove('fas');
+        document.querySelector("#contactIndicator").classList.add('far');
+    } else if (document.documentElement.scrollTop >= window.innerHeight * 1 && document.documentElement.scrollTop < window.innerHeight * 2) {
+        document.querySelector("#homeIndicator").classList.remove('fas');
+        document.querySelector("#homeIndicator").classList.add('far');
+        document.querySelector("#aboutIndicator").classList.remove('far');
+        document.querySelector("#aboutIndicator").classList.add('fas');
+        document.querySelector("#projectIndicator").classList.remove('fas');
+        document.querySelector("#projectIndicator").classList.add('far');
+        document.querySelector("#skillIndicator").classList.remove('fas');
+        document.querySelector("#skillIndicator").classList.add('far');
+        document.querySelector("#contactIndicator").classList.remove('fas');
+        document.querySelector("#contactIndicator").classList.add('far');
+    } else if (document.documentElement.scrollTop >= window.innerHeight * 2 && document.documentElement.scrollTop < window.innerHeight * 6) {
+        document.querySelector("#homeIndicator").classList.remove('fas');
+        document.querySelector("#homeIndicator").classList.add('far');
+        document.querySelector("#aboutIndicator").classList.remove('fas');
+        document.querySelector("#aboutIndicator").classList.add('far');
+        document.querySelector("#projectIndicator").classList.remove('far');
+        document.querySelector("#projectIndicator").classList.add('fas');
+        document.querySelector("#skillIndicator").classList.remove('fas');
+        document.querySelector("#skillIndicator").classList.add('far');
+        document.querySelector("#contactIndicator").classList.remove('fas');
+        document.querySelector("#contactIndicator").classList.add('far');
+    } else if (document.documentElement.scrollTop >= window.innerHeight * 6 && document.documentElement.scrollTop < window.innerHeight * 7) {
+        document.querySelector("#homeIndicator").classList.remove('fas');
+        document.querySelector("#homeIndicator").classList.add('far');
+        document.querySelector("#aboutIndicator").classList.remove('fas');
+        document.querySelector("#aboutIndicator").classList.add('far');
+        document.querySelector("#projectIndicator").classList.remove('fas');
+        document.querySelector("#projectIndicator").classList.add('far');
+        document.querySelector("#skillIndicator").classList.remove('far');
+        document.querySelector("#skillIndicator").classList.add('fas');
+        document.querySelector("#contactIndicator").classList.remove('fas');
+        document.querySelector("#contactIndicator").classList.add('far');
+    } else {
+        document.querySelector("#homeIndicator").classList.remove('fas');
+        document.querySelector("#homeIndicator").classList.add('far');
+        document.querySelector("#aboutIndicator").classList.remove('fas');
+        document.querySelector("#aboutIndicator").classList.add('far');
+        document.querySelector("#projectIndicator").classList.remove('fas');
+        document.querySelector("#projectIndicator").classList.add('far');
+        document.querySelector("#skillIndicator").classList.remove('fas');
+        document.querySelector("#skillIndicator").classList.add('far');
+        document.querySelector("#contactIndicator").classList.remove('far');
+        document.querySelector("#contactIndicator").classList.add('fas');
     }
 }
 
@@ -137,9 +216,13 @@ app.init = function () {
     window.addEventListener('scroll', function(){
         console.log(document.documentElement.scrollTop);
         app.showingNavAside();
+        app.showingFollowMeAside();
+        app.navIndicator();
     })
     //When refresh page
     app.showingNavAside();
+    app.showingFollowMeAside();
+    app.navIndicator();
 
 
 

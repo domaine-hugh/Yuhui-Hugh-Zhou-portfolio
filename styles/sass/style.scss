@@ -62,3 +62,29 @@ h4 {
 p {
     font-family: $fontText;
 }
+
+.copyPop {
+    opacity: 0;
+    display:none;
+    height: 100px;
+    width: 600px;
+    position:fixed;
+    top: calc(50vh - 50px);
+    left:calc(50vw - 300px);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $colorLightSlate;
+    animation: popWindowHide 3s linear;
+
+    p {
+        font-family: $fontSubSubTittle;
+        color:$colorLightNavy;
+    }
+
+    @keyframes popWindowHide {
+        0% {opacity: 1; display:block;}
+        99% {opacity: 0; display:block;}
+        100% {opacity: 0; display:none;}
+    }
+}

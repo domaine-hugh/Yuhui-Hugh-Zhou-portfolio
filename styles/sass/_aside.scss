@@ -53,9 +53,11 @@
 
 
 .followmeBarAside {
+    opacity: 1;
     top: 0;
     left:0;
     margin: 0 0 0 20px;
+    animation: navBarAsideShow 1s linear;
     
     & > div {
         height: 100px;
@@ -86,6 +88,7 @@
     bottom: 0;
     right:0;
     margin: 0 20px 0 0;
+    animation: navBarAsideHide 1s linear;
 
     & > div {
         height: 100px;
@@ -98,14 +101,24 @@
     }
 }
 
-.navBarAsideShow {
+.asideShow {
     opacity: 1;
     animation: navBarAsideShow 1s linear;
+}
+
+.asideHide {
+    opacity: 0;
+    animation: navBarAsideHide 1s linear;
 }
 
 @keyframes navBarAsideShow {
     0% {opacity: 0;}
     100% {opacity: 1;}
+}
+
+@keyframes navBarAsideHide {
+    0% {opacity:1;}
+    100% {opacity: 0;}
 }
 
 .rightArrow {
