@@ -283,6 +283,12 @@ header li a {
 .typingcontainer {
   width: 60vw;
   margin: 25vh auto 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .typingcontainer h2:nth-of-type(2) {
@@ -292,6 +298,14 @@ header li a {
 .typingcontainer P {
   color: #64ffda;
   font-size: 1.2rem;
+}
+
+.typingcontainer img {
+  width: 300px;
+  height: 300px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .navContainer {
@@ -815,7 +829,7 @@ header li a {
 
 .projectSection .videoContainer .videoCover {
   position: absolute;
-  background-color: rgba(168, 178, 209, 0.5);
+  background-color: rgba(168, 178, 209, 0.7);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -860,6 +874,54 @@ header li a {
           flex-direction: column;
 }
 
+.projectSection h2 {
+  opacity: 0;
+  -webkit-animation: titleHide 1s linear;
+          animation: titleHide 1s linear;
+}
+
+@-webkit-keyframes titleHide {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes titleHide {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.projectSection .projectTittleShows {
+  opacity: 1;
+  -webkit-animation: titleShow 1s linear;
+          animation: titleShow 1s linear;
+}
+
+@-webkit-keyframes titleShow {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes titleShow {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .projectDetails {
   position: relative;
   bottom: 10vh;
@@ -894,9 +956,14 @@ header li a {
   text-decoration: none;
   color: #64ffda;
   margin: 0 30px;
+  padding: 5px 15px;
 }
 
-.projectSection .videoCover h2 {
+.projectDetails a:hover {
+  background-color: #112240;
+}
+
+.projectSection .videoCover h3 {
   color: #64ffda;
 }
 

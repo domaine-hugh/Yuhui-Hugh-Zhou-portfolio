@@ -6,7 +6,7 @@
 
         .videoCover {
             position:absolute;
-            background-color: rgba(168,178,209, 0.5);
+            background-color: rgba(168,178,209, 0.7);
             display:flex;
             justify-content: center;
             align-items: center;
@@ -35,6 +35,26 @@
             flex-direction: column;
         }
     }
+
+    h2 {
+        opacity: 0;
+        animation: titleHide 1s linear;
+    }
+}
+
+@keyframes titleHide {
+    0% {opacity: 1; }
+    100% {opacity: 0; }
+}
+
+.projectSection .projectTittleShows {
+    opacity: 1;
+    animation: titleShow 1s linear;
+}
+
+@keyframes titleShow {
+    0% {opacity: 0; }
+    100% {opacity: 1; }
 }
 
 .projectDetails {
@@ -64,11 +84,16 @@
             text-decoration: none;
             color:$colorLightGreen;
             margin: 0 30px;
+            padding: 5px 15px;
         }
     }
 }
 
-.projectSection .videoCover h2 {
+.projectDetails a:hover {
+    background-color: $colorLightNavy;
+}
+
+.projectSection .videoCover h3 {
     color:$colorLightGreen;
 }
 
@@ -111,3 +136,4 @@
         }
     }
 }
+

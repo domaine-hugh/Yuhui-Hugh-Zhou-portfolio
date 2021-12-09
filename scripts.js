@@ -42,14 +42,17 @@ app.copyEmail = () => {
 }
 
 //Printing effect(header)
-app.text = ['former electrical engineer', 'husband and father', 'basketball player'];
+app.text = ['former electrical engineer', 'husband and father', 'basketball player...?'];
 app.typingContainer = document.getElementById("printingArea");
 app.index = 0;
 app.arrayIndex = 0;
 app.isAdding = true;
+app.avoidGifReset = 0;
 app.typing = () =>  {
+    let currentWords;
     setTimeout(function () {
         app.typingContainer.innerText = app.text[app.arrayIndex].slice(0, app.index);
+        currentWords = app.text[app.arrayIndex];
         if (app.isAdding) {
             if (app.index === app.text[app.arrayIndex].length) {
                 app.isAdding = false;
@@ -64,12 +67,43 @@ app.typing = () =>  {
             if (app.index === 0) {
                 app.isAdding = true;
                 app.arrayIndex = (app.arrayIndex + 1) % app.text.length;    //1 % 3 = 1; 2 % 3 = 2; 3 % 3 = 0;
+                app.currentWords = app.text[app.arrayIndex];
             } else {
                 app.index--;
             }
         }
+        
+        if (currentWords === 'former electrical engineer') {
+            document.querySelector('#changingImg').src = "./images/EE.jpg";
+            document.querySelector('#changingImg').alt = "Hugh was an electrical engineer";
+            app.avoidGifReset = 0;
+        } else if (currentWords === 'husband and father') {
+            document.querySelector('#changingImg').src = "./images/father.jpg";
+            document.querySelector('#changingImg').alt = "Hugh and his daughter";
+        }  else if (currentWords === 'basketball player...?') {
+            if (app.avoidGifReset !== 0) {
+               //Empty round
+            } else {
+            document.querySelector('#changingImg').src = "./images/basketball.gif";
+            document.querySelector('#changingImg').alt = "Hugh is a basketball player";
+            app.avoidGifReset = 1;
+            }
+        }
         app.typing();
     }, app.isAdding ? 100 : 30)
+}
+
+app.headerPicture = () => {
+    if (app.currentWords === 'former electrical engineer') {
+        document.querySelector('#changingImg').src = "./images/EE.jpg";
+        document.querySelector('#changingImg').alt = "Hugh was an electrical engineer";
+    } else if (app.currentWords === 'husband and father') {
+        document.querySelector('#changingImg').src = "./images/father.jpg";
+        document.querySelector('#changingImg').alt = "Hugh and his daughter";
+    }  else if (app.currentWords === 'basketball player...?') {
+        document.querySelector('#changingImg').src = "./images/basketball.gif";
+        document.querySelector('#changingImg').alt = "Hugh is a basketball player";
+    }
 }
 
 //Showing nav aside
@@ -101,7 +135,7 @@ app.navIndicator = () => {
         document.querySelector("#skillIndicator").classList.add('far');
         document.querySelector("#contactIndicator").classList.remove('fas');
         document.querySelector("#contactIndicator").classList.add('far');
-    } else if (document.documentElement.scrollTop >= window.innerHeight * 1 && document.documentElement.scrollTop < window.innerHeight * 2) {
+    } else if (document.documentElement.scrollTop >= window.innerHeight * 1 && document.documentElement.scrollTop < window.innerHeight * 2) { //About section
         document.querySelector("#homeIndicator").classList.remove('fas');
         document.querySelector("#homeIndicator").classList.add('far');
         document.querySelector("#aboutIndicator").classList.remove('far');
@@ -112,7 +146,7 @@ app.navIndicator = () => {
         document.querySelector("#skillIndicator").classList.add('far');
         document.querySelector("#contactIndicator").classList.remove('fas');
         document.querySelector("#contactIndicator").classList.add('far');
-    } else if (document.documentElement.scrollTop >= window.innerHeight * 2 && document.documentElement.scrollTop < window.innerHeight * 6) {
+    } else if (document.documentElement.scrollTop >= window.innerHeight * 2 && document.documentElement.scrollTop < window.innerHeight * 6) {//Project section
         document.querySelector("#homeIndicator").classList.remove('fas');
         document.querySelector("#homeIndicator").classList.add('far');
         document.querySelector("#aboutIndicator").classList.remove('fas');
@@ -123,7 +157,7 @@ app.navIndicator = () => {
         document.querySelector("#skillIndicator").classList.add('far');
         document.querySelector("#contactIndicator").classList.remove('fas');
         document.querySelector("#contactIndicator").classList.add('far');
-    } else if (document.documentElement.scrollTop >= window.innerHeight * 6 && document.documentElement.scrollTop < window.innerHeight * 7) {
+    } else if (document.documentElement.scrollTop >= window.innerHeight * 6 && document.documentElement.scrollTop < window.innerHeight * 7) { //Skill section
         document.querySelector("#homeIndicator").classList.remove('fas');
         document.querySelector("#homeIndicator").classList.add('far');
         document.querySelector("#aboutIndicator").classList.remove('fas');
@@ -134,7 +168,7 @@ app.navIndicator = () => {
         document.querySelector("#skillIndicator").classList.add('fas');
         document.querySelector("#contactIndicator").classList.remove('fas');
         document.querySelector("#contactIndicator").classList.add('far');
-    } else {
+    } else { //Contact section
         document.querySelector("#homeIndicator").classList.remove('fas');
         document.querySelector("#homeIndicator").classList.add('far');
         document.querySelector("#aboutIndicator").classList.remove('fas');
@@ -147,6 +181,30 @@ app.navIndicator = () => {
         document.querySelector("#contactIndicator").classList.add('fas');
     }
 }
+//Project section h2 
+app.projectTittles = () => {
+    if (document.documentElement.scrollTop <= window.innerHeight * 2) {
+        document.querySelector("#firstProjectTittle").classList.add('projectTittleShows');
+        document.querySelector("#secondProjectTittle").classList.remove('projectTittleShows');
+        document.querySelector("#thirdProjectTittle").classList.remove('projectTittleShows');
+        document.querySelector("#fourthProjectTittle").classList.remove('projectTittleShows');
+    } else if (document.documentElement.scrollTop >= window.innerHeight * 2.05 && document.documentElement.scrollTop < window.innerHeight * 3.05) {
+        document.querySelector("#firstProjectTittle").classList.remove('projectTittleShows');
+        document.querySelector("#secondProjectTittle").classList.add('projectTittleShows');
+        document.querySelector("#thirdProjectTittle").classList.remove('projectTittleShows');
+        document.querySelector("#fourthProjectTittle").classList.remove('projectTittleShows');
+    } else if (document.documentElement.scrollTop >= window.innerHeight * 3.05 && document.documentElement.scrollTop < window.innerHeight * 4.05) {
+        document.querySelector("#firstProjectTittle").classList.remove('projectTittleShows');
+        document.querySelector("#secondProjectTittle").classList.remove('projectTittleShows');
+        document.querySelector("#thirdProjectTittle").classList.add('projectTittleShows');
+        document.querySelector("#fourthProjectTittle").classList.remove('projectTittleShows');
+    } else {
+        document.querySelector("#firstProjectTittle").classList.remove('projectTittleShows');
+        document.querySelector("#secondProjectTittle").classList.remove('projectTittleShows');
+        document.querySelector("#thirdProjectTittle").classList.remove('projectTittleShows');
+        document.querySelector("#fourthProjectTittle").classList.add('projectTittleShows');
+    }
+} 
 
 //Random hover effect for skill section
 app.randomHoverEffect = () => {
@@ -214,15 +272,19 @@ app.init = function () {
     app.copyEmail();
     //Scrolling trigger functions
     window.addEventListener('scroll', function(){
-        console.log(document.documentElement.scrollTop);
         app.showingNavAside();
         app.showingFollowMeAside();
         app.navIndicator();
+        app.projectTittles();
     })
     //When refresh page
     app.showingNavAside();
     app.showingFollowMeAside();
     app.navIndicator();
+    app.projectTittles();
+
+    //Header picture change
+    app.headerPicture();
 
 
 
