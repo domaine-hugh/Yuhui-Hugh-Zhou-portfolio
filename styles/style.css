@@ -1222,6 +1222,7 @@ header li a {
   border: none;
   font-family: "Crimson Pro", serif;
   text-align: center;
+  line-height: 2;
 }
 
 .inputContainer input:focus,

@@ -19,13 +19,22 @@ app.hoverDisplayVideo = () => {
     }
 }
 
+//Copy email 
+app.copyEmail = () => {
+    const copyEmailButtons = document.querySelectorAll(".emailButtonContainer");
+    for( let i = 0; i < copyEmailButtons.length ; i ++) {
+        copyEmailButtons[i].addEventListener("click", function() {
+            navigator.clipboard.writeText("hughzhoutrt@gmail.com");
+        })
+    }
+}
+
 //Printing effect(header)
 app.text = ['former electrical engineer', 'husband and father', 'basketball player'];
 app.typingContainer = document.getElementById("printingArea");
 app.index = 0;
 app.arrayIndex = 0;
 app.isAdding = true;
-
 app.typing = () =>  {
     setTimeout(function () {
         app.typingContainer.innerText = app.text[app.arrayIndex].slice(0, app.index);
@@ -68,7 +77,6 @@ app.randomHoverEffect = () => {
             skillBlocks[i].addEventListener(e, function() {
                 const randomNumber = Math.floor(Math.random() * 3);
                 if (randomNumber === 0) {
-                    console.log('hi');
                     skillBlocks[i].classList.add('pulseEffect');
                 } else if (randomNumber === 1) {
                     skillBlocks[i].classList.add('jellyEffect');
@@ -117,14 +125,14 @@ app.init = function () {
 
     //About Section switch function
     app.aboutSwitch();
-
     //Random hover effect for skill section
     app.randomHoverEffect();
-
     //Display project videos
     app.hoverDisplayVideo();
     //Printing effect(header)
     app.typing();
+    //Copy email
+    app.copyEmail();
     //Scrolling trigger functions
     window.addEventListener('scroll', function(){
         console.log(document.documentElement.scrollTop);
