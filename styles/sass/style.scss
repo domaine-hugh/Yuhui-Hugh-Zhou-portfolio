@@ -85,6 +85,23 @@ p {
     }
 }
 
+@media (min-width:1920px) {
+    html {
+        width: 1920px;
+        margin: 0 auto;
+    }
+
+    body {
+        width: 1920px;
+        overflow-x:auto;
+    }
+
+    .mainWrapper {
+        width: calc (1920px * 0.8);
+        margin: 0 auto;
+    }
+}
+
 @media (max-height: 1050px) {
     .aboutSection h2,
     .projectSection h2,
@@ -135,7 +152,7 @@ p {
     }
 }
 
-@media (max-width: 406px) {
+@media (max-width: 414px) {
     h2 {
         font-size: 1rem;
     }

@@ -1362,24 +1362,6 @@ header li a {
   .aboutSection .education {
     width: 80vw;
   }
-  .profile > div {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .profile > div img {
-    height: 150px;
-    margin-right: 0;
-    margin-bottom: 20px;
-  }
-  .profile > div .profileText {
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-  }
-  .profile > div p {
-    margin: 10px;
-  }
 }
 
 @media (max-width: 830px) {
@@ -1940,6 +1922,7 @@ header li a {
   font-family: "Crimson Pro", serif;
   text-align: center;
   line-height: 2;
+  color: #0a192f;
 }
 
 .inputContainer input:focus,
@@ -2102,9 +2085,9 @@ header li a {
   }
 }
 
-@media (max-width: 406px) {
+@media (max-width: 414px) {
   .contactSection .contactText > p {
-    margin: 5px 0;
+    margin: 2px 0;
     line-height: 1.3;
   }
   .contactSection .inputContainer {
@@ -2120,9 +2103,10 @@ header li a {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
+    padding-left: 5px;
   }
   .contactSection ul li {
-    width: 50px;
+    width: 40px;
   }
 }
 
@@ -2264,6 +2248,21 @@ p {
   }
 }
 
+@media (min-width: 1920px) {
+  html {
+    width: 1920px;
+    margin: 0 auto;
+  }
+  body {
+    width: 1920px;
+    overflow-x: auto;
+  }
+  .mainWrapper {
+    width: calc 1536px;
+    margin: 0 auto;
+  }
+}
+
 @media (max-height: 1050px) {
   .aboutSection h2,
   .projectSection h2,
@@ -2306,7 +2305,7 @@ p {
   }
 }
 
-@media (max-width: 406px) {
+@media (max-width: 414px) {
   h2 {
     font-size: 1rem;
   }

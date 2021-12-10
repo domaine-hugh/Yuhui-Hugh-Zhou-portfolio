@@ -424,27 +424,6 @@ position: relative;
       width: 80vw;
     }
   }
-
-  .profile {
-    & > div {
-        flex-direction: column;
-        
-        img {
-            height: 150px;
-            margin-right: 0;
-            margin-bottom: 20px;
-        } 
-        
-        .profileText {
-          border-bottom-right-radius: 20px;
-          border-bottom-left-radius: 20px;
-        }
-
-        p {
-          margin: 10px;
-        }
-    }
-  }
 }
 
 @media (max-width:830px) {
