@@ -160,6 +160,42 @@
     }
 }
 
+@media (max-width: 813px) {
+    .contactSection {
+        .contactText {
+            width: 90%;
+        }
+    
+        form {
+            width: 90%;
+        }
+    }
+}
+
+@media (max-width: 722px) {
+    .contactSection {
+        .contactText {
+            width: 100%;
+        }
+    
+        form {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 650px) {
+    .contactSection {
+        .contactMethods {
+            display:flex;
+            flex-direction: column;
+        }
+      ul {
+          padding-left: 10px;
+      }
+    }
+}
+
 @media (max-height: 850px) {
     .contactSection {
         .contactText {
@@ -168,5 +204,7 @@
                 line-height: 1.5;
             }
         }
+
     }
 }
+

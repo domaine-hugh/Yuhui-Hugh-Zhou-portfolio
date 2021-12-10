@@ -136,12 +136,18 @@
 @media (max-width: 1634px){
     .projectSection {
         & > div {
-    
             & >div {
                 margin-top: 0;
                flex-direction: column;
                align-items: center;
             }
+        }
+
+        .videoContainer {
+            width: 80vw;
+            display:flex;
+            justify-content: center;
+            background-color: $colorDarkSlate;
         }
     }
 
@@ -154,7 +160,63 @@
     }
 }
 
+@media (max-width: 875px) {
+    .projectSection {
+        .videoContainer {
+            width: 600px;
+    
+            .videoCover {
+                width: 600px;
+                height: 337.5px;
+            }
+    
+            video {
+                width: 600px;
+            }
+        }
+        img {
+            width:30px;
+            margin: 0 5px; 
+        }
+    }
+
+    .projectDetails {
+        align-self: center;
+        width: 600px;
+    }
+
+    .nextProjectLink {
+        right: 50px;
+    }
+}
+
 @media (max-height: 874px) {
+    .projectSection {
+        .videoContainer {
+            width: 600px;
+    
+            .videoCover {
+                width: 600px;
+                height: 337.5px;
+            }
+    
+            video {
+                width: 600px;
+            }
+        }
+        img {
+            width:30px;
+            margin: 0 5px; 
+        }
+    }
+
+    .projectDetails {
+        align-self: center;
+        width: 600px;
+    }
+}
+
+@media (max-width: 720px) {
     .projectSection {
         .videoContainer {
             width: 500px;
@@ -168,11 +230,55 @@
                 width: 500px;
             }
         }
-        img {
-            width:30px;
-            margin: 0 5px; 
-        }
+    }
+
+    .projectDetails {
+        width: 500px;
     }
 }
+
+@media (max-width: 600px) {
+    .projectSection {
+        .videoContainer {
+            width: 400px;
+    
+            .videoCover {
+                width: 400px;
+                height: 225px;
+            }
+    
+            video {
+                width: 400px;
+            }
+        }
+    }
+
+    .projectDetails {
+        width: 400px;
+    }
+}
+
+@media (max-width: 421px) {
+    .projectSection {
+        .videoContainer {
+            width: 300px;
+    
+            .videoCover {
+                width: 300px;
+                height: 168.75px;
+            }
+    
+            video {
+                width: 300px;
+            }
+        }
+    }
+
+    .projectDetails {
+        width: 300px;
+    }
+}
+
+
 
 

@@ -159,3 +159,39 @@ header li{
         }
     }
 }
+
+@media (max-width: 768px) {
+    header {
+        nav {
+            width: 70vw;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        nav {
+            width: 80vw;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    header {
+        .typingcontainer {
+            margin: 10vh auto 0;
+          
+            img {
+                width:200px;
+                height: 200px;
+            }
+        }
+    }
+
+    header li{
+        a{
+            font-size: 1rem;
+        }
+    }
+}
+
