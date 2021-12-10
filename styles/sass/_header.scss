@@ -193,5 +193,25 @@ header li{
             font-size: 1rem;
         }
     }
+
+    .typingcontainer h2:nth-of-type(2) {
+        margin-left: 150px
+    }
+}
+
+@media (max-width: 421px) {
+    header li{
+        a{
+            margin: 0;
+            font-size: 0.9rem;
+            padding: 3px 5px;
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .typingcontainer h2:nth-of-type(2) {
+        margin-left: 120px
+    }
 }
 

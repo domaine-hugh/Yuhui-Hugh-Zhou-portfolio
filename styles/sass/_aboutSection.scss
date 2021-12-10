@@ -549,5 +549,69 @@ position: relative;
   }
 }
 
+@media (max-width:375px) {
+  .profile {
+    & > div {
+        p {
+          margin: 2px;
+        }
+    }
+  }
+
+  .education {
+    & > div {
+        img {
+            width: 40px;
+            margin: 0 5px;
+        }
+  
+        p {
+          padding: 2px;
+        }
+    }
+  }
+
+  .skillSection {
+    ul {
+      li {
+          height: 90px;
+          width: 30%;
+          margin-bottom: 5px;
+      }
+    }
+  }
+}
+
+@media (max-width: 360px) {
+  .skillSection {
+    ul {
+      li {
+          height: 80px;
+          width: 30%;
+          margin-bottom: 5px;
+      }
+    }
+  }
+
+  .skillSection p {
+    font-size: 0.65rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .skillSection {
+    ul {
+      li {
+          height: 70px;
+          width: 31%;
+          margin-bottom: 3px;
+      }
+    }
+  }
+
+  .skillSection p {
+    font-size: 0.6rem;
+  }
+}
 
 

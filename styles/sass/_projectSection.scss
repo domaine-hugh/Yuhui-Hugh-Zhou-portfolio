@@ -279,6 +279,50 @@
     }
 }
 
+@media (max-width: 421px) {
+    .projectSection {
+        .videoContainer {
+            width: 300px;
+    
+            .videoCover {
+                width: 300px;
+                height: 168.75px;
+            }
+    
+            video {
+                width: 300px;
+            }
+        }
+    }
 
+    .projectDetails {
+        width: 300px;
+    }
+}
+
+@media (max-width: 360px) {
+    .projectSection {
+        .videoContainer {
+            width: 250px;
+    
+            .videoCover {
+                width: 250px;
+                height: 140.64px;
+            }
+    
+            video {
+                width: 250px;
+            }
+        }
+        img {
+            width:15px;
+            margin: 0 2px; 
+        }
+    }
+
+    .projectDetails {
+        width: 250px;
+    }
+}
 
 
