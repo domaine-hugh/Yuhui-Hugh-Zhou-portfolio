@@ -2146,7 +2146,13 @@ header li a {
     padding-left: 5px;
   }
   .contactSection ul li {
-    width: 40px;
+    width: 50px;
+  }
+  .contactSection li button {
+    margin: 0;
+  }
+  .contactSection li i {
+    margin: 0;
   }
 }
 
@@ -2342,6 +2348,11 @@ p {
   }
   p {
     font-size: 0.8rem;
+  }
+  .copyPop {
+    width: 300px;
+    left: calc(50vw - 150px);
+    padding: 0 10px;
   }
 }
 

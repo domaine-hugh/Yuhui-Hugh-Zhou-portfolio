@@ -266,9 +266,19 @@
           justify-content: space-evenly;
           padding-left: 5px;
          li {
-             width: 40px;
+             width: 50px;
          }
       }
+    }
+
+    .contactSection li {
+        button{
+            margin: 0 ;
+        }
+
+        i {
+            margin: 0 ;
+        }
     }
 }
 
