@@ -136,3 +136,26 @@ header li{
       }
 }
 
+@media (max-width:1440px) {
+    .typingcontainer {
+        width: 70vw;
+    }
+}
+
+@media (max-width:1280px) {
+    .typingcontainer {
+        width: 80vw;
+    }
+}
+
+@media (max-width:1024px) {
+    .typingcontainer {
+        margin: 15vh auto 0;
+        flex-direction: column;
+        align-items: center;
+
+        img {
+           margin-top: 5vh;
+        }
+    }
+}

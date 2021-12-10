@@ -31,6 +31,7 @@
         img {
             height: 350px;
             margin-right: 2vw;
+            align-self: center;
         }
 
         .profileText {
@@ -38,10 +39,17 @@
           padding: 5px 20px;
           color:$colorDarkNavy;
           border-bottom-right-radius: 50px;
+          display:flex;
+          flex-direction: column;
+          justify-content: space-evenly;
         }
 
         span {
           color :$colorLightGreen;
+        }
+
+        p {
+          margin: 0;
         }
     }
 }
@@ -110,7 +118,7 @@ margin: 20px 0 10px;
 
 .skillSection p {
 text-align: center;
-margin: 10px 0 20px;
+margin: 10px 3px 20px;
 }
 
 .pulseEffect {
@@ -299,3 +307,80 @@ position: relative;
 }
 
 //About Me section
+
+@media (max-width: 1600px) {
+  .aboutSection {
+    .profile {
+        width: 80vw;
+    }
+  }
+}
+
+@media (max-width:1280px) {
+  .aboutSection {
+    .education{
+      width: 80vw;
+    }
+  }
+  .profile {
+    .profileText {
+      border-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+  }
+
+  .education {
+    & > div {
+       padding: 10px;
+    }
+
+    & > div:nth-child(2) {
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+    }
+
+    & > div:last-child {
+      border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+  }
+
+  .skillSection {
+    ul {
+      li {
+          height: 160px;
+      }
+    }
+  }
+
+  .skillSection img {
+    width: 40%;   
+    margin: 10px 0 5px;
+    }
+    
+    .skillSection p {
+    font-size: 0.9rem;
+    text-align: center;
+    margin: 5px 3px 10px;
+    }
+}
+
+@media (max-height: 1000px) {
+  .aboutSection {
+    .profile {
+        width: 80vw;
+    }
+
+    .education{
+      width: 80vw;
+    }
+  }
+}
+
+@media (max-height: 900px) {
+  .aboutSection {
+    h3 {
+      margin-bottom: 30px;
+    }
+  }
+}

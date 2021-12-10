@@ -58,6 +58,7 @@
         i {
             color:$colorLightSlate;
             margin: 0 20px;
+            cursor: pointer;
         }
     }
 }
@@ -144,5 +145,28 @@
     textarea:focus ~ .left {
         transform-origin: top left;
         transform: scaleY(1);
+    }
+}
+
+@media (max-width: 1084px) {
+    .contactSection {
+        .contactText {
+            width: 80%;
+        }
+    
+        form {
+            width: 80%;
+        }
+    }
+}
+
+@media (max-height: 850px) {
+    .contactSection {
+        .contactText {
+            & > p {
+                margin: 20px 0;
+                line-height: 1.5;
+            }
+        }
     }
 }
