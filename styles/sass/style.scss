@@ -21,6 +21,11 @@ body {
     overflow-x: hidden;
 }
 
+.maxWidth {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
 .mainWrapper {
     width: 80vw;
     margin: 0 auto;
@@ -86,18 +91,12 @@ p {
 }
 
 @media (min-width:1920px) {
-    html {
-        width: 1920px;
-        margin: 0 auto;
-    }
-
     body {
-        width: 1920px;
         overflow-x:auto;
     }
 
     .mainWrapper {
-        width: calc (1920px * 0.8);
+        width: 1536px;
         margin: 0 auto;
     }
 }

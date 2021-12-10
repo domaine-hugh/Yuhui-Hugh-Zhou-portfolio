@@ -475,6 +475,19 @@ header li a {
   }
 }
 
+@media (min-width: 1920px) {
+  header nav {
+    width: 1152px;
+  }
+  header .loadingPage {
+    width: 1920px;
+    margin: 0 auto;
+  }
+  .typingcontainer {
+    width: 1152px;
+  }
+}
+
 @media (max-width: 1440px) {
   .typingcontainer {
     width: 70vw;
@@ -815,6 +828,15 @@ header li a {
   100% {
     -webkit-transform: scale(1, 1);
             transform: scale(1, 1);
+  }
+}
+
+@media (min-width: 1920px) {
+  .followmeBarAside {
+    margin: 0 0 0 calc((50vw - 960px) + 10px);
+  }
+  .navBarAside {
+    margin: 0 calc((50vw - 960px) + 10px) 0 0;
   }
 }
 
@@ -1280,6 +1302,18 @@ header li a {
   background: #a8b2d1;
 }
 
+@media (min-width: 1920px) {
+  .aboutSection .profile {
+    width: 1344px;
+  }
+  .aboutSection .education {
+    width: 1344px;
+  }
+  .profile > div img {
+    margin-right: 38.4px;
+  }
+}
+
 @media (max-width: 1600px) {
   .aboutSection .profile {
     width: 80vw;
@@ -1651,6 +1685,12 @@ header li a {
   }
   100% {
     bottom: 0;
+  }
+}
+
+@media (min-width: 1920px) {
+  .projectDetails {
+    width: 786px;
   }
 }
 
@@ -2154,6 +2194,11 @@ body {
   overflow-x: hidden;
 }
 
+.maxWidth {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
 .mainWrapper {
   width: 80vw;
   margin: 0 auto;
@@ -2249,16 +2294,11 @@ p {
 }
 
 @media (min-width: 1920px) {
-  html {
-    width: 1920px;
-    margin: 0 auto;
-  }
   body {
-    width: 1920px;
     overflow-x: auto;
   }
   .mainWrapper {
-    width: calc 1536px;
+    width: 1536px;
     margin: 0 auto;
   }
 }

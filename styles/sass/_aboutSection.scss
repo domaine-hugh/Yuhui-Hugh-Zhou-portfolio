@@ -307,6 +307,25 @@ position: relative;
 }
 
 //About Me section
+@media (min-width:1920px) {
+  .aboutSection {
+    .profile {
+        width: 1344px;
+    }
+    
+    .education{
+      width: 1344px;
+    }
+  }
+
+  .profile {
+    & > div {
+      img {
+          margin-right: 38.4px;
+      }
+    }
+  }
+}
 
 @media (max-width: 1600px) {
   .aboutSection {
