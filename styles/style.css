@@ -2157,7 +2157,7 @@ header li a {
   }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 375px) {
   .inputContainer input, .inputContainer textarea {
     line-height: 1.2;
   }
@@ -2366,7 +2366,7 @@ p {
   }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 375px) {
   p {
     font-size: 0.65rem;
   }
