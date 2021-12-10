@@ -2149,6 +2149,7 @@ header li a {
     width: 50px;
   }
   .contactSection li button {
+    padding: 0;
     margin: 0;
   }
   .contactSection li i {
