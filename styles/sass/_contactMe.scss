@@ -40,6 +40,15 @@
             color:$colorLightGreen ;
             background-color: $colorDarkNavy;
             border: none;
+
+            &:hover {
+                color:$colorPink;
+            }
+
+            &:active {
+                border: 5px inset $colorDarkSlate;
+                color:$colorBlue;
+            }
         }
     }
 }

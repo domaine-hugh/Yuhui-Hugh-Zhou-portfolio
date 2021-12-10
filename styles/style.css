@@ -414,7 +414,17 @@ header li a {
   margin: 0 20px;
   color: #64ffda;
   font-size: 1.2rem;
-  padding: 3px 5px;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+header li a:hover {
+  background-color: #8892b0;
+  color: #f57dff;
+}
+
+header li a:active {
+  color: #57cbff;
 }
 
 .typingcontainer {
@@ -596,6 +606,16 @@ header li a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.navContainer ul li:hover i {
+  color: #64ffda;
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+.navContainer ul li:active i {
+  color: #57cbff;
 }
 
 .navContainer a, .navContainer button {
@@ -1225,7 +1245,6 @@ header li a {
           box-shadow: 0px 0px 1px #64ffda;
   background: #a8b2d1;
   border-radius: 1px;
-  border: 0px solid #64ffda;
 }
 
 .aboutSectionRange input[type=range]::-webkit-slider-thumb {
@@ -1250,7 +1269,6 @@ header li a {
   box-shadow: 0px 0px 1px #64ffda;
   background: #a8b2d1;
   border-radius: 1px;
-  border: 0px solid #64ffda;
 }
 
 .aboutSectionRange input[type=range]::-moz-range-thumb {
@@ -1545,6 +1563,9 @@ header li a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 .projectSection h2 {
@@ -1628,6 +1649,15 @@ header li a {
   color: #64ffda;
   margin: 0 30px;
   padding: 5px 15px;
+  border-radius: 5px;
+}
+
+.projectDetails div:last-child a:hover {
+  color: #f57dff;
+}
+
+.projectDetails div:last-child a:active {
+  color: #57cbff;
 }
 
 .projectDetails a {
@@ -1655,6 +1685,14 @@ header li a {
   font-family: "Lato", sans-serif;
   text-decoration: none;
   color: #64ffda;
+}
+
+.nextProjectLink:hover {
+  color: #f57dff;
+}
+
+.nextProjectLink:active {
+  color: #57cbff;
 }
 
 .nextProjectLink i {
@@ -1688,6 +1726,50 @@ header li a {
   }
 }
 
+.movingVideoContainerToCenter {
+  margin: 0 auto;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  -webkit-animation: movingVideoContainerToCenter 1s linear;
+          animation: movingVideoContainerToCenter 1s linear;
+}
+
+@-webkit-keyframes movingVideoContainerToCenter {
+  0% {
+    margin: 0;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    margin: 0 0 0 22vw;
+    -webkit-transform: scale(1.25);
+            transform: scale(1.25);
+  }
+  100% {
+    margin: 0 auto;
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+}
+
+@keyframes movingVideoContainerToCenter {
+  0% {
+    margin: 0;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    margin: 0 0 0 22vw;
+    -webkit-transform: scale(1.25);
+            transform: scale(1.25);
+  }
+  100% {
+    margin: 0 auto;
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+}
+
 @media (min-width: 1920px) {
   .projectDetails {
     width: 786px;
@@ -1706,6 +1788,137 @@ header li a {
 }
 
 @media (max-width: 1634px) {
+  .projectSection .videoContainer {
+    width: 600px;
+  }
+  .projectSection .videoContainer .videoCover {
+    width: 600px;
+    height: 337.5px;
+  }
+  .projectSection .videoContainer video {
+    width: 600px;
+  }
+  .projectSection img {
+    width: 30px;
+    margin: 0 5px;
+  }
+  .projectDetails {
+    width: calc(80vw - 650px);
+  }
+}
+
+@media (max-width: 1550px) {
+  .projectSection .videoContainer {
+    width: 500px;
+  }
+  .projectSection .videoContainer .videoCover {
+    width: 500px;
+    height: 281.25px;
+  }
+  .projectSection .videoContainer video {
+    width: 500px;
+  }
+  .projectDetails {
+    width: calc(80vw - 550px);
+  }
+  .movingVideoContainerToCenter {
+    -webkit-transform: scale(1.7);
+            transform: scale(1.7);
+  }
+  @-webkit-keyframes movingVideoContainerToCenter {
+    0% {
+      margin: 0;
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    50% {
+      margin: 0 0 0 22vw;
+      -webkit-transform: scale(1.35);
+              transform: scale(1.35);
+    }
+    100% {
+      margin: 0 auto;
+      -webkit-transform: scale(1.7);
+              transform: scale(1.7);
+    }
+  }
+  @keyframes movingVideoContainerToCenter {
+    0% {
+      margin: 0;
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    50% {
+      margin: 0 0 0 22vw;
+      -webkit-transform: scale(1.35);
+              transform: scale(1.35);
+    }
+    100% {
+      margin: 0 auto;
+      -webkit-transform: scale(1.7);
+              transform: scale(1.7);
+    }
+  }
+}
+
+@media (max-width: 1280px) {
+  .projectSection .videoContainer {
+    width: 400px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .projectSection .videoContainer .videoCover {
+    width: 400px;
+    height: 225px;
+  }
+  .projectSection .videoContainer video {
+    width: 400px;
+  }
+  .projectDetails {
+    width: calc(80vw - 450px);
+  }
+  .movingVideoContainerToCenter {
+    -webkit-transform: scale(1.8);
+            transform: scale(1.8);
+  }
+  @-webkit-keyframes movingVideoContainerToCenter {
+    0% {
+      margin: 0;
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    50% {
+      margin: 0 0 0 22vw;
+      -webkit-transform: scale(1.4);
+              transform: scale(1.4);
+    }
+    100% {
+      margin: 0 auto;
+      -webkit-transform: scale(1.8);
+              transform: scale(1.8);
+    }
+  }
+  @keyframes movingVideoContainerToCenter {
+    0% {
+      margin: 0;
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    50% {
+      margin: 0 0 0 22vw;
+      -webkit-transform: scale(1.4);
+              transform: scale(1.4);
+    }
+    100% {
+      margin: 0 auto;
+      -webkit-transform: scale(1.8);
+              transform: scale(1.8);
+    }
+  }
+}
+
+@media (max-width: 1024px) {
   .projectSection > div > div {
     margin-top: 0;
     -webkit-box-orient: vertical;
@@ -1717,20 +1930,71 @@ header li a {
             align-items: center;
   }
   .projectSection .videoContainer {
-    width: 80vw;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    background-color: #8892b0;
+    width: 700px;
+  }
+  .projectSection .videoContainer .videoCover {
+    position: absolute;
+    width: 700px;
+    height: 393.75px;
+    margin: 0;
+  }
+  .projectSection .videoContainer video {
+    width: 700px;
   }
   .projectDetails {
-    width: 80vw;
+    width: 700px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
   }
   .projectDetails div {
     padding: 0 20px 10px;
+    margin: 0;
+  }
+  .movingVideoContainerToCenter {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    margin: 50px 0 0 0;
+  }
+  @-webkit-keyframes movingVideoContainerToCenter {
+    0% {
+      margin: 0;
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    50% {
+      margin: 25px 0 0 0;
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    100% {
+      margin: 50px 0 0 0;
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  @keyframes movingVideoContainerToCenter {
+    0% {
+      margin: 0;
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    50% {
+      margin: 25px 0 0 0;
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    100% {
+      margin: 50px 0 0 0;
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
   }
 }
 
@@ -1760,26 +2024,74 @@ header li a {
   }
 }
 
-@media (max-height: 874px) {
+@media (max-height: 874px) and (min-width: 1024px) {
+  .projectSection > div > div {
+    margin-top: 0;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
   .projectSection .videoContainer {
-    width: 600px;
+    width: 300px;
   }
   .projectSection .videoContainer .videoCover {
-    width: 600px;
-    height: 337.5px;
+    position: absolute;
+    width: 300px;
+    height: 168.75px;
+    margin: 0;
   }
   .projectSection .videoContainer video {
-    width: 600px;
-  }
-  .projectSection img {
-    width: 30px;
-    margin: 0 5px;
+    width: 300px;
   }
   .projectDetails {
+    width: calc(80vw - 350px);
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
-    width: 600px;
+  }
+  .projectDetails div {
+    padding: 0 20px 10px;
+    margin: 0;
+  }
+  .movingVideoContainerToCenter {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    margin: 100px auto 0;
+  }
+  @-webkit-keyframes movingVideoContainerToCenter {
+    0% {
+      margin: 0;
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    50% {
+      margin: 50px 0 0 20vw;
+      -webkit-transform: scale(1.25);
+              transform: scale(1.25);
+    }
+    100% {
+      margin: 100px  auto 0;
+      -webkit-transform: scale(1.5);
+              transform: scale(1.5);
+    }
+  }
+  @keyframes movingVideoContainerToCenter {
+    0% {
+      margin: 0;
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    50% {
+      margin: 50px 0 0 20vw;
+      -webkit-transform: scale(1.25);
+              transform: scale(1.25);
+    }
+    100% {
+      margin: 100px  auto 0;
+      -webkit-transform: scale(1.5);
+              transform: scale(1.5);
+    }
   }
 }
 
@@ -1926,6 +2238,15 @@ header li a {
   color: #64ffda;
   background-color: #020c1b;
   border: none;
+}
+
+.contactSection form button:hover {
+  color: #f57dff;
+}
+
+.contactSection form button:active {
+  border: 5px inset #8892b0;
+  color: #57cbff;
 }
 
 .contactMethods {

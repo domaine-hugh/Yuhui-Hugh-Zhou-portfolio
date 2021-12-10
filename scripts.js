@@ -168,7 +168,7 @@ app.navIndicator = () => {
         document.querySelector("#projectIndicator").classList.add('far');
         document.querySelector("#contactIndicator").classList.remove('fas');
         document.querySelector("#contactIndicator").classList.add('far');
-    } else if (document.documentElement.scrollTop >= window.innerHeight * 2 && document.documentElement.scrollTop < window.innerHeight * 6) {//Project section
+    } else if (document.documentElement.scrollTop >= window.innerHeight * 2 && document.documentElement.scrollTop < window.innerHeight * 5) {//Project section
         document.querySelector("#homeIndicator").classList.remove('fas');
         document.querySelector("#homeIndicator").classList.add('far');
         document.querySelector("#aboutIndicator").classList.remove('fas');
@@ -177,7 +177,7 @@ app.navIndicator = () => {
         document.querySelector("#projectIndicator").classList.add('fas');
         document.querySelector("#contactIndicator").classList.remove('fas');
         document.querySelector("#contactIndicator").classList.add('far');
-    } else if (document.documentElement.scrollTop >= window.innerHeight * 6){ //Contact section
+    } else if (document.documentElement.scrollTop >= window.innerHeight * 5){ //Contact section
         document.querySelector("#homeIndicator").classList.remove('fas');
         document.querySelector("#homeIndicator").classList.add('far');
         document.querySelector("#aboutIndicator").classList.remove('fas');
@@ -260,6 +260,7 @@ app.aboutSwitch = () => {
         }
     })
 }
+
 //Loading page
 app.loadingShowingNumber =0 ;
 app.loadingNumber = () => {
@@ -275,6 +276,30 @@ app.loadingPageDone = () => {
     setTimeout(function() {
         document.querySelector("#loadingPage").classList.add('loadingPageHide')
     }, 3000)
+}
+
+//Moving video to center 
+app.hoverOnVideoThanMove = () => {
+    const projectSection = document.querySelectorAll('.projectSection > div');
+    for (let i = 0; i <  projectSection.length; i ++) {
+        ['mouseenter', 'focusin', 'touchstart'].forEach((e) => {
+            projectSection[i].querySelector('.videoContainer').addEventListener(e, function() {
+                projectSection[i].querySelector('.projectDetails').style.display = "none";
+                projectSection[i].querySelector('.videoContainer').classList.add('movingVideoContainerToCenter');
+            })
+        })
+    }
+}
+app.hoverOnVideoThanMoveBack = () => {
+    const projectSection = document.querySelectorAll('.projectSection > div');
+    for (let i = 0; i <  projectSection.length; i ++) {
+        ['mouseleave', 'focusout', 'touchmove'].forEach((e) => {
+            projectSection[i].querySelector('.videoContainer').addEventListener(e, function() {
+                projectSection[i].querySelector('.projectDetails').style.display = "block";
+                projectSection[i].querySelector('.videoContainer').classList.remove('movingVideoContainerToCenter');
+            })
+        })
+    }
 }
 
 //Hover on some skill icons
@@ -400,6 +425,9 @@ app.init = function () {
     //Profile picture change
     app.profileImage();
     app.profileImageBack();
+    //Hover and move the location of video
+    app.hoverOnVideoThanMove();
+    app.hoverOnVideoThanMoveBack();
 }
 
 app.init();

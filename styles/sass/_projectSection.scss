@@ -13,6 +13,7 @@
             width: 700px;
         }
     }
+
     img {
         width:40px;
         margin: 0 10px;
@@ -29,6 +30,7 @@
             margin-top: 15vh;
             display:flex;
             justify-content: space-between;
+            align-items: flex-end;
         }
     }
 
@@ -79,6 +81,15 @@
             color:$colorLightGreen;
             margin: 0 30px;
             padding: 5px 15px;
+            border-radius: 5px;
+
+            &:hover {
+                color:$colorPink;
+            }
+
+            &:active {
+                color:$colorBlue;
+            }
         }
     }
 
@@ -109,6 +120,15 @@
     text-decoration: none;
     color:$colorLightGreen;
 
+    
+        &:hover {
+            color:$colorPink;
+        }
+
+        &:active {
+            color:$colorBlue;
+        }
+
     i {
         position:absolute;
         margin-left: 15px;
@@ -121,6 +141,19 @@
         100%{bottom: 0;}
     }
 }
+
+.movingVideoContainerToCenter{
+    margin: 0 auto;
+    transform: scale(1.5);
+    animation: movingVideoContainerToCenter 1s linear;
+}
+
+@keyframes movingVideoContainerToCenter {
+    0% {margin: 0; transform: scale(1);}
+    50% {margin: 0 0 0 22vw; transform: scale(1.25);}
+    100% { margin: 0 auto;transform: scale(1.5);}
+}
+
 
 @media (min-width:1920px) {
     .projectDetails {
@@ -140,7 +173,120 @@
 }
 
 @media (max-width: 1634px){
+    // .projectSection {
+    //     & > div {
+    //         & >div {
+    //             margin-top: 0;
+    //            flex-direction: column;
+    //            align-items: center;
+    //         }
+    //     }
+
+    //     .videoContainer {
+    //         width: 80vw;
+    //         display:flex;
+    //         justify-content: center;
+    //         background-color: $colorDarkSlate;
+    //     }
+    // }
+
+    // .projectDetails {
+    //     width: 80vw;
+
+    //     div {
+    //         padding: 0 20px 10px;
+    //     }
+    // }
+
     .projectSection {
+        .videoContainer {
+            width: 600px;
+    
+            .videoCover {
+                width: 600px;
+                height: 337.5px;
+            }
+    
+            video {
+                width: 600px;
+            }
+        }
+        img {
+            width:30px;
+            margin: 0 5px; 
+        }
+    }
+
+    .projectDetails {
+        width: calc(80vw - 650px); // 100px between it and video
+    }
+}
+
+@media (max-width: 1550px){
+    .projectSection {
+        .videoContainer {
+            width: 500px;
+    
+            .videoCover {
+                width: 500px;
+                height: 281.25px;
+            }
+    
+            video {
+                width: 500px;
+            }
+        }
+    }
+
+    .projectDetails {
+        width: calc(80vw - 550px); // 100px between it and video
+    }
+
+    .movingVideoContainerToCenter{
+        transform: scale(1.7);
+    }
+
+    @keyframes movingVideoContainerToCenter {
+        0% {margin: 0; transform: scale(1);}
+        50% {margin: 0 0 0 22vw; transform: scale(1.35);}
+        100% { margin: 0 auto;transform: scale(1.7);}
+    }
+}
+
+@media (max-width: 1280px){
+    .projectSection {
+        .videoContainer {
+            width: 400px;
+            align-self: center;
+    
+            .videoCover {
+                width: 400px;
+                height: 225px;
+            }
+    
+            video {
+                width: 400px;
+            }
+        }
+    }
+
+    .projectDetails {
+        width: calc(80vw - 450px); // 100px between it and video
+    }
+
+    .movingVideoContainerToCenter{
+        transform: scale( 1.8);
+    }
+
+    @keyframes movingVideoContainerToCenter {
+        0% {margin: 0; transform: scale(1);}
+        50% {margin: 0 0 0 22vw; transform: scale(1.4);}
+        100% { margin: 0 auto;transform: scale(1.8);}
+    }
+}
+
+@media (max-width: 1024px){
+ .projectSection {
         & > div {
             & >div {
                 margin-top: 0;
@@ -150,19 +296,42 @@
         }
 
         .videoContainer {
-            width: 80vw;
             display:flex;
             justify-content: center;
-            background-color: $colorDarkSlate;
+            width: 700px;
+
+            .videoCover {
+                position:absolute;
+                width: 700px;
+                height: 393.75px;
+                margin: 0;
+            }
+    
+            video {
+                width: 700px;
+            }
         }
     }
 
     .projectDetails {
-        width: 80vw;
+        width: 700px;
+        align-self: center;
 
         div {
             padding: 0 20px 10px;
+            margin:0;
         }
+    }
+
+    .movingVideoContainerToCenter{
+        transform: scale(1);
+        margin: 50px 0 0 0 ;
+    }
+
+    @keyframes movingVideoContainerToCenter {
+        0% {margin: 0; transform: scale(1);}
+        50% {  margin: 25px 0 0 0 ; transform: scale(1);}
+        100% {   margin: 50px 0 0 0 ; transform: scale(1);}
     }
 }
 
@@ -196,29 +365,50 @@
     }
 }
 
-@media (max-height: 874px) {
+@media (max-height: 874px) and (min-width: 1024px) {
     .projectSection {
+        & > div {
+            & >div {
+                margin-top: 0;
+               flex-direction: row;
+            }
+        }
+
         .videoContainer {
-            width: 600px;
-    
+            width: 300px;
+
             .videoCover {
-                width: 600px;
-                height: 337.5px;
+                position:absolute;
+                width: 300px;
+                height: 168.75px;
+                margin: 0;
             }
     
             video {
-                width: 600px;
+                width: 300px;
             }
-        }
-        img {
-            width:30px;
-            margin: 0 5px; 
         }
     }
 
     .projectDetails {
+        width: calc(80vw - 350px);
         align-self: center;
-        width: 600px;
+
+        div {
+            padding: 0 20px 10px;
+            margin:0;
+        }
+    }
+
+    .movingVideoContainerToCenter{
+        transform: scale(1.5);
+        margin: 100px auto 0;
+    }
+
+    @keyframes movingVideoContainerToCenter {
+        0% {margin: 0; transform: scale(1);}
+        50% {  margin:  50px 0 0 20vw ; transform: scale(1.25);}
+        100% {   margin: 100px  auto 0; transform: scale(1.5);}
     }
 }
 

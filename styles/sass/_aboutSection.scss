@@ -226,7 +226,6 @@ position: relative;
     input[type=range] {
         height: 25px;
         -webkit-appearance: none;
-       
         width: 25%;
         background-color: $colorNavy;
       }
@@ -239,7 +238,6 @@ position: relative;
         box-shadow: 0px 0px 1px $colorLightGreen;
         background: $colorSlate;
         border-radius: 1px;
-        border: 0px solid $colorLightGreen;
       }
       input[type=range]::-webkit-slider-thumb {
         box-shadow: 0px 0px 1px $colorSlate;
@@ -260,7 +258,6 @@ position: relative;
         box-shadow: 0px 0px 1px $colorLightGreen;
         background: $colorSlate;
         border-radius: 1px;
-        border: 0px solid $colorLightGreen;
       }
       input[type=range]::-moz-range-thumb {
         box-shadow: 0px 0px 1px $colorSlate;
