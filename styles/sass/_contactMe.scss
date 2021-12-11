@@ -57,7 +57,7 @@
     display:flex;
 
     li {
-        display:inline;
+        display:inline-block;
 
         button{
             background-color:$colorNavy ;
@@ -85,6 +85,19 @@
         text-align: center;
         line-height: 2;
         color:$colorNavy;
+
+        &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: $colorNav;
+            opacity: 1; /* Firefox */
+        }
+
+        &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color: $colorNav;
+        }
+
+        &::-ms-input-placeholder { /* Microsoft Edge */
+            color: $colorNav;
+        }
     }
     input:focus,
     textarea:focus {

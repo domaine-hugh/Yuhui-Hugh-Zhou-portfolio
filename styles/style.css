@@ -1611,7 +1611,32 @@ header li a:active {
   padding: 0 20px 20px;
 }
 
-.projectDetails div:last-child {
+.projectDetails .projectSkillLogo {
+  display: inline-block;
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+.projectDetails .projectSkillLogo:hover p {
+  display: block;
+}
+
+.projectDetails .projectSkillLogo p {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  width: 100px;
+  padding: 15px 0;
+  background-color: #8892b0;
+  color: #64ffda;
+  text-align: center;
+  border: 1px solid #64ffda;
+  top: -10px;
+  left: -20px;
+}
+
+.projectDetails > div:last-child {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1620,18 +1645,18 @@ header li a:active {
           justify-content: center;
 }
 
-.projectDetails div:last-child a {
+.projectDetails > div:last-child a {
   text-decoration: none;
   color: #64ffda;
   margin: 0 30px;
   padding: 5px 15px;
 }
 
-.projectDetails div:last-child a:hover {
+.projectDetails > div:last-child a:hover {
   color: #f57dff;
 }
 
-.projectDetails div:last-child a:active {
+.projectDetails > div:last-child a:active {
   color: #57cbff;
 }
 
@@ -1779,6 +1804,12 @@ header li a:active {
   }
   .projectDetails {
     width: calc(80vw - 650px);
+  }
+  .projectDetails .projectSkillLogo p {
+    font-size: 0.8rem;
+    width: 84px;
+    padding: 10px 0;
+    top: -5px;
   }
 }
 
@@ -1994,6 +2025,15 @@ header li a:active {
         align-self: center;
     width: 600px;
   }
+  .projectDetails .projectDetails {
+    width: calc(80vw - 650px);
+  }
+  .projectDetails .projectDetails .projectSkillLogo p {
+    font-size: 0.8rem;
+    width: 84px;
+    padding: 10px 0;
+    top: -5px;
+  }
   .nextProjectLink {
     right: 50px;
   }
@@ -2118,22 +2158,6 @@ header li a:active {
   }
 }
 
-@media (max-width: 421px) {
-  .projectSection .videoContainer {
-    width: 300px;
-  }
-  .projectSection .videoContainer .videoCover {
-    width: 300px;
-    height: 168.75px;
-  }
-  .projectSection .videoContainer video {
-    width: 300px;
-  }
-  .projectDetails {
-    width: 300px;
-  }
-}
-
 @media (max-width: 360px) {
   .projectSection .videoContainer {
     width: 250px;
@@ -2151,6 +2175,12 @@ header li a:active {
   }
   .projectDetails {
     width: 250px;
+  }
+  .projectDetails .projectSkillLogo p {
+    font-size: 0.5rem;
+    width: 70px;
+    padding: 5px 0;
+    top: 0px;
   }
 }
 
@@ -2231,7 +2261,7 @@ header li a:active {
 }
 
 .contactMethods li {
-  display: inline;
+  display: inline-block;
 }
 
 .contactMethods li button {
@@ -2505,6 +2535,19 @@ body {
 .mainWrapper {
   width: 80vw;
   margin: 0 auto;
+}
+
+.skip-link {
+  position: absolute;
+  left: -1000px;
+  top: 5px;
+  z-index: 999;
+  background: white;
+  color: black;
+}
+
+.skip-link:focus {
+  left: 0;
 }
 
 h1 {

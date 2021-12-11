@@ -72,7 +72,32 @@
         padding: 0 20px 20px;
     }
 
-    div:last-child {
+    .projectSkillLogo {
+        display:inline-block;
+        position:relative;
+        padding: 0; 
+        margin: 0;
+
+        &:hover p {
+            display:block;
+        }
+
+        p{
+            display: none;
+            position:absolute;
+            z-index: 1;
+            width: 100px;
+            padding: 15px 0;
+            background-color: $colorDarkSlate;
+            color: $colorLightGreen;
+            text-align: center;
+            border: 1px solid $colorLightGreen;
+            top: -10px;
+            left:-20px;
+        }
+    }
+
+    & > div:last-child {
         display: flex;
         justify-content: center;
 
@@ -172,31 +197,6 @@
 }
 
 @media (max-width: 1634px){
-    // .projectSection {
-    //     & > div {
-    //         & >div {
-    //             margin-top: 0;
-    //            flex-direction: column;
-    //            align-items: center;
-    //         }
-    //     }
-
-    //     .videoContainer {
-    //         width: 80vw;
-    //         display:flex;
-    //         justify-content: center;
-    //         background-color: $colorDarkSlate;
-    //     }
-    // }
-
-    // .projectDetails {
-    //     width: 80vw;
-
-    //     div {
-    //         padding: 0 20px 10px;
-    //     }
-    // }
-
     .projectSection {
         .videoContainer {
             width: 600px;
@@ -218,6 +218,15 @@
 
     .projectDetails {
         width: calc(80vw - 650px); // 100px between it and video
+
+        .projectSkillLogo {
+            p{
+                font-size: 0.8rem;
+                width: 84px;
+                padding: 10px 0;
+                top: -5px;
+            }
+        }
     }
 }
 
@@ -357,6 +366,19 @@
     .projectDetails {
         align-self: center;
         width: 600px;
+
+        .projectDetails {
+            width: calc(80vw - 650px); // 100px between it and video
+    
+            .projectSkillLogo {
+                p{
+                    font-size: 0.8rem;
+                    width: 84px;
+                    padding: 10px 0;
+                    top: -5px;
+                }
+            }
+        }
     }
 
     .nextProjectLink {
@@ -496,6 +518,15 @@
 
     .projectDetails {
         width: 250px;
+
+        .projectSkillLogo {
+            p{
+                font-size: 0.5rem;
+                width: 70px;
+                padding: 5px 0;
+                top: 0px;
+            }
+        } 
     }
 }
 

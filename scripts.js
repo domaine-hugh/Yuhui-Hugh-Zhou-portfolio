@@ -142,7 +142,7 @@ app.showingNavAside = () => {
 }
 //Showing follow me aside 
 app.showingFollowMeAside = () => {
-    if (document.documentElement.scrollTop >= window.innerHeight * 5.45) {
+    if (document.documentElement.scrollTop >= window.innerHeight * 6.45) {
         document.querySelector('#followmeBarAside').classList.add('asideHide');
     } else {
         document.querySelector('#followmeBarAside').classList.remove('asideHide');
@@ -168,7 +168,7 @@ app.navIndicator = () => {
         document.querySelector("#projectIndicator").classList.add('far');
         document.querySelector("#contactIndicator").classList.remove('fas');
         document.querySelector("#contactIndicator").classList.add('far');
-    } else if (document.documentElement.scrollTop >= window.innerHeight * 2 && document.documentElement.scrollTop < window.innerHeight * 5) {//Project section
+    } else if (document.documentElement.scrollTop >= window.innerHeight * 2 && document.documentElement.scrollTop < window.innerHeight * 6) {//Project section
         document.querySelector("#homeIndicator").classList.remove('fas');
         document.querySelector("#homeIndicator").classList.add('far');
         document.querySelector("#aboutIndicator").classList.remove('fas');
@@ -177,7 +177,7 @@ app.navIndicator = () => {
         document.querySelector("#projectIndicator").classList.add('fas');
         document.querySelector("#contactIndicator").classList.remove('fas');
         document.querySelector("#contactIndicator").classList.add('far');
-    } else if (document.documentElement.scrollTop >= window.innerHeight * 5){ //Contact section
+    } else if (document.documentElement.scrollTop >= window.innerHeight * 6){ //Contact section
         document.querySelector("#homeIndicator").classList.remove('fas');
         document.querySelector("#homeIndicator").classList.add('far');
         document.querySelector("#aboutIndicator").classList.remove('fas');
@@ -195,21 +195,31 @@ app.projectTittles = () => {
         document.querySelector("#secondProjectTittle").classList.remove('projectTittleShows');
         document.querySelector("#thirdProjectTittle").classList.remove('projectTittleShows');
         document.querySelector("#fourthProjectTittle").classList.remove('projectTittleShows');
+        document.querySelector("#fifthProjectTittle").classList.remove('projectTittleShows');
     } else if (document.documentElement.scrollTop >= window.innerHeight * 2.05 && document.documentElement.scrollTop < window.innerHeight * 3.05) {
         document.querySelector("#firstProjectTittle").classList.remove('projectTittleShows');
         document.querySelector("#secondProjectTittle").classList.add('projectTittleShows');
         document.querySelector("#thirdProjectTittle").classList.remove('projectTittleShows');
         document.querySelector("#fourthProjectTittle").classList.remove('projectTittleShows');
+        document.querySelector("#fifthProjectTittle").classList.remove('projectTittleShows');
     } else if (document.documentElement.scrollTop >= window.innerHeight * 3.05 && document.documentElement.scrollTop < window.innerHeight * 4.05) {
         document.querySelector("#firstProjectTittle").classList.remove('projectTittleShows');
         document.querySelector("#secondProjectTittle").classList.remove('projectTittleShows');
         document.querySelector("#thirdProjectTittle").classList.add('projectTittleShows');
         document.querySelector("#fourthProjectTittle").classList.remove('projectTittleShows');
-    } else {
+        document.querySelector("#fifthProjectTittle").classList.remove('projectTittleShows');
+    } else if (document.documentElement.scrollTop >= window.innerHeight * 4.05 && document.documentElement.scrollTop < window.innerHeight * 5.05){
         document.querySelector("#firstProjectTittle").classList.remove('projectTittleShows');
         document.querySelector("#secondProjectTittle").classList.remove('projectTittleShows');
         document.querySelector("#thirdProjectTittle").classList.remove('projectTittleShows');
         document.querySelector("#fourthProjectTittle").classList.add('projectTittleShows');
+        document.querySelector("#fifthProjectTittle").classList.remove('projectTittleShows');
+    } else {
+        document.querySelector("#firstProjectTittle").classList.remove('projectTittleShows');
+        document.querySelector("#secondProjectTittle").classList.remove('projectTittleShows');
+        document.querySelector("#thirdProjectTittle").classList.remove('projectTittleShows');
+        document.querySelector("#fourthProjectTittle").classList.remove('projectTittleShows');
+        document.querySelector("#fifthProjectTittle").classList.add('projectTittleShows');
     }
 } 
 
