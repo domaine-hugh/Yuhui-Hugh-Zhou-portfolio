@@ -474,27 +474,6 @@
     }
 }
 
-@media (max-width: 421px) {
-    .projectSection {
-        .videoContainer {
-            width: 300px;
-    
-            .videoCover {
-                width: 300px;
-                height: 168.75px;
-            }
-    
-            video {
-                width: 300px;
-            }
-        }
-    }
-
-    .projectDetails {
-        width: 300px;
-    }
-}
-
 @media (max-width: 360px) {
     .projectSection {
         .videoContainer {
