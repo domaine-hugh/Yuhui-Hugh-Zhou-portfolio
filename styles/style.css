@@ -2291,6 +2291,26 @@ header li a:active {
   color: #0a192f;
 }
 
+.inputContainer input::-webkit-input-placeholder, .inputContainer textarea::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #0a192f;
+}
+
+.inputContainer input::-moz-placeholder, .inputContainer textarea::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #0a192f;
+}
+
+.inputContainer input:-ms-input-placeholder, .inputContainer textarea:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #0a192f;
+}
+
+.inputContainer input :-moz-placeholder, .inputContainer textarea :-moz-placeholder {
+  /* Firefox 18- */
+  color: #0a192f;
+}
+
 .inputContainer input:focus,
 .inputContainer textarea:focus {
   outline: none;

@@ -85,18 +85,21 @@
         text-align: center;
         line-height: 2;
         color:$colorNavy;
-
-        &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-            color: $colorNav;
-            opacity: 1; /* Firefox */
+        
+        &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+            color: $colorNavy;
         }
 
-        &:-ms-input-placeholder { /* Internet Explorer 10-11 */
-            color: $colorNav;
+        &::-moz-placeholder { /* Firefox 19+ */
+            color: $colorNavy;
         }
 
-        &::-ms-input-placeholder { /* Microsoft Edge */
-            color: $colorNav;
+        &:-ms-input-placeholder { /* IE 10+ */
+            color: $colorNavy;
+        }
+
+        :-moz-placeholder { /* Firefox 18- */
+            color: $colorNavy;
         }
     }
     input:focus,
