@@ -415,7 +415,6 @@ header li a {
   color: #64ffda;
   font-size: 1.2rem;
   padding: 5px 10px;
-  border-radius: 5px;
 }
 
 header li a:hover {
@@ -637,7 +636,6 @@ header li a:active {
   border: 1px solid #64ffda;
   background-color: #112240;
   text-align: center;
-  border-radius: 5px;
 }
 
 .followmeBarAside {
@@ -930,7 +928,6 @@ header li a:active {
   background-color: #8892b0;
   padding: 5px 20px;
   color: #020c1b;
-  border-bottom-right-radius: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -977,10 +974,6 @@ header li a:active {
   font-weight: bolder;
 }
 
-.education > div:last-child {
-  border-bottom-right-radius: 50px;
-}
-
 .skillSection ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1012,7 +1005,6 @@ header li a:active {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-radius: 20px;
   background-color: #8892b0;
 }
 
@@ -1048,7 +1040,6 @@ header li a:active {
           transform-origin: center;
   -webkit-transform: scale(1);
           transform: scale(1);
-  border-radius: 20px;
 }
 
 .pulseEffect:hover::before {
@@ -1342,23 +1333,11 @@ header li a:active {
   .aboutSection .education {
     width: 80vw;
   }
-  .profile > div .profileText {
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-  }
   .profile > div p {
     margin: 10px;
   }
   .education > div {
     padding: 10px;
-  }
-  .education > div:nth-child(2) {
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-  }
-  .education > div:last-child {
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
   }
   .skillSection ul {
     -ms-flex-wrap: wrap;
@@ -1431,9 +1410,6 @@ header li a:active {
 @media (max-width: 719px) {
   .profile > div img {
     display: none;
-  }
-  .profile > div .profileText {
-    border-radius: 20px;
   }
 }
 
@@ -1649,7 +1625,6 @@ header li a:active {
   color: #64ffda;
   margin: 0 30px;
   padding: 5px 15px;
-  border-radius: 5px;
 }
 
 .projectDetails div:last-child a:hover {
@@ -1960,7 +1935,7 @@ header li a:active {
   .movingVideoContainerToCenter {
     -webkit-transform: scale(1);
             transform: scale(1);
-    margin: 50px 0 0 0;
+    margin: 0;
   }
   @-webkit-keyframes movingVideoContainerToCenter {
     0% {
@@ -1969,12 +1944,12 @@ header li a:active {
               transform: scale(1);
     }
     50% {
-      margin: 25px 0 0 0;
+      margin: 0;
       -webkit-transform: scale(1);
               transform: scale(1);
     }
     100% {
-      margin: 50px 0 0 0;
+      margin: 0;
       -webkit-transform: scale(1);
               transform: scale(1);
     }
@@ -1986,12 +1961,12 @@ header li a:active {
               transform: scale(1);
     }
     50% {
-      margin: 25px 0 0 0;
+      margin: 0;
       -webkit-transform: scale(1);
               transform: scale(1);
     }
     100% {
-      margin: 50px 0 0 0;
+      margin: 0;
       -webkit-transform: scale(1);
               transform: scale(1);
     }
