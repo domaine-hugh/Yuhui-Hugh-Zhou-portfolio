@@ -174,7 +174,7 @@
 
 @keyframes movingVideoContainerToCenter {
     0% {margin: 0; transform: scale(1);}
-    50% {margin: 0 0 0 22vw; transform: scale(1.25);}
+    50% {margin: 0 0 0 15vw; transform: scale(1.25);}
     100% { margin: 0 auto;transform: scale(1.5);}
 }
 
@@ -256,7 +256,7 @@
 
     @keyframes movingVideoContainerToCenter {
         0% {margin: 0; transform: scale(1);}
-        50% {margin: 0 0 0 22vw; transform: scale(1.35);}
+        50% {margin: 0 0 0 20vw; transform: scale(1.35);}
         100% { margin: 0 auto;transform: scale(1.7);}
     }
 }

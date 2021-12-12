@@ -1801,7 +1801,7 @@ header li a:active {
             transform: scale(1);
   }
   50% {
-    margin: 0 0 0 22vw;
+    margin: 0 0 0 15vw;
     -webkit-transform: scale(1.25);
             transform: scale(1.25);
   }
@@ -1819,7 +1819,7 @@ header li a:active {
             transform: scale(1);
   }
   50% {
-    margin: 0 0 0 22vw;
+    margin: 0 0 0 15vw;
     -webkit-transform: scale(1.25);
             transform: scale(1.25);
   }
@@ -1898,7 +1898,7 @@ header li a:active {
               transform: scale(1);
     }
     50% {
-      margin: 0 0 0 22vw;
+      margin: 0 0 0 20vw;
       -webkit-transform: scale(1.35);
               transform: scale(1.35);
     }
@@ -1915,7 +1915,7 @@ header li a:active {
               transform: scale(1);
     }
     50% {
-      margin: 0 0 0 22vw;
+      margin: 0 0 0 20vw;
       -webkit-transform: scale(1.35);
               transform: scale(1.35);
     }
