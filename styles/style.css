@@ -2387,7 +2387,7 @@ header li a:active {
 
 .inputContainer .bottom,
 .inputContainer .top {
-  height: 2px;
+  height: 3px;
   left: 0;
   right: 0;
   -webkit-transform: scaleX(0);
@@ -2396,7 +2396,7 @@ header li a:active {
 
 .inputContainer .left,
 .inputContainer .right {
-  width: 2px;
+  width: 3px;
   top: 0;
   bottom: 0;
   -webkit-transform: scaleY(0);

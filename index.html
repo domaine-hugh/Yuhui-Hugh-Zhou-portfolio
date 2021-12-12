@@ -17,6 +17,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Crimson+Pro&family=Inter:wght@700&family=Lato:wght@700&family=Monoton&display=swap"
         rel="stylesheet">
+    <!-- AOS library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
     <title>Hugh Zhou</title>
 </head>
 
@@ -98,9 +100,9 @@
             </nav>
             <div></div>
         </aside>
-        <section class="aboutSection mainWrapper" id="aboutSection">
+        <section class="aboutSection mainWrapper" id="aboutSection" data-aos="zoom-in-up" data-aos-duration="2000">
             <h2>About Me</h2>
-            <div class="profile" id="profile">
+            <div class="profile" id="profile" >
                 <div class="profileTitle">
                     <h3>Who I Am</h3>
                     <button id="avatarButton">Avatar</button>
@@ -121,7 +123,7 @@
                     </div>
                 </div>
             </div>
-            <div class="education" id="education">
+            <div class="education" id="education" >
                 <h3>Educational Background</h3>
                 <div>
                     <img src="./images/junoLogo.png" alt="Juno College logo">
@@ -223,7 +225,7 @@
             </div>
         </section>
         <section class="projectSection mainWrapper" id="projectSection">
-            <div id="firstProject">
+            <div id="firstProject" data-aos="fade-right" data-aos-duration="2000">
                 <h2 id="firstProjectTittle">Some Things I've Made</h2>
                 <div>
                     <div class="videoContainer">
@@ -292,7 +294,7 @@
                 <a class="nextProjectLink" href="#secondProject">Next Application<i
                         class="fas fa-angle-double-down"></i></a>
             </div>
-            <div id="secondProject">
+            <div id="secondProject" data-aos="fade-left" data-aos-duration="2000">
                 <h2  id="secondProjectTittle">Some Things I've Made</h2>
                 <div>
                     <div class="videoContainer">
@@ -354,7 +356,7 @@
                 <a class="nextProjectLink" href="#thridProject">Next Application<i
                         class="fas fa-angle-double-down"></i></a>
             </div>
-            <div id="thridProject">
+            <div id="thridProject" data-aos="fade-right" data-aos-duration="2000">
                 <h2  id="thirdProjectTittle">Some Things I've Made</h2>
                 <div>
                     <div class="videoContainer">
@@ -407,7 +409,7 @@
                 <a class="nextProjectLink" href="#fourthProject">Next Application<i
                         class="fas fa-angle-double-down"></i></a>
             </div>
-            <div id="fourthProject">
+            <div id="fourthProject" data-aos="fade-left" data-aos-duration="2000">
                 <h2  id="fourthProjectTittle">Some Things I've Made</h2>
                 <div>
                     <div class="videoContainer">
@@ -468,7 +470,7 @@
                 <a class="nextProjectLink" href="#fifthProject">Next Application<i
                         class="fas fa-angle-double-down"></i></a>
             </div>
-            <div id="fifthProject">
+            <div id="fifthProject" data-aos="fade-right" data-aos-duration="2000">
                 <h2 id="fifthProjectTittle">Some Things I've Made</h2>
                 <div>
                     <div class="videoContainer">
@@ -520,7 +522,7 @@
                 </div>
             </div>
         </section>
-        <section class="contactSection mainWrapper" id="contactSection">
+        <section class="contactSection mainWrapper" id="contactSection" data-aos="zoom-in-down" data-aos-duration="2000">
             <h2>Contact Me</h2>
             <div>
                 <div class="contactText">
@@ -589,6 +591,10 @@
     </footer>
 
     <script type="text/javascript" src="scripts.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 
 </html>

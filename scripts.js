@@ -150,7 +150,7 @@ app.showingFollowMeAside = () => {
 }
 //Nav aside indicator 
 app.navIndicator = () => {
-    if (document.documentElement.scrollTop < window.innerHeight * 1) { //Home page
+    if (document.documentElement.scrollTop < window.innerHeight * 0.9) { //Home page
         document.querySelector("#homeIndicator").classList.remove('far');
         document.querySelector("#homeIndicator").classList.add('fas');
         document.querySelector("#aboutIndicator").classList.remove('fas');
@@ -159,7 +159,7 @@ app.navIndicator = () => {
         document.querySelector("#projectIndicator").classList.add('far');
         document.querySelector("#contactIndicator").classList.remove('fas');
         document.querySelector("#contactIndicator").classList.add('far');
-    } else if (document.documentElement.scrollTop >= window.innerHeight * 1 && document.documentElement.scrollTop < window.innerHeight * 2) { //About section
+    } else if (document.documentElement.scrollTop >= window.innerHeight * 0.9 && document.documentElement.scrollTop < window.innerHeight * 1.9) { //About section
         document.querySelector("#homeIndicator").classList.remove('fas');
         document.querySelector("#homeIndicator").classList.add('far');
         document.querySelector("#aboutIndicator").classList.remove('far');
@@ -168,7 +168,7 @@ app.navIndicator = () => {
         document.querySelector("#projectIndicator").classList.add('far');
         document.querySelector("#contactIndicator").classList.remove('fas');
         document.querySelector("#contactIndicator").classList.add('far');
-    } else if (document.documentElement.scrollTop >= window.innerHeight * 2 && document.documentElement.scrollTop < window.innerHeight * 6) {//Project section
+    } else if (document.documentElement.scrollTop >= window.innerHeight * 1.9 && document.documentElement.scrollTop < window.innerHeight * 5.9) {//Project section
         document.querySelector("#homeIndicator").classList.remove('fas');
         document.querySelector("#homeIndicator").classList.add('far');
         document.querySelector("#aboutIndicator").classList.remove('fas');
@@ -177,7 +177,7 @@ app.navIndicator = () => {
         document.querySelector("#projectIndicator").classList.add('fas');
         document.querySelector("#contactIndicator").classList.remove('fas');
         document.querySelector("#contactIndicator").classList.add('far');
-    } else if (document.documentElement.scrollTop >= window.innerHeight * 6){ //Contact section
+    } else if (document.documentElement.scrollTop >= window.innerHeight * 5.9){ //Contact section
         document.querySelector("#homeIndicator").classList.remove('fas');
         document.querySelector("#homeIndicator").classList.add('far');
         document.querySelector("#aboutIndicator").classList.remove('fas');
