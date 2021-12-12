@@ -42,7 +42,7 @@
             border: none;
 
             &:hover {
-                color:$colorPink;
+                color:$colorBurntCoral;
             }
 
             &:active {
@@ -308,14 +308,31 @@
     }
 }
 
-@media (max-width: 375px) {
-        .inputContainer {
-            input, textarea {
-                line-height: 1.2;
+@media (max-width: 386px) {
+    .inputContainer {
+        input, textarea {
+            line-height: 1.2;
+            }
+
+            &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+                font-size: 0.7rem;
+            }
+    
+            &::-moz-placeholder { /* Firefox 19+ */
+                font-size: 0.7rem;
+            }
+    
+            &:-ms-input-placeholder { /* IE 10+ */
+                font-size: 0.7rem;
+            }
+    
+            :-moz-placeholder { /* Firefox 18- */
+                font-size: 0.7rem;
             }
         }
     .contactSection form button {
         font-size: 0.7rem;
     }
 }
+
 

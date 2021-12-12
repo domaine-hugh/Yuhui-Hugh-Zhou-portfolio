@@ -34,6 +34,10 @@
             align-self: center;
         }
 
+        button{
+          display:none;
+        }
+
         .profileText {
           background-color:$colorDarkSlate;
           padding: 5px 20px;
@@ -334,10 +338,54 @@ position: relative;
 
   .profile {
     & > div {
-      p {
+      .profileContainer {
+        position:relative;
+      }
+
+      img {
+        display:none;
+     }
+
+     .avatarShows {
+       display:block;
+       position:absolute;
+       left: calc(40vw - 175px);
+     }
+
+     button {
+       display: block;
+       border:none;
+       background-color: inherit;
+       font-family: $fontSubSubTittle;
+       color:$colorDarkSlate;
+       font-size: 1.5rem;
+       cursor: pointer;
+
+       &:hover {
+        color:$colorLightGreen;
+       }
+     }
+
+     .buttonClicked {
+      color: $colorBurntCoral;
+
+      &:hover {
+        color: $colorBurntCoral;
+      }
+     }
+
+    p {
         margin: 10px;
       }
+
+      .profileText {
+        padding: 15px 20px;
+      }
     }
+  }
+
+  .profileTitle {
+    justify-content: space-between;
   }
 
   .education {
@@ -376,21 +424,17 @@ position: relative;
 }
 
 @media (max-width:1062px) {
-  .aboutSection {
-    h3 {
-      margin-bottom: 20px;
-    }
-  }
-
   .profile {
     & > div {
         flex-direction: column;
-        
-        img {
-            height: 150px;
-            margin-right: 0;
-            margin-bottom: 20px;
-        }
+    }
+
+    .profileTitle {
+      flex-direction: row;
+    }
+
+    img {
+      margin-top:40px;
     }
   }
 
@@ -442,16 +486,6 @@ position: relative;
   }
 }
 
-@media (max-width:719px) {
-  .profile {
-    & > div {
-      img {
-         display:none;
-      }
-    }
-  }
-}
-
 @media (max-width:604px) {
   .education {
     & > div {
@@ -469,7 +503,32 @@ position: relative;
   }
 }
 
+@media (max-width:600px) {
+  .profile {
+    & > div {
+     button {
+       font-size: 1.2rem;
+     }
+    }
+  }
+}
+
 @media (max-width:500px) {
+  .profile {
+    & > div {
+      img {
+        height: 250px;
+      }
+
+      button {
+        font-size: 1.1rem;
+      }
+    
+      .avatarShows {
+        left: calc(40vw - 125px);
+      }
+    }
+  }
   .skillSection {
     ul {
       li {
@@ -515,6 +574,16 @@ position: relative;
 
   .skillSection p {
     font-size: 0.7rem;
+  }
+}
+
+@media (max-width:414px) {
+  .profile {
+    & > div {
+     button {
+       font-size: 0.9rem;
+     }
+    }
   }
 }
 
@@ -568,6 +637,14 @@ position: relative;
 }
 
 @media (max-width: 320px) {
+  .profile {
+    & > div {
+     button {
+       font-size: 0.7rem;
+     }
+    }
+  }
+
   .skillSection {
     ul {
       li {

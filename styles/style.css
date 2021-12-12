@@ -419,7 +419,7 @@ header li a {
 
 header li a:hover {
   background-color: #8892b0;
-  color: #f57dff;
+  color: #E9897E;
 }
 
 header li a:active {
@@ -924,6 +924,10 @@ header li a:active {
       align-self: center;
 }
 
+.profile > div button {
+  display: none;
+}
+
 .profile > div .profileText {
   background-color: #8892b0;
   padding: 5px 20px;
@@ -1333,8 +1337,45 @@ header li a:active {
   .aboutSection .education {
     width: 80vw;
   }
+  .profile > div .profileContainer {
+    position: relative;
+  }
+  .profile > div img {
+    display: none;
+  }
+  .profile > div .avatarShows {
+    display: block;
+    position: absolute;
+    left: calc(40vw - 175px);
+  }
+  .profile > div button {
+    display: block;
+    border: none;
+    background-color: inherit;
+    font-family: "Lato", sans-serif;
+    color: #8892b0;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  .profile > div button:hover {
+    color: #64ffda;
+  }
+  .profile > div .buttonClicked {
+    color: #E9897E;
+  }
+  .profile > div .buttonClicked:hover {
+    color: #E9897E;
+  }
   .profile > div p {
     margin: 10px;
+  }
+  .profile > div .profileText {
+    padding: 15px 20px;
+  }
+  .profileTitle {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .education > div {
     padding: 10px;
@@ -1363,19 +1404,20 @@ header li a:active {
 }
 
 @media (max-width: 1062px) {
-  .aboutSection h3 {
-    margin-bottom: 20px;
-  }
   .profile > div {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .profile > div img {
-    height: 150px;
-    margin-right: 0;
-    margin-bottom: 20px;
+  .profile .profileTitle {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .profile img {
+    margin-top: 40px;
   }
   .skillSection ul li {
     height: 130px;
@@ -1407,12 +1449,6 @@ header li a:active {
   }
 }
 
-@media (max-width: 719px) {
-  .profile > div img {
-    display: none;
-  }
-}
-
 @media (max-width: 604px) {
   .education > div {
     padding: 10px;
@@ -1426,7 +1462,22 @@ header li a:active {
   }
 }
 
+@media (max-width: 600px) {
+  .profile > div button {
+    font-size: 1.2rem;
+  }
+}
+
 @media (max-width: 500px) {
+  .profile > div img {
+    height: 250px;
+  }
+  .profile > div button {
+    font-size: 1.1rem;
+  }
+  .profile > div .avatarShows {
+    left: calc(40vw - 125px);
+  }
   .skillSection ul li {
     height: 100px;
     width: 24%;
@@ -1456,6 +1507,12 @@ header li a:active {
   }
   .skillSection p {
     font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 414px) {
+  .profile > div button {
+    font-size: 0.9rem;
   }
 }
 
@@ -1489,6 +1546,9 @@ header li a:active {
 }
 
 @media (max-width: 320px) {
+  .profile > div button {
+    font-size: 0.7rem;
+  }
   .skillSection ul li {
     height: 70px;
     width: 31%;
@@ -1653,7 +1713,7 @@ header li a:active {
 }
 
 .projectDetails > div:last-child a:hover {
-  color: #f57dff;
+  color: #E9897E;
 }
 
 .projectDetails > div:last-child a:active {
@@ -1688,7 +1748,7 @@ header li a:active {
 }
 
 .nextProjectLink:hover {
-  color: #f57dff;
+  color: #E9897E;
 }
 
 .nextProjectLink:active {
@@ -2246,7 +2306,7 @@ header li a:active {
 }
 
 .contactSection form button:hover {
-  color: #f57dff;
+  color: #E9897E;
 }
 
 .contactSection form button:active {
@@ -2503,9 +2563,25 @@ header li a:active {
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 386px) {
   .inputContainer input, .inputContainer textarea {
     line-height: 1.2;
+  }
+  .inputContainer::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    font-size: 0.7rem;
+  }
+  .inputContainer::-moz-placeholder {
+    /* Firefox 19+ */
+    font-size: 0.7rem;
+  }
+  .inputContainer:-ms-input-placeholder {
+    /* IE 10+ */
+    font-size: 0.7rem;
+  }
+  .inputContainer :-moz-placeholder {
+    /* Firefox 18- */
+    font-size: 0.7rem;
   }
   .contactSection form button {
     font-size: 0.7rem;
@@ -2534,6 +2610,13 @@ footer p {
 
 footer span {
   color: #64ffda;
+}
+
+footer span:hover {
+  display: inline-block;
+  color: #E9897E;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 html {

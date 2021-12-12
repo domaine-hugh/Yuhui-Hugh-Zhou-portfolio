@@ -101,8 +101,11 @@
         <section class="aboutSection mainWrapper" id="aboutSection">
             <h2>About Me</h2>
             <div class="profile" id="profile">
-                <h3>Who I Am</h3>
-                <div>
+                <div class="profileTitle">
+                    <h3>Who I Am</h3>
+                    <button id="avatarButton">Avatar</button>
+                </div>
+                <div class="profileContainer">
                     <img id ="profileImage" src="./images/profilePhoto.jpg" alt="Hugh's profile photo">
                     <div class="profileText">
                         <p>Hi, my name is Hugh Zhou, and I am an electrical engineer turned front-end developer based in Toronto, Canada.</p>
@@ -549,8 +552,8 @@
                     <p>Or feel free to leave a message for me here</p>
                     <div class="inputContainer">
                         <label class="sr-only" for="nameInput">Could I have your name please:</label>
-                        <input id="nameInput" name="nameInput" type="text" placeholder="Please enter your name here:"
-                            aria-label="Please enter your name here" required>
+                        <input id="nameInput" name="nameInput" type="text" placeholder="Could I have your name please:"
+                            aria-label="Could I have your name please:" required>
                         <span class="bottom"></span>
                         <span class="right"></span>
                         <span class="top"></span>
@@ -559,7 +562,7 @@
                     <div class="inputContainer">
                         <label class="sr-only" for="emailInput">Could I have your email please:</label>
                         <input id="emailInput" name="emailInput" type="email"
-                            placeholder="Please enter your email here:" aria-label="Please enter your email here"
+                            placeholder="Could I have your name please:" aria-label="Could I have your name please:"
                             required>
                         <span class="bottom"></span>
                         <span class="right"></span>
@@ -569,8 +572,8 @@
                     <div class="inputContainer">
                         <label class="sr-only" for="textareaInput">Could I have some ideas about what you want to share with me? (optional)</label>
                         <textarea id="textareaInput" name="textareaInput"
-                            placeholder="Please share the topic you want to talk with me here:"
-                            aria-label="Please share the topic you want to talk with me here"></textarea>
+                            placeholder="Could I have some ideas about what you want to share with me? (optional)"
+                            aria-label="Could I have some ideas about what you want to share with me? (optional)"></textarea>
                         <span class="bottom"></span>
                         <span class="right"></span>
                         <span class="top"></span>
@@ -582,7 +585,7 @@
         </section>
     </main>
     <footer class='maxWidth'>
-        <p>Copyright © 2021 by <span>YUHUI ZHOU</span>. All Rights Reserved.</p>
+        <p>Copyright © 2021 by <span>HUGH ZHOU</span>. All Rights Reserved.</p>
     </footer>
 
     <script type="text/javascript" src="scripts.js"></script>

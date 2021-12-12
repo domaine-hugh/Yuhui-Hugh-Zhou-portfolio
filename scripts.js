@@ -402,6 +402,14 @@ app.hoverOutSkillIcons = () => {
     })
 }
 
+//Avatar triggle button
+app.avatarTriggle = () => {
+    document.querySelector('#avatarButton').addEventListener('click', function(){
+        document.querySelector('#profileImage').classList.toggle('avatarShows');
+        document.querySelector('#avatarButton').classList.toggle('buttonClicked');
+    })
+}
+
 
 app.init = function () {
     //Page loading
@@ -440,6 +448,8 @@ app.init = function () {
     //Hover and move the location of video
     app.hoverOnVideoThanMove();
     app.hoverOnVideoThanMoveBack();
+    //Avatar triggle
+    app.avatarTriggle();
 }
 
 app.init();

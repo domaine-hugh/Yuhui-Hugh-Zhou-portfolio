@@ -13,5 +13,11 @@ footer {
 
     span {
         color:$colorLightGreen;
+
+        &:hover {
+            display: inline-block;
+            color:$colorBurntCoral;
+            transform: scale(1.1);
+        }
     }
 }
