@@ -363,7 +363,7 @@ header .loadingPage .balls div:nth-of-type(3) {
 
 header .loadingPage h2 {
   font-family: "Monoton", cursive;
-  color: #ccd6f6;
+  color: #ffa7d7;
   font-size: 2rem;
 }
 
@@ -2377,7 +2377,7 @@ a {
 
 @media (max-width: 525px) {
   .projectSection h2 {
-    width: 270px;
+    width: 290px;
   }
 }
 
@@ -2888,13 +2888,13 @@ body {
 
 h1 {
   font-family: "Monoton", cursive;
-  color: #ccd6f6;
+  color: #ffa7d7;
   font-size: 2rem;
 }
 
 h2 {
   font-family: "Press Start 2P", cursive;
-  color: #ccd6f6;
+  color: #ffa7d7;
   font-size: 1.3rem;
 }
 
@@ -2902,7 +2902,7 @@ h2 {
 .projectSection h2,
 .skillSection h2,
 .contactSection h2 {
-  color: #ccd6f6;
+  color: #ffa7d7;
   margin: 0;
   height: 100px;
   padding-top: 30px;
