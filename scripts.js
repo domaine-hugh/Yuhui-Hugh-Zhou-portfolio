@@ -63,7 +63,7 @@ app.downloadResume = () => {
 }
 
 //Printing effect(header)
-app.text = ['former electrical engineer', 'husband and father', 'basketball player...?'];
+app.text = ['former engineer', 'husband and father', 'basketball player...?'];
 app.typingContainer = document.getElementById("printingArea");
 app.index = 0;
 app.arrayIndex = 0;
@@ -94,7 +94,7 @@ app.typing = () =>  {
             }
         }
         
-        if (currentWords === 'former electrical engineer') {
+        if (currentWords === 'former engineer') {
             document.querySelector('#changingImg').src = "./images/EE.jpg";
             document.querySelector('#changingImg').alt = "Hugh was an electrical engineer";
             app.avoidGifReset = 0;

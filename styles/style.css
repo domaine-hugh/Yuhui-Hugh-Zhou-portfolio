@@ -363,7 +363,7 @@ header .loadingPage .balls div:nth-of-type(3) {
 
 header .loadingPage h2 {
   font-family: "Monoton", cursive;
-  color: #ffa7d7;
+  color: white;
   font-size: 2rem;
 }
 
@@ -402,7 +402,7 @@ header nav {
       -ms-flex-pack: center;
           justify-content: center;
   border: 5px solid #57cbff;
-  background-color: #7a7a7a;
+  background-color: #020c1b;
 }
 
 header nav ul {
@@ -437,7 +437,7 @@ header li a {
 }
 
 header li a:hover {
-  background-color: #8892b0;
+  background-color: #949AB8;
   color: #E9897E;
 }
 
@@ -688,7 +688,7 @@ a {
   z-index: 1;
   height: 40px;
   width: 40px;
-  color: #ccd6f6;
+  color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -711,7 +711,7 @@ a {
 }
 
 .navContainer a, .navContainer button {
-  color: #ccd6f6;
+  color: white;
   border: none;
   background-color: inherit;
   cursor: pointer;
@@ -991,7 +991,7 @@ a {
   width: 250px;
   border: 5px solid #57cbff;
   text-align: center;
-  background-color: #7a7a7a;
+  background-color: #020c1b;
 }
 
 .aboutSection .profile {
@@ -1032,7 +1032,7 @@ a {
 }
 
 .profile > div .profileText {
-  background-color: #8892b0;
+  background-color: #949AB8;
   padding: 5px 20px;
   color: #020c1b;
   display: -webkit-box;
@@ -1057,7 +1057,7 @@ a {
 }
 
 .education > div {
-  background-color: #8892b0;
+  background-color: #949AB8;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1123,7 +1123,7 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #8892b0;
+  background-color: #949AB8;
 }
 
 .skillSection ul li:last-child img {
@@ -1153,7 +1153,7 @@ a {
   bottom: 0;
   left: 0;
   right: 0;
-  border: 4px solid #8892b0;
+  border: 4px solid #949AB8;
   -webkit-transform-origin: center;
           transform-origin: center;
   -webkit-transform: scale(1);
@@ -1325,7 +1325,7 @@ a {
 .aboutSectionRange div p {
   font-family: "Press Start 2P", cursive;
   font-size: 0.7rem;
-  color: #ccd6f6;
+  color: white;
   width: 100px;
 }
 
@@ -1474,7 +1474,7 @@ a {
     border: none;
     background-color: inherit;
     font-family: "Audiowide", cursive;
-    color: #8892b0;
+    color: #949AB8;
     font-size: 1.5rem;
     cursor: pointer;
   }
@@ -1708,7 +1708,7 @@ a {
   width: 600px;
   border: 5px solid #57cbff;
   text-align: center;
-  background-color: #7a7a7a;
+  background-color: #020c1b;
 }
 
 .projectSection .videoContainer {
@@ -1813,7 +1813,7 @@ a {
 }
 
 .projectDetails p, .projectDetails > div {
-  background-color: #8892b0;
+  background-color: #949AB8;
   border-left: 5px double #020c1b;
   border-right: 5px double #020c1b;
 }
@@ -1852,7 +1852,7 @@ a {
   z-index: 1;
   width: 100px;
   padding: 15px 0;
-  background-color: #8892b0;
+  background-color: #949AB8;
   color: #64ffda;
   text-align: center;
   border: 1px solid #64ffda;
@@ -2446,7 +2446,7 @@ a {
   width: 300px;
   border: 5px solid #57cbff;
   text-align: center;
-  background-color: #7a7a7a;
+  background-color: #020c1b;
 }
 
 .contactSection > div {
@@ -2457,7 +2457,7 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  color: #a8b2d1;
+  color: white;
 }
 
 .contactSection .contactText {
@@ -2504,7 +2504,7 @@ a {
 }
 
 .contactSection form button:active {
-  border: 5px inset #8892b0;
+  border: 5px inset #949AB8;
   color: #57cbff;
 }
 
@@ -2831,7 +2831,7 @@ footer {
 }
 
 footer p {
-  color: #a8b2d1;
+  color: white;
   text-align: center;
 }
 
@@ -2888,13 +2888,13 @@ body {
 
 h1 {
   font-family: "Monoton", cursive;
-  color: #ffa7d7;
+  color: white;
   font-size: 2rem;
 }
 
 h2 {
   font-family: "Press Start 2P", cursive;
-  color: #ffa7d7;
+  color: white;
   font-size: 1.3rem;
 }
 
@@ -2902,7 +2902,7 @@ h2 {
 .projectSection h2,
 .skillSection h2,
 .contactSection h2 {
-  color: #ffa7d7;
+  color: white;
   margin: 0;
   height: 100px;
   padding-top: 30px;
@@ -2910,7 +2910,7 @@ h2 {
 
 h3 {
   font-family: "Audiowide", cursive;
-  color: #a8b2d1;
+  color: white;
   font-size: 1.5rem;
 }
 

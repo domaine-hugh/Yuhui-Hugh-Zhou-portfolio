@@ -19,7 +19,7 @@
             z-index: 1;
             height: 40px;
             width: 40px;
-            color:$colorLightSlate;
+            color:white;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -38,7 +38,7 @@
 
 .navContainer {
     a,button {
-        color:$colorLightSlate;
+        color:white;
         border: none;
         background-color: inherit;
         cursor: pointer;
