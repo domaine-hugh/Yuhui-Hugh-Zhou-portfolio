@@ -16,7 +16,7 @@ html {
 
 body {
     max-width: 1920px;
-    background-color: $colorNavy;
+    background-color: $colorDarkGrey;
     margin: 0 auto;
     overflow-x: hidden;
 }
@@ -52,9 +52,9 @@ h1 {
 }
 
 h2 {
-    font-family: $fontSubTittle;
-    color:$colorSlate;
-    font-size: 1.8rem;
+    font-family: $fontSubTitle;
+    color:$colorLightSlate;
+    font-size: 1.3rem;
 }
 
 .aboutSection h2,
@@ -63,13 +63,13 @@ h2 {
 .contactSection h2 {
     color:$colorLightSlate;
     margin: 0;
-    height: 15vh;
-    padding-top: 5vh;
+    height: 100px;
+    padding-top: 30px;
 }
 
 h3 {
     font-family: $fontSubSubTittle;
-    color:$colorDarkSlate;
+    color:$colorSlate;
     font-size: 1.5rem;
 }
 
@@ -116,13 +116,25 @@ p {
     }
 }
 
-@media (max-height: 1050px) {
+@media (max-width: 1110px) {
     .aboutSection h2,
     .projectSection h2,
     .skillSection h2,
-    .contactSection h2 {
-        height: 10vh;
-        padding-top: 4vh;
+    .contactSection h2,
+    .typingcontainer h2 {
+        font-size: 1rem;
+        height:90px;
+    }
+}
+
+@media(max-width: 956px) {
+    .aboutSection h2,
+    .projectSection h2,
+    .skillSection h2,
+    .contactSection h2,
+    .typingcontainer h2 {
+        font-size: 0.8rem;
+        height: 80px;
     }
 }
 
@@ -132,7 +144,7 @@ p {
     }
     
     h2 {
-        font-size: 1.4rem;
+        font-size: 0.7rem;
     }
 
     h3 {
@@ -143,6 +155,27 @@ p {
         width: 400px;
         left:calc(50vw - 200px);
         padding: 0 10px;
+    }
+
+    .aboutSection h2,
+    .projectSection h2,
+    .skillSection h2,
+    .contactSection h2,
+    .typingcontainer h2 {
+        font-size: 0.7rem;
+        height: 80px;
+    }
+}
+
+@media  (max-width: 525px) {
+    .aboutSection h2,
+    .projectSection h2,
+    .skillSection h2,
+    .contactSection h2,
+    .typingcontainer h2 {
+        font-size: 0.6rem;
+        height: 60px;
+        padding-top: 20px;
     }
 }
 

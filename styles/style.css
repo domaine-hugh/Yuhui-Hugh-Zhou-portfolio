@@ -237,16 +237,32 @@ html {
 
 header {
   height: 100vh;
+  width: 80vw;
+  margin: 0 auto;
   position: relative;
+  background-color: rgba(90, 90, 90, 0.9);
+}
+
+header .headerBackgroundGif {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0 auto;
+  height: 100vh;
+  width: 80vw;
+  z-index: -1;
+  background-image: url(../images/cloudsBackground.gif);
+  background-size: 100%;
 }
 
 header .loadingPage {
   position: absolute;
   top: 0;
   left: 0;
+  margin: 0 auto;
   height: 100vh;
-  width: 100vw;
-  background-color: #0a192f;
+  width: 80vw;
+  background-color: #5a5a5a;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -379,13 +395,14 @@ header .loadingPageHide {
 header nav {
   width: 60vw;
   margin: 0 auto;
-  height: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  border: 5px solid #57cbff;
+  background-color: #7a7a7a;
 }
 
 header nav ul {
@@ -399,14 +416,16 @@ header nav ul {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  font-family: "Crimson Pro", serif;
+  font-family: "Press Start 2P", cursive;
   height: 5vh;
+  font-size: 1.3rem;
   padding-left: 0;
   width: 100%;
 }
 
 header li {
   list-style: none;
+  line-height: 1.6;
 }
 
 header li a {
@@ -427,7 +446,7 @@ header li a:active {
 }
 
 .typingcontainer {
-  width: 60vw;
+  width: 70vw;
   margin: 25vh auto 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -437,11 +456,24 @@ header li a:active {
           justify-content: space-between;
 }
 
-.typingcontainer h2:nth-of-type(2) {
-  margin-left: 200px;
+.typingcontainer > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.typingcontainer P {
+.typingcontainer h2:nth-of-type(2) {
+  text-align: center;
+}
+
+.typingcontainer h3 {
   color: #64ffda;
   font-size: 1.2rem;
 }
@@ -452,6 +484,7 @@ header li a:active {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  border: 5px solid #57cbff;
 }
 
 .typingcontainer .printingArea::after {
@@ -485,33 +518,40 @@ header li a:active {
 }
 
 @media (min-width: 1920px) {
+  header {
+    width: 1536px;
+  }
   header nav {
     width: 1152px;
   }
+  header .headerBackgroundGif {
+    width: 1536px;
+  }
   header .loadingPage {
-    width: 1920px;
+    width: 1536px;
     margin: 0 auto;
   }
   .typingcontainer {
-    width: 1152px;
+    width: 1344px;
   }
 }
 
-@media (max-width: 1440px) {
-  .typingcontainer {
-    width: 70vw;
-  }
-}
-
-@media (max-width: 1280px) {
+@media (max-width: 1500px) {
   .typingcontainer {
     width: 80vw;
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1350px) {
+  header .typingcontainer img {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 1280px) {
   .typingcontainer {
-    margin: 15vh auto 0;
+    margin: 5vh auto 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -525,15 +565,53 @@ header li a:active {
   }
 }
 
+@media (max-width: 1110px) {
+  header nav ul {
+    height: auto;
+  }
+  header li
+a {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 956px) {
+  header li a {
+    font-size: 0.8rem;
+  }
+}
+
 @media (max-width: 768px) {
   header nav {
     width: 70vw;
   }
 }
 
+@media (max-width: 700px) {
+  header li a {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 700px) {
+  header li a {
+    font-size: 0.8rem;
+    font-family: "Audiowide", cursive;
+  }
+}
+
 @media (max-width: 600px) {
   header nav {
     width: 80vw;
+  }
+  header .typingcontainer h2 {
+    height: 40px;
+  }
+}
+
+@media (max-width: 540px) {
+  header li a {
+    font-size: 0.7rem;
   }
 }
 
@@ -546,24 +624,39 @@ header li a:active {
     height: 200px;
   }
   header li a {
-    font-size: 1rem;
-  }
-  .typingcontainer h2:nth-of-type(2) {
-    margin-left: 150px;
-  }
-}
-
-@media (max-width: 421px) {
-  header li a {
     margin: 0;
     font-size: 0.9rem;
     padding: 3px 5px;
   }
 }
 
+@media (max-width: 421px) {
+  header .typingcontainer h2 {
+    height: 20px;
+  }
+  header li a {
+    margin: 0;
+    font-size: 0.7rem;
+    padding: 3px 5px;
+  }
+}
+
 @media (max-width: 375px) {
-  .typingcontainer h2:nth-of-type(2) {
+  header .typingcontainer {
+    margin: 20px auto 0;
+  }
+  header .typingcontainer h2 {
+    height: 10px;
+  }
+  header .typingcontainer h2:nth-of-type(2) {
     margin-left: 120px;
+  }
+}
+
+@media (max-height: 625px) {
+  header .typingcontainer img {
+    width: 100px;
+    height: 100px;
   }
 }
 
@@ -634,7 +727,8 @@ header li a:active {
   margin: 0;
   top: 6px;
   border: 1px solid #64ffda;
-  background-color: #112240;
+  background-color: #7a7a7a;
+  color: #64ffda;
   text-align: center;
 }
 
@@ -888,6 +982,16 @@ header li a:active {
 .aboutSection {
   position: relative;
   height: 100vh;
+  background-image: url(../images/bricksBackground.png);
+  background-size: 18.5% 100%;
+  background-repeat: repeat-x;
+}
+
+.aboutSection h2 {
+  width: 250px;
+  border: 5px solid #57cbff;
+  text-align: center;
+  background-color: #7a7a7a;
 }
 
 .aboutSection .profile {
@@ -907,6 +1011,7 @@ header li a:active {
 }
 
 .aboutSection h3 {
+  margin-left: 25px;
   margin-bottom: 60px;
 }
 
@@ -919,9 +1024,7 @@ header li a:active {
 .profile > div img {
   height: 350px;
   margin-right: 2vw;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  border: 5px double #020c1b;
 }
 
 .profile > div button {
@@ -942,6 +1045,7 @@ header li a:active {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  border: 5px double #020c1b;
 }
 
 .profile > div span {
@@ -961,6 +1065,8 @@ header li a:active {
       -ms-flex-align: center;
           align-items: center;
   padding: 20px;
+  border-left: 5px double #020c1b;
+  border-right: 5px double #020c1b;
 }
 
 .education > div img {
@@ -976,6 +1082,14 @@ header li a:active {
 
 .education > div span {
   font-weight: bolder;
+}
+
+.education > div:nth-child(2) {
+  border-top: 5px double #020c1b;
+}
+
+.education > div:last-child {
+  border-bottom: 5px double #020c1b;
 }
 
 .skillSection ul {
@@ -1209,7 +1323,8 @@ header li a:active {
 }
 
 .aboutSectionRange div p {
-  font-family: "Inter", sans-serif;
+  font-family: "Press Start 2P", cursive;
+  font-size: 0.7rem;
   color: #ccd6f6;
   width: 100px;
 }
@@ -1226,7 +1341,7 @@ header li a:active {
   height: 25px;
   -webkit-appearance: none;
   width: 25%;
-  background-color: #0a192f;
+  background-color: #5a5a5a;
 }
 
 .aboutSectionRange input[type=range]:focus {
@@ -1328,12 +1443,18 @@ header li a:active {
 }
 
 @media (max-width: 1600px) {
+  .aboutSection {
+    background-size: 22.5% 100%;
+  }
   .aboutSection .profile {
     width: 80vw;
   }
 }
 
 @media (max-width: 1280px) {
+  .aboutSection {
+    background-size: 27.5% 100%;
+  }
   .aboutSection .education {
     width: 80vw;
   }
@@ -1352,7 +1473,7 @@ header li a:active {
     display: block;
     border: none;
     background-color: inherit;
-    font-family: "Lato", sans-serif;
+    font-family: "Audiowide", cursive;
     color: #8892b0;
     font-size: 1.5rem;
     cursor: pointer;
@@ -1400,6 +1521,15 @@ header li a:active {
   }
   .aboutSectionRange div {
     width: 35%;
+  }
+}
+
+@media (max-width: 1110px) {
+  .aboutSection {
+    background-size: 50% 100%;
+  }
+  .aboutSection h2 {
+    width: 200px;
   }
 }
 
@@ -1463,8 +1593,17 @@ header li a:active {
 }
 
 @media (max-width: 600px) {
+  .aboutSection h2 {
+    width: 150px;
+  }
   .profile > div button {
     font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 525px) {
+  .aboutSection h2 {
+    width: 120px;
   }
 }
 
@@ -1545,6 +1684,12 @@ header li a:active {
   }
 }
 
+@media (max-height: 590px) {
+  .aboutSectionRange {
+    margin-bottom: 1vh;
+  }
+}
+
 @media (max-width: 320px) {
   .profile > div button {
     font-size: 0.7rem;
@@ -1557,6 +1702,13 @@ header li a:active {
   .skillSection p {
     font-size: 0.6rem;
   }
+}
+
+.projectSection h2 {
+  width: 600px;
+  border: 5px solid #57cbff;
+  text-align: center;
+  background-color: #7a7a7a;
 }
 
 .projectSection .videoContainer {
@@ -1589,6 +1741,8 @@ header li a:active {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  background-image: url(../images/mazeBackground.jpg);
+  background-size: cover;
 }
 
 .projectSection > div > div {
@@ -1658,8 +1812,18 @@ header li a:active {
   width: calc(80vw - 800px);
 }
 
-.projectDetails p, .projectDetails div {
+.projectDetails p, .projectDetails > div {
   background-color: #8892b0;
+  border-left: 5px double #020c1b;
+  border-right: 5px double #020c1b;
+}
+
+.projectDetails > p:nth-child(2) {
+  border-top: 5px double #020c1b;
+}
+
+.projectDetails > div:last-child {
+  border-bottom: 5px double #020c1b;
 }
 
 .projectDetails P {
@@ -1740,9 +1904,9 @@ header li a:active {
 
 .nextProjectLink {
   position: absolute;
-  right: 0;
+  right: 30px;
   bottom: 5vh;
-  font-family: "Lato", sans-serif;
+  font-family: "Audiowide", cursive;
   text-decoration: none;
   color: #64ffda;
 }
@@ -1984,9 +2148,15 @@ header li a:active {
   }
 }
 
+@media (max-width: 1110px) {
+  .projectSection h2 {
+    width: 470px;
+  }
+}
+
 @media (max-width: 1024px) {
   .projectSection > div > div {
-    margin-top: 0;
+    margin-top: 50px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -2187,6 +2357,9 @@ header li a:active {
 }
 
 @media (max-width: 600px) {
+  .projectSection h2 {
+    width: 350px;
+  }
   .projectSection .videoContainer {
     width: 400px;
   }
@@ -2199,6 +2372,18 @@ header li a:active {
   }
   .projectDetails {
     width: 400px;
+  }
+}
+
+@media (max-width: 525px) {
+  .projectSection h2 {
+    width: 270px;
+  }
+}
+
+@media (max-height: 752px) {
+  .nextProjectLink {
+    display: none;
   }
 }
 
@@ -2253,6 +2438,15 @@ header li a:active {
       -ms-flex-direction: column;
           flex-direction: column;
   height: calc(100vh - 100px);
+  background-image: url(../images/bottomBackground.png);
+  background-size: 100%;
+}
+
+.contactSection h2 {
+  width: 300px;
+  border: 5px solid #57cbff;
+  text-align: center;
+  background-color: #7a7a7a;
 }
 
 .contactSection > div {
@@ -2299,7 +2493,7 @@ header li a:active {
 .contactSection form button {
   font-size: 1.2rem;
   padding: 10px 0;
-  font-family: "Inter", sans-serif;
+  font-family: "Press Start 2P", cursive;
   color: #64ffda;
   background-color: #020c1b;
   border: none;
@@ -2325,7 +2519,7 @@ header li a:active {
 }
 
 .contactMethods li button {
-  background-color: #0a192f;
+  background-color: inherit;
   border: none;
 }
 
@@ -2459,6 +2653,12 @@ header li a:active {
           transform: scaleY(1);
 }
 
+@media (max-width: 1110px) {
+  .contactSection h2 {
+    width: 250px;
+  }
+}
+
 @media (max-width: 1084px) {
   .contactSection .contactText {
     width: 80%;
@@ -2531,6 +2731,19 @@ header li a:active {
   }
 }
 
+@media (max-width: 650px) {
+  .contactSection h2 {
+    width: 180px;
+  }
+}
+
+@media (max-width: 525px) {
+  .contactSection h2 {
+    width: 140px;
+    padding-bottom: 20px;
+  }
+}
+
 @media (max-width: 414px) {
   .contactSection .contactText > p {
     margin: 2px 0;
@@ -2588,6 +2801,19 @@ header li a:active {
   }
 }
 
+@media (max-height: 575px) {
+  .contactSection {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: calc(100vh - 60px);
+  }
+}
+
 footer {
   width: 80vw;
   margin: 0 auto;
@@ -2601,6 +2827,7 @@ footer {
       -ms-flex-align: center;
           align-items: center;
   height: 100px;
+  background-image: url(../images/footerBackground.png);
 }
 
 footer p {
@@ -2619,13 +2846,19 @@ footer span:hover {
           transform: scale(1.1);
 }
 
+@media (max-height: 575px) {
+  footer {
+    height: 60px;
+  }
+}
+
 html {
   font-size: 125%;
 }
 
 body {
   max-width: 1920px;
-  background-color: #0a192f;
+  background-color: #5a5a5a;
   margin: 0 auto;
   overflow-x: hidden;
 }
@@ -2660,9 +2893,9 @@ h1 {
 }
 
 h2 {
-  font-family: "Inter", sans-serif;
-  color: #a8b2d1;
-  font-size: 1.8rem;
+  font-family: "Press Start 2P", cursive;
+  color: #ccd6f6;
+  font-size: 1.3rem;
 }
 
 .aboutSection h2,
@@ -2671,13 +2904,13 @@ h2 {
 .contactSection h2 {
   color: #ccd6f6;
   margin: 0;
-  height: 15vh;
-  padding-top: 5vh;
+  height: 100px;
+  padding-top: 30px;
 }
 
 h3 {
-  font-family: "Lato", sans-serif;
-  color: #8892b0;
+  font-family: "Audiowide", cursive;
+  color: #a8b2d1;
   font-size: 1.5rem;
 }
 
@@ -2709,7 +2942,7 @@ p {
 }
 
 .copyPop p {
-  font-family: "Lato", sans-serif;
+  font-family: "Audiowide", cursive;
   color: #112240;
 }
 
@@ -2753,13 +2986,25 @@ p {
   }
 }
 
-@media (max-height: 1050px) {
+@media (max-width: 1110px) {
   .aboutSection h2,
   .projectSection h2,
   .skillSection h2,
-  .contactSection h2 {
-    height: 10vh;
-    padding-top: 4vh;
+  .contactSection h2,
+  .typingcontainer h2 {
+    font-size: 1rem;
+    height: 90px;
+  }
+}
+
+@media (max-width: 956px) {
+  .aboutSection h2,
+  .projectSection h2,
+  .skillSection h2,
+  .contactSection h2,
+  .typingcontainer h2 {
+    font-size: 0.8rem;
+    height: 80px;
   }
 }
 
@@ -2768,7 +3013,7 @@ p {
     font-size: 1.6rem;
   }
   h2 {
-    font-size: 1.4rem;
+    font-size: 0.7rem;
   }
   h3 {
     font-size: 1.2rem;
@@ -2777,6 +3022,26 @@ p {
     width: 400px;
     left: calc(50vw - 200px);
     padding: 0 10px;
+  }
+  .aboutSection h2,
+  .projectSection h2,
+  .skillSection h2,
+  .contactSection h2,
+  .typingcontainer h2 {
+    font-size: 0.7rem;
+    height: 80px;
+  }
+}
+
+@media (max-width: 525px) {
+  .aboutSection h2,
+  .projectSection h2,
+  .skillSection h2,
+  .contactSection h2,
+  .typingcontainer h2 {
+    font-size: 0.6rem;
+    height: 60px;
+    padding-top: 20px;
   }
 }
 

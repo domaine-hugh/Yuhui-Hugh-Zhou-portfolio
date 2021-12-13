@@ -2,15 +2,31 @@
 
 header {
     height: 100vh;
+    width: 80vw;
+    margin: 0 auto;
     position:relative;
+    background-color: rgba(90, 90, 90, 0.9);
+
+    .headerBackgroundGif {
+        position: absolute;
+        top:0;
+        left:0;
+        margin:0 auto;
+        height: 100vh;
+        width: 80vw;
+        z-index: -1;
+        background-image: url(../images/cloudsBackground.gif);
+        background-size: 100%;
+    }
 
     .loadingPage {
         position: absolute;
         top:0;
         left:0;
+        margin:0 auto;
         height: 100vh;
-        width: 100vw;
-        background-color: $colorNavy;
+        width: 80vw;
+        background-color: $colorDarkGrey;
         display:flex;
         flex-direction: column;
         justify-content: center;
@@ -74,16 +90,18 @@ header {
     nav {
         width: 60vw;
         margin: 0 auto;
-        height: 20px;
         display:flex;
         justify-content: center;
+        border: 5px solid $colorBlue;
+        background-color: $colorGrey;
 
         ul {
             display:flex;
             flex-direction: row;
             justify-content: space-between;
-            font-family: $fontText;
+            font-family: $fontSubTitle;
             height: 5vh;
+            font-size: 1.3rem;
             padding-left: 0;
             width: 100%;
         }
@@ -92,6 +110,7 @@ header {
 
 header li{
     list-style: none;
+    line-height: 1.6;
 
     a{
         text-decoration: none;
@@ -112,16 +131,21 @@ header li{
 }
 
 .typingcontainer {
-    width: 60vw;
+    & > div {
+        display:flex; 
+        flex-direction: column;
+        justify-content: center;
+    }
+    width: 70vw;
     margin: 25vh auto 0;
     display:flex;
     justify-content: space-between;
 
     h2:nth-of-type(2) {
-       margin-left: 200px;
+      text-align: center;
     }
 
-    P {
+    h3 {
         color: $colorLightGreen;
         font-size: 1.2rem;
     }
@@ -130,6 +154,7 @@ header li{
         width:300px;
         height: 300px;
         align-self: center;
+        border: 5px solid $colorBlue;
     }
 
     .printingArea::after {
@@ -146,41 +171,78 @@ header li{
 
 @media (min-width:1920px) {
     header {
+        width: 1536px;
+
         nav {
             width: 1152px;
         }
 
+        .headerBackgroundGif {
+            width: 1536px;
+        }
+
         .loadingPage {
-            width: 1920px;
+            width: 1536px;
             margin: 0 auto;
            
         }
     }
     .typingcontainer {
-        width: 1152px;
+        width: 1344px;
     }
 }
 
-@media (max-width:1440px) {
-    .typingcontainer {
-        width: 70vw;
-    }
-}
-
-@media (max-width:1280px) {
+@media (max-width:1500px) {
     .typingcontainer {
         width: 80vw;
     }
 }
 
-@media (max-width:1024px) {
+@media (max-width:1350px) {
+    header {
+        .typingcontainer {
+            img {
+                width:250px;
+                height: 250px;
+            }
+        }
+    }
+}
+
+@media (max-width:1280px) {
     .typingcontainer {
-        margin: 15vh auto 0;
+        margin: 5vh auto 0;
         flex-direction: column;
         align-items: center;
 
         img {
            margin-top: 5vh;
+        }
+    }
+}
+
+@media (max-width:1110px) {
+    header {
+        nav {
+            ul {
+                height: auto;
+            }
+        }
+        li
+            a{
+                font-size: 1rem;
+            }
+        }
+    
+}
+
+@media (max-width: 956px) {
+    header {
+        li{
+          
+            a{
+                font-size: 0.8rem;
+            }
         }
     }
 }
@@ -193,10 +255,47 @@ header li{
     }
 }
 
+@media (max-width: 700px) {
+    header {
+
+        li{
+          
+            a{
+                font-size: 0.7rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    header {
+
+        li{
+          
+            a{
+                font-size: 0.8rem;
+                font-family: $fontSubSubTittle;
+            }
+        }
+    }
+}
+
 @media (max-width: 600px) {
     header {
         nav {
             width: 80vw;
+        }
+
+        .typingcontainer h2 {
+            height: 40px;
+        }
+    }
+}
+
+@media (max-width: 540px) {
+    header li{
+        a{
+            font-size: 0.7rem;
         }
     }
 }
@@ -211,32 +310,58 @@ header li{
                 height: 200px;
             }
         }
-    }
 
-    header li{
-        a{
-            font-size: 1rem;
+        
+        li{
+            a{
+                margin: 0;
+                font-size: 0.9rem;
+                padding: 3px 5px;
+            }
         }
-    }
-
-    .typingcontainer h2:nth-of-type(2) {
-        margin-left: 150px
-    }
+    } 
 }
 
 @media (max-width: 421px) {
-    header li{
-        a{
-            margin: 0;
-            font-size: 0.9rem;
-            padding: 3px 5px;
+    header {
+        .typingcontainer h2 {
+            height: 20px;
+        }
+
+        li{
+            a{
+                margin: 0;
+                font-size: 0.7rem;
+                padding: 3px 5px;
+            }
         }
     }
 }
 
 @media (max-width: 375px) {
-    .typingcontainer h2:nth-of-type(2) {
-        margin-left: 120px
+    header {
+        .typingcontainer {
+                margin: 20px auto 0;
+
+            h2 {
+                height: 10px;
+            }
+
+            h2:nth-of-type(2) {
+                margin-left: 120px;
+            }
+        }   
     }
 }
 
+@media (max-height: 625px) {
+    header {
+        .typingcontainer {
+          
+            img {
+                width:100px;
+                height: 100px;
+            }
+        }
+    }
+}

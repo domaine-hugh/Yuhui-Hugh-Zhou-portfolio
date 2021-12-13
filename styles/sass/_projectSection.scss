@@ -1,4 +1,11 @@
 .projectSection {
+    h2 {
+        width: 600px;
+        border: 5px solid $colorBlue;
+        text-align: center;
+        background-color: $colorGrey;
+      }
+
     .videoContainer {
         width: 700px;
 
@@ -25,6 +32,8 @@
         height:100vh;
         display:flex;
         flex-direction: column;
+        background-image: url(../images/mazeBackground.jpg);
+        background-size: cover;
 
         & >div {
             margin-top: 15vh;
@@ -59,8 +68,18 @@
     align-self: flex-end;
     width: calc(80vw - 800px); // 100px between it and video
 
-    p, div {
+    p, &>div {
         background-color: $colorDarkSlate;
+        border-left: 5px double $colorDarkNavy;
+        border-right:5px double $colorDarkNavy;
+    }
+
+    & > p:nth-child(2){
+        border-top: 5px double $colorDarkNavy;
+    }
+
+    & > div:last-child {
+        border-bottom: 5px double $colorDarkNavy;
     }
 
     P {
@@ -138,7 +157,7 @@
 
 .nextProjectLink {
     position:absolute;
-    right: 0;
+    right: 30px;
     bottom: 5vh;
     font-family: $fontSubSubTittle;
     text-decoration: none;
@@ -293,11 +312,19 @@
     }
 }
 
+@media (max-width: 1110px) {
+    .projectSection { 
+        h2 {
+        width: 470px;
+        }
+    }
+}
+
 @media (max-width: 1024px){
  .projectSection {
         & > div {
             & >div {
-                margin-top: 0;
+                margin-top: 50px;
                flex-direction: column;
                align-items: center;
             }
@@ -456,6 +483,9 @@
 
 @media (max-width: 600px) {
     .projectSection {
+        h2 {
+            width: 350px;
+        }
         .videoContainer {
             width: 400px;
     
@@ -472,6 +502,21 @@
 
     .projectDetails {
         width: 400px;
+    }
+}
+
+@media (max-width: 525px) {
+    .projectSection {
+        h2 {
+            width: 270px;
+        }
+    }
+}
+
+@media(max-height: 752px) {
+    
+    .nextProjectLink {
+        display: none;
     }
 }
 
@@ -495,6 +540,7 @@
         width: 300px;
     }
 }
+
 
 @media (max-width: 360px) {
     .projectSection {
@@ -529,5 +575,7 @@
         } 
     }
 }
+
+
 
 

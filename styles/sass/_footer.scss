@@ -5,6 +5,7 @@ footer {
     justify-content: center;
     align-items: center;
     height:100px;
+    background-image: url(../images/footerBackground.png);
 
     p {
         color:$colorSlate;
@@ -19,5 +20,11 @@ footer {
             color:$colorBurntCoral;
             transform: scale(1.1);
         }
+    }
+}
+
+@media (max-height: 575px) {
+    footer {
+        height:60px;
     }
 }
