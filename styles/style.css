@@ -1686,7 +1686,7 @@ a {
 
 @media (max-height: 590px) {
   .aboutSectionRange {
-    margin-bottom: 1vh;
+    margin-bottom: 0;
   }
 }
 
@@ -2651,6 +2651,18 @@ a {
           transform-origin: top left;
   -webkit-transform: scaleY(1);
           transform: scaleY(1);
+}
+
+@media (max-width: 1600px) {
+  .contactSection {
+    background-size: 120% 100%;
+  }
+}
+
+@media (max-width: 1500px) {
+  .contactSection {
+    background-size: 130% 100%;
+  }
 }
 
 @media (max-width: 1110px) {

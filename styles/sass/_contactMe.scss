@@ -183,6 +183,20 @@
     }
 }
 
+@media (max-width: 1600px) {
+    .contactSection { 
+       background-size: 120% 100%;
+    }
+}
+
+@media (max-width: 1500px) {
+    .contactSection { 
+       background-size: 130% 100%;
+    }
+}
+
+
+
 @media (max-width: 1110px) {
     .contactSection { 
         h2 {
