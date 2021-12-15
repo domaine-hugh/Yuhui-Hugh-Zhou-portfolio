@@ -269,6 +269,7 @@
 
 @media (max-height: 738px) {
     .contactSection {
+        background-size: 550% 110%;
         .contactText {
             & > p {
                 margin: 5px 0;
@@ -298,20 +299,14 @@
     }
 }
 
-@media (max-width: 722px) {
-    .contactSection {
-        .contactText {
-            width: 100%;
-        }
-    
-        form {
-            width: 100%;
-        }
-    }
-}
-
 @media (max-width: 650px) {
     .contactSection {
+        background-size: 330% 110%;
+
+        h2 {
+            width:180px;
+        }
+
         .contactMethods {
             display:flex;
             flex-direction: column;
@@ -326,16 +321,9 @@
     }
 }
 
-@media (max-width: 650px) {
-    .contactSection {
-        h2 {
-            width:180px;
-        }
-    }
-}
-
 @media (max-width: 525px) {
     .contactSection {
+        background-size: 400% 110%;
         h2 {
             width:140px;
             padding-bottom: 20px;
@@ -343,8 +331,21 @@
     }
 }
 
+@media(max-height:960px) {
+    .contactSection {
+        background-size: 500% 110%;
+        .contactText {
+            & > p {
+                margin: 2px 0;
+                line-height: 1.3;
+            }
+        }
+    }
+}
+
 @media (max-width: 414px) {
     .contactSection {
+        background-size: 500% 110%;
         .contactText {
             & > p {
                 margin: 2px 0;

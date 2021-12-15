@@ -238,6 +238,14 @@ header li{
 
 @media (max-width: 956px) {
     header {
+        nav {
+            height: 60px;
+        }
+
+        ul {
+            margin: 0;
+        }
+
         li{
           
             a{
@@ -247,7 +255,7 @@ header li{
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     header {
         nav {
             width: 70vw;
@@ -258,20 +266,11 @@ header li{
 @media (max-width: 700px) {
     header {
 
-        li{
-          
-            a{
-                font-size: 0.7rem;
-            }
+        nav {
+            height: 60px;
         }
-    }
-}
 
-@media (max-width: 700px) {
-    header {
-
-        li{
-          
+        li{ 
             a{
                 font-size: 0.8rem;
                 font-family: $fontSubSubTittle;
