@@ -2665,7 +2665,28 @@ a {
   }
 }
 
+@media (max-width: 1400px) {
+  .contactSection {
+    background-size: 160% 110%;
+  }
+}
+
+@media (max-width: 1300px) {
+  .contactSection {
+    background-size: 170% 110%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .contactSection {
+    background-size: 180% 110%;
+  }
+}
+
 @media (max-width: 1110px) {
+  .contactSection {
+    background-size: 190% 110%;
+  }
   .contactSection h2 {
     width: 250px;
   }
@@ -2680,7 +2701,16 @@ a {
   }
 }
 
+@media (max-width: 1000px) {
+  .contactSection {
+    background-size: 260% 110%;
+  }
+}
+
 @media (max-height: 850px) {
+  .contactSection {
+    background-size: 350% 110%;
+  }
   .contactSection .contactText > p {
     margin: 20px 0;
     line-height: 1.5;
