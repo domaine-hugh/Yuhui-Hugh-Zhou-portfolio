@@ -192,6 +192,23 @@ header li{
     }
 }
 
+@media (max-width:1920px) and (min-height:2500px) {
+    header {
+        .typingcontainer {
+            flex-direction: column;
+            margin:35vh auto 0;
+        }
+    }
+}
+
+@media (min-height:1100px) {
+    header {
+        nav {
+            height:110px;
+        }
+    }
+}
+
 @media (max-width:1500px) {
     .typingcontainer {
         width: 80vw;
@@ -204,6 +221,18 @@ header li{
             img {
                 width:250px;
                 height: 250px;
+            }
+        }
+    }
+}
+
+@media (max-width:1350px) and (min-height:2500px) {
+    header {
+        .typingcontainer {
+            img {
+                width:400px;
+                height: 400px;
+                align-self: flex-end;
             }
         }
     }

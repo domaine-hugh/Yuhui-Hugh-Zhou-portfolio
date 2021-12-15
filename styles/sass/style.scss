@@ -116,6 +116,13 @@ p {
     }
 }
 
+@media (max-width: 1920px) and (min-height: 2000px){
+    p {
+        font-size: 1.2rem;
+        line-height: 1.5;
+    }
+}
+
 @media (max-width: 1110px) {
     .aboutSection h2,
     .projectSection h2,
@@ -212,6 +219,18 @@ p {
 
     h3 {
         font-size: 0.9rem;
+    }
+}
+
+@media  (max-width: 385px) {
+    .aboutSection h2,
+    .projectSection h2,
+    .skillSection h2,
+    .contactSection h2,
+    .typingcontainer h2 {
+        font-size: 0.5rem;
+        height: 50px;
+        padding-top: 15px;
     }
 }
 

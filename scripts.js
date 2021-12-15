@@ -294,7 +294,7 @@ app.hoverOnVideoThanMove = () => {
     for (let i = 0; i <  projectSection.length; i ++) {
         ['mouseenter', 'focusin', 'touchstart'].forEach((e) => {
             projectSection[i].querySelector('.videoContainer').addEventListener(e, function() {
-                if (screen.width > 1024) {
+                if (screen.width > 1284) {
                     projectSection[i].querySelector('.projectDetails').style.display = "none";
                     projectSection[i].querySelector('.videoContainer').classList.add('movingVideoContainerToCenter');
                 }

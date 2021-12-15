@@ -183,6 +183,18 @@
     }
 }
 
+@media (max-width: 1920px) and (min-height: 2000px) {
+    .contactSection {
+        & > div {
+            margin-top: 15vh;
+
+            form {
+                margin-top: 5vh;
+            }
+        }
+    }
+}
+
 @media (max-width: 1600px) {
     .contactSection { 
        background-size: 120% 100%;

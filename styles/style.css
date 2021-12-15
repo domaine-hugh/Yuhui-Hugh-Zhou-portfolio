@@ -536,6 +536,22 @@ header li a:active {
   }
 }
 
+@media (max-width: 1920px) and (min-height: 2500px) {
+  header .typingcontainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 35vh auto 0;
+  }
+}
+
+@media (min-height: 1100px) {
+  header nav {
+    height: 110px;
+  }
+}
+
 @media (max-width: 1500px) {
   .typingcontainer {
     width: 80vw;
@@ -546,6 +562,15 @@ header li a:active {
   header .typingcontainer img {
     width: 250px;
     height: 250px;
+  }
+}
+
+@media (max-width: 1350px) and (min-height: 2500px) {
+  header .typingcontainer img {
+    width: 400px;
+    height: 400px;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
   }
 }
 
@@ -999,13 +1024,13 @@ a {
 
 .aboutSection .profile {
   width: 70vw;
-  margin: 0 auto;
+  margin: 10vh auto 0;
   display: block;
 }
 
 .aboutSection .education,
 .aboutSection .skillSection {
-  margin: 0 auto;
+  margin: 10vh auto 0;
   display: none;
 }
 
@@ -1445,12 +1470,72 @@ a {
   }
 }
 
+@media (max-width: 1920px) and (min-height: 2000px) {
+  .profile > div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .profile > div img {
+    height: 600px;
+    width: 600px;
+  }
+  .profile .profileContainer .profileText {
+    margin-top: 5vh;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    width: 800px;
+  }
+  .skillSection ul li {
+    width: 31%;
+    height: 250px;
+  }
+  .skillSection ul li:last-child img {
+    width: 30%;
+  }
+  .education > div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+@media (min-height: 1100px) {
+  .aboutSection > div {
+    margin-top: 10vh;
+  }
+}
+
 @media (max-width: 1600px) {
   .aboutSection {
     background-size: 22.5% 100%;
   }
   .aboutSection .profile {
     width: 80vw;
+  }
+  .aboutSectionRange div {
+    width: 38%;
+  }
+}
+
+@media (max-height: 800px) {
+  .aboutSection .profile {
+    margin: 5vh auto 0;
+  }
+  .aboutSection .education,
+  .aboutSection .skillSection {
+    margin: 5vh auto 0;
+  }
+}
+
+@media (max-width: 1440px) {
+  .aboutSectionRange div {
+    width: 35%;
   }
 }
 
@@ -1521,9 +1606,6 @@ a {
     font-size: 0.9rem;
     text-align: center;
     margin: 5px 3px 10px;
-  }
-  .aboutSectionRange div {
-    width: 35%;
   }
 }
 
@@ -1676,7 +1758,24 @@ a {
   }
 }
 
+@media (max-height: 695px) {
+  .aboutSection .profile {
+    margin: 0 auto;
+  }
+  .aboutSection .education,
+  .aboutSection .skillSection {
+    margin: 0 auto;
+  }
+}
+
 @media (max-width: 360px) {
+  .aboutSection .profile {
+    margin: 0 auto;
+  }
+  .aboutSection .education,
+  .aboutSection .skillSection {
+    margin: 0 auto;
+  }
   .skillSection ul li {
     height: 80px;
     width: 30%;
@@ -2003,6 +2102,23 @@ a {
   }
 }
 
+@media (max-width: 1920px) and (min-height: 2000px) {
+  .projectSection > div {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .projectSection > div > div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+}
+
 @media (max-width: 1856px) {
   .projectDetails {
     -ms-flex-item-align: end;
@@ -2091,6 +2207,66 @@ a {
       -webkit-transform: scale(1.7);
               transform: scale(1.7);
     }
+  }
+}
+
+@media (max-width: 1550px) and (min-height: 2000px) {
+  .projectSection > div > div {
+    margin-top: 5vh;
+  }
+  .projectSection .videoContainer {
+    width: 70vw;
+  }
+  .projectSection .videoContainer .videoCover {
+    position: absolute;
+    width: 70vw;
+    height: auto;
+    margin: 0;
+  }
+  .projectSection .videoContainer video {
+    width: 70vw;
+  }
+  .projectSection .movingVideoContainerToCenter {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  @-webkit-keyframes movingVideoContainerToCenter {
+    0% {
+      margin: 0 auto;
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    50% {
+      margin: 0 auto;
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    100% {
+      margin: 0 auto;
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  @keyframes movingVideoContainerToCenter {
+    0% {
+      margin: 0 auto;
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    50% {
+      margin: 0 auto;
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    100% {
+      margin: 0 auto;
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  .projectSection .projectDetails {
+    margin-top: 5vh;
+    width: 70vw;
   }
 }
 
@@ -2258,10 +2434,7 @@ a {
         align-self: center;
     width: 600px;
   }
-  .projectDetails .projectDetails {
-    width: calc(80vw - 650px);
-  }
-  .projectDetails .projectDetails .projectSkillLogo p {
+  .projectDetails .projectSkillLogo p {
     font-size: 0.8rem;
     width: 84px;
     padding: 10px 0;
@@ -2406,7 +2579,10 @@ a {
   }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 385px) {
+  .projectSection h2 {
+    width: 250px;
+  }
   .projectSection .videoContainer {
     width: 250px;
   }
@@ -2654,6 +2830,15 @@ a {
           transform-origin: top left;
   -webkit-transform: scaleY(1);
           transform: scaleY(1);
+}
+
+@media (max-width: 1920px) and (min-height: 2000px) {
+  .contactSection > div {
+    margin-top: 15vh;
+  }
+  .contactSection > div form {
+    margin-top: 5vh;
+  }
 }
 
 @media (max-width: 1600px) {
@@ -3047,6 +3232,13 @@ p {
   }
 }
 
+@media (max-width: 1920px) and (min-height: 2000px) {
+  p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+}
+
 @media (max-width: 1110px) {
   .aboutSection h2,
   .projectSection h2,
@@ -3132,6 +3324,18 @@ p {
   }
   h3 {
     font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 385px) {
+  .aboutSection h2,
+  .projectSection h2,
+  .skillSection h2,
+  .contactSection h2,
+  .typingcontainer h2 {
+    font-size: 0.5rem;
+    height: 50px;
+    padding-top: 15px;
   }
 }
 
