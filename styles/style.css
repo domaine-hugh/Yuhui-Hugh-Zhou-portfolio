@@ -2053,7 +2053,7 @@ a {
 }
 
 .movingVideoContainerToCenter {
-  margin: 0 auto;
+  margin: 0 calc(40vw - 350px);
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
   -webkit-animation: movingVideoContainerToCenter 1s linear;
@@ -2066,13 +2066,8 @@ a {
     -webkit-transform: scale(1);
             transform: scale(1);
   }
-  50% {
-    margin: 0 0 0 15vw;
-    -webkit-transform: scale(1.25);
-            transform: scale(1.25);
-  }
   100% {
-    margin: 0 auto;
+    margin: 0 calc(40vw - 350px);
     -webkit-transform: scale(1.5);
             transform: scale(1.5);
   }
@@ -2084,13 +2079,8 @@ a {
     -webkit-transform: scale(1);
             transform: scale(1);
   }
-  50% {
-    margin: 0 0 0 15vw;
-    -webkit-transform: scale(1.25);
-            transform: scale(1.25);
-  }
   100% {
-    margin: 0 auto;
+    margin: 0 calc(40vw - 350px);
     -webkit-transform: scale(1.5);
             transform: scale(1.5);
   }
