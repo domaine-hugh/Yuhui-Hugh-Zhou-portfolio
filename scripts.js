@@ -140,7 +140,7 @@ app.showingNavAside = () => {
         document.querySelector('#navBarAside').classList.remove('asideShow');
     }
 }
-//Showing follow me aside 
+//Showing follow me aside out
 app.showingFollowMeAside = () => {
     if (document.documentElement.scrollTop >= window.innerHeight * 6.45) {
         document.querySelector('#followmeBarAside').classList.add('asideHide');
